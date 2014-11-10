@@ -56,6 +56,11 @@
     
 }
 
+-(void) showInfo
+{
+    DetailsHouseViewController *detailsViewController = [[DetailsHouseViewController alloc] init];
+    [self showViewController:detailsViewController sender:self];
+}
 
 -(void) showHome
 {
@@ -83,11 +88,5 @@
         default:
             break;
     }
-}
-
--(void) showInfo
-{
-    DetailsHouseViewController *detailsViewController = [[DetailsHouseViewController alloc] init];
-    [self showViewController:detailsViewController sender:self];
 }
 @end

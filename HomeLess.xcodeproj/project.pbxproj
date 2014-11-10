@@ -208,16 +208,14 @@
 			children = (
 				544C6A721A0FA0490057C2E3 /* AppDelegate.h */,
 				544C6A731A0FA0490057C2E3 /* AppDelegate.m */,
-				544C6A871A0FA0490057C2E3 /* Images.xcassets */,
 				E2E067F61A0AB41E00A0FE4E /* External Classes */,
 				E2BD4CBC1A0BBA9F00EBEE02 /* Filters */,
 				185E973B1A0A955D00A5ED6D /* Home */,
+				544C6A871A0FA0490057C2E3 /* Images.xcassets */,
 				5442371E1A0ED7470044EB3F /* Information */,
 				E2EDA5571A0D2CA200848400 /* Login */,
+				E24998231A1147E800E9969D /* MessagesViewController */,
 				E2EDA5561A0D2C6600848400 /* Profile */,
-				E249981E1A1135A100E9969D /* MessagesViewController.h */,
-				E249981F1A1135A100E9969D /* MessagesViewController.m */,
-				E24998201A1135A100E9969D /* MessagesViewController.xib */,
 			);
 			name = Classes;
 			path = IntegratingFacebookTutorial/Classes;
@@ -275,6 +273,16 @@
 				8103BCCA19AD1EF000BCF4C7 /* System Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E24998231A1147E800E9969D /* MessagesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E249981E1A1135A100E9969D /* MessagesViewController.h */,
+				E249981F1A1135A100E9969D /* MessagesViewController.m */,
+				E24998201A1135A100E9969D /* MessagesViewController.xib */,
+			);
+			name = MessagesViewController;
 			sourceTree = "<group>";
 		};
 		E2BD4CBC1A0BBA9F00EBEE02 /* Filters */ = {
