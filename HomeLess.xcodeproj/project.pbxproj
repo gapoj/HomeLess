@@ -33,10 +33,6 @@
 		544C6AB71A0FA1360057C2E3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AAD1A0FA1360057C2E3 /* Default@2x.png */; };
 		544C6AB81A0FA1360057C2E3 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AAE1A0FA1360057C2E3 /* Icon.png */; };
 		544C6AB91A0FA1360057C2E3 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AAF1A0FA1360057C2E3 /* Icon@2x.png */; };
-		544C6ABA1A0FA1360057C2E3 /* login-button-small-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AB01A0FA1360057C2E3 /* login-button-small-pressed.png */; };
-		544C6ABB1A0FA1360057C2E3 /* login-button-small-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AB11A0FA1360057C2E3 /* login-button-small-pressed@2x.png */; };
-		544C6ABC1A0FA1360057C2E3 /* login-button-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AB21A0FA1360057C2E3 /* login-button-small.png */; };
-		544C6ABD1A0FA1360057C2E3 /* login-button-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AB31A0FA1360057C2E3 /* login-button-small@2x.png */; };
 		544C6ABE1A0FA1360057C2E3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AB41A0FA1360057C2E3 /* LoginViewController.xib */; };
 		6D10F48316DD68E000690A0F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D10F48216DD68E000690A0F /* CoreLocation.framework */; };
 		8103BCCD19AD1F8900BCF4C7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8103BCCB19AD1F8900BCF4C7 /* Bolts.framework */; };
@@ -97,10 +93,6 @@
 		544C6AAD1A0FA1360057C2E3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Source/Resources/Default@2x.png"; sourceTree = SOURCE_ROOT; };
 		544C6AAE1A0FA1360057C2E3 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Source/Resources/Icon.png; sourceTree = SOURCE_ROOT; };
 		544C6AAF1A0FA1360057C2E3 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Source/Resources/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
-		544C6AB01A0FA1360057C2E3 /* login-button-small-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small-pressed.png"; path = "Source/Resources/login-button-small-pressed.png"; sourceTree = SOURCE_ROOT; };
-		544C6AB11A0FA1360057C2E3 /* login-button-small-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small-pressed@2x.png"; path = "Source/Resources/login-button-small-pressed@2x.png"; sourceTree = SOURCE_ROOT; };
-		544C6AB21A0FA1360057C2E3 /* login-button-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small.png"; path = "Source/Resources/login-button-small.png"; sourceTree = SOURCE_ROOT; };
-		544C6AB31A0FA1360057C2E3 /* login-button-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small@2x.png"; path = "Source/Resources/login-button-small@2x.png"; sourceTree = SOURCE_ROOT; };
 		544C6AB41A0FA1360057C2E3 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Source/Resources/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
 		6D10F48216DD68E000690A0F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8103BCCB19AD1F8900BCF4C7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -231,10 +223,6 @@
 				544C6AAD1A0FA1360057C2E3 /* Default@2x.png */,
 				544C6AAE1A0FA1360057C2E3 /* Icon.png */,
 				544C6AAF1A0FA1360057C2E3 /* Icon@2x.png */,
-				544C6AB01A0FA1360057C2E3 /* login-button-small-pressed.png */,
-				544C6AB11A0FA1360057C2E3 /* login-button-small-pressed@2x.png */,
-				544C6AB21A0FA1360057C2E3 /* login-button-small.png */,
-				544C6AB31A0FA1360057C2E3 /* login-button-small@2x.png */,
 			);
 			name = Resources;
 			path = IntegratingFacebookTutorial/Resources;
@@ -386,9 +374,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				544C6ABD1A0FA1360057C2E3 /* login-button-small@2x.png in Resources */,
-				544C6ABA1A0FA1360057C2E3 /* login-button-small-pressed.png in Resources */,
-				544C6ABC1A0FA1360057C2E3 /* login-button-small.png in Resources */,
 				544C6AB81A0FA1360057C2E3 /* Icon.png in Resources */,
 				544C6AB91A0FA1360057C2E3 /* Icon@2x.png in Resources */,
 				E293FBFF1A1103F7001F8910 /* DetailsHouseViewController.xib in Resources */,
@@ -400,7 +385,6 @@
 				544C6AA11A0FA0490057C2E3 /* UserDetailsViewController.xib in Resources */,
 				544C6AB71A0FA1360057C2E3 /* Default@2x.png in Resources */,
 				544C6A981A0FA0490057C2E3 /* FiltersViewController.xib in Resources */,
-				544C6ABB1A0FA1360057C2E3 /* login-button-small-pressed@2x.png in Resources */,
 				544C6A9C1A0FA0490057C2E3 /* HouseTableViewCell.xib in Resources */,
 				544C6AA91A0FA1110057C2E3 /* HomeLess-Info.plist in Resources */,
 				544C6AB61A0FA1360057C2E3 /* Default.png in Resources */,
