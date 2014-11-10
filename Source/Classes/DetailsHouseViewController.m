@@ -14,4 +14,8 @@
     [scroller setContentSize:CGSizeMake(320, 1850)];
 }
 
+- (IBAction)onPageChanged:(UIPageControl *)sender {
+    NSInteger a = sender.currentPage;
+    a++;
+}
 @end

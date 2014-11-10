@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FiltersViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsHouseViewController">
             <connections>
                 <outlet property="scroller" destination="Qnf-P4-Ugb" id="vzu-5B-m0P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -18,12 +18,6 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qnf-P4-Ugb">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EnA-KZ-oSc">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="0.0" width="400" height="424"/>
-                            </variation>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ve-6E-uy0">
                             <rect key="frame" x="8" y="421" width="400" height="21"/>
                             <color key="backgroundColor" red="0.066591541860000006" green="0.25338921689999999" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
@@ -185,6 +179,16 @@
                                 <rect key="frame" x="31" y="640" width="167" height="21"/>
                             </variation>
                         </label>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ev2-Pw-KDx">
+                            <rect key="frame" x="-19" y="-18" width="39" height="37"/>
+                            <color key="pageIndicatorTintColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="106" y="432" width="128" height="37"/>
+                            </variation>
+                            <connections>
+                                <action selector="onPageChanged:" destination="-1" eventType="valueChanged" id="vwC-rf-laf"/>
+                            </connections>
+                        </pageControl>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Others" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOO-5v-8sc">
                             <rect key="frame" x="8" y="670" width="400" height="21"/>
                             <color key="backgroundColor" red="0.066591541860000006" green="0.25338921689999999" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
@@ -214,17 +218,15 @@
                                 <rect key="frame" x="0.0" y="832" width="400" height="21"/>
                             </variation>
                         </label>
-                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ev2-Pw-KDx">
-                            <rect key="frame" x="-19" y="-18" width="39" height="37"/>
-                            <color key="pageIndicatorTintColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="EnA-KZ-oSc">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="106" y="432" width="128" height="37"/>
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="424"/>
                             </variation>
-                        </pageControl>
+                        </imageView>
                     </subviews>
                     <variation key="default">
                         <mask key="subviews">
-                            <exclude reference="EnA-KZ-oSc"/>
                             <exclude reference="8Ve-6E-uy0"/>
                             <exclude reference="878-As-REo"/>
                             <exclude reference="tcf-vr-Drn"/>
@@ -242,16 +244,16 @@
                             <exclude reference="0KY-Ae-a1N"/>
                             <exclude reference="6as-p7-Te8"/>
                             <exclude reference="pj0-hE-nNM"/>
+                            <exclude reference="Ev2-Pw-KDx"/>
                             <exclude reference="vOO-5v-8sc"/>
                             <exclude reference="Alu-s4-LmQ"/>
                             <exclude reference="sno-da-l5b"/>
-                            <exclude reference="Ev2-Pw-KDx"/>
+                            <exclude reference="EnA-KZ-oSc"/>
                         </mask>
                     </variation>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="0.0" y="93" width="400" height="1200"/>
                         <mask key="subviews">
-                            <include reference="EnA-KZ-oSc"/>
                             <include reference="8Ve-6E-uy0"/>
                             <include reference="878-As-REo"/>
                             <include reference="tcf-vr-Drn"/>
@@ -269,10 +271,11 @@
                             <include reference="0KY-Ae-a1N"/>
                             <include reference="6as-p7-Te8"/>
                             <include reference="pj0-hE-nNM"/>
+                            <include reference="Ev2-Pw-KDx"/>
                             <include reference="vOO-5v-8sc"/>
                             <include reference="Alu-s4-LmQ"/>
                             <include reference="sno-da-l5b"/>
-                            <include reference="Ev2-Pw-KDx"/>
+                            <include reference="EnA-KZ-oSc"/>
                         </mask>
                     </variation>
                 </scrollView>
@@ -295,5 +298,6 @@
     <resources>
         <image name="cat" width="256" height="256"/>
         <image name="dog" width="256" height="256"/>
+        <image name="home" width="4500" height="3000"/>
     </resources>
 </document>
