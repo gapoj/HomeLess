@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *imageList = @[[UIImage imageNamed:@"menuHome"], [UIImage imageNamed:@"menuUsers"], [UIImage imageNamed:@"menuFavorite"],[UIImage imageNamed:@"menuFilters"],[UIImage imageNamed:@"menuLogout"]];
+    NSArray *imageList = @[[UIImage imageNamed:@"menuHome"], [UIImage imageNamed:@"menuUsers"], [UIImage imageNamed:@"menuFavorite"],[UIImage imageNamed:@"menuFilters"],[UIImage imageNamed:@"menuChat"],[UIImage imageNamed:@"menuLogout"]];
     sideBar = [[CDSideBarController alloc] initWithImages:imageList];
     sideBar.delegate = self;
     
