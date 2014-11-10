@@ -57,7 +57,7 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"HouseCell"];
     }
     House * house = self.houses[indexPath.row];
-    cell.label.text = house.houseDescription;
+    cell.label.text = house.title;
     
     return cell;
 }

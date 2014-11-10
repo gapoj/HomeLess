@@ -10,7 +10,11 @@
 #import "AddHouseViewController.h"
 #import "House.h"
 
-@interface AddHouseViewController ()<UITextViewDelegate>
+@interface AddHouseViewController ()<UITextViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *mainPhoto;
+@property (weak, nonatomic) IBOutlet UITextField *PriceTextField;
+@property (weak, nonatomic) IBOutlet UITextField *addressTextField;
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *rentOrSaleSegmentControl;
 @property (strong, nonatomic) IBOutlet UISlider *roomsSlider;
 - (IBAction)roomsValueChanged:(id)sender;
@@ -34,7 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [scroller setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320, 1000)];
+    [scroller setContentSize:CGSizeMake(320, 1500)];
     self.desc.delegate = self;
 }
 
@@ -44,9 +48,28 @@
 }
 
 - (IBAction)onAddPhotos:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.mainPhoto.image = chosenImage;
+     self.mainPhoto.contentMode = UIViewContentModeScaleAspectFit;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
 }
 
-
+////////////////**********************************
 - (IBAction)roomsValueChanged:(id)sender {
     int sliderVal =0;
     sliderVal = self.roomsSlider.value;
@@ -65,6 +88,9 @@
 - (IBAction)onSave:(id)sender {
     House *newHouse = [House object];
     newHouse.owner = [PFUser currentUser];
+    newHouse.title = self.titleTextField.text;
+    newHouse.address = self.addressTextField.text;
+    newHouse.price = self.PriceTextField.text;
     newHouse.houseDescription = self.desc.text;
     newHouse.bathrooms = [self.bathroomsLabel.text integerValue];
     newHouse.rooms = [self.roomsLabel.text integerValue];
@@ -82,6 +108,7 @@
     } else {
          newHouse.withGarage = NO;
     }
+    
     [newHouse saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(error){
             NSLog(@"%@",error);

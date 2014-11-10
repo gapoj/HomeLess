@@ -9,7 +9,9 @@
 #import "House.h"
 
 @implementation House
-
+@dynamic title;
+@dynamic address;
+@dynamic price;
 @dynamic  houseDescription;
 @dynamic rooms;
 @dynamic  bathrooms;
