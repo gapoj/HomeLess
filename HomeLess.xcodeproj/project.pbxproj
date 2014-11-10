@@ -49,6 +49,8 @@
 		D4DA7A1214D334F30055F672 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0B14D334F30055F672 /* QuartzCore.framework */; };
 		D4DA7A1314D334F30055F672 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0C14D334F30055F672 /* Security.framework */; };
 		D4DA7A1414D334F30055F672 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0D14D334F30055F672 /* SystemConfiguration.framework */; };
+		E24998211A1135A100E9969D /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E249981F1A1135A100E9969D /* MessagesViewController.m */; };
+		E24998221A1135A100E9969D /* MessagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24998201A1135A100E9969D /* MessagesViewController.xib */; };
 		E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E293FBFC1A1103F7001F8910 /* DetailsHouseViewController.m */; };
 		E293FBFF1A1103F7001F8910 /* DetailsHouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E293FBFD1A1103F7001F8910 /* DetailsHouseViewController.xib */; };
 /* End PBXBuildFile section */
@@ -110,6 +112,9 @@
 		D4DA7A0B14D334F30055F672 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D4DA7A0C14D334F30055F672 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D4DA7A0D14D334F30055F672 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E249981E1A1135A100E9969D /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessagesViewController.h; path = Source/Classes/MessagesViewController.h; sourceTree = SOURCE_ROOT; };
+		E249981F1A1135A100E9969D /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessagesViewController.m; path = Source/Classes/MessagesViewController.m; sourceTree = SOURCE_ROOT; };
+		E24998201A1135A100E9969D /* MessagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessagesViewController.xib; path = Source/Classes/MessagesViewController.xib; sourceTree = SOURCE_ROOT; };
 		E293FBFB1A1103F7001F8910 /* DetailsHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsHouseViewController.h; path = Source/Classes/DetailsHouseViewController.h; sourceTree = SOURCE_ROOT; };
 		E293FBFC1A1103F7001F8910 /* DetailsHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsHouseViewController.m; path = Source/Classes/DetailsHouseViewController.m; sourceTree = SOURCE_ROOT; };
 		E293FBFD1A1103F7001F8910 /* DetailsHouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailsHouseViewController.xib; path = Source/Classes/DetailsHouseViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -210,6 +215,9 @@
 				5442371E1A0ED7470044EB3F /* Information */,
 				E2EDA5571A0D2CA200848400 /* Login */,
 				E2EDA5561A0D2C6600848400 /* Profile */,
+				E249981E1A1135A100E9969D /* MessagesViewController.h */,
+				E249981F1A1135A100E9969D /* MessagesViewController.m */,
+				E24998201A1135A100E9969D /* MessagesViewController.xib */,
 			);
 			name = Classes;
 			path = IntegratingFacebookTutorial/Classes;
@@ -380,6 +388,7 @@
 				544C6A901A0FA0490057C2E3 /* AddHouseViewController.xib in Resources */,
 				544C6AA81A0FA1110057C2E3 /* InfoPlist.strings in Resources */,
 				544C6AB51A0FA1360057C2E3 /* Default-568h@2x.png in Resources */,
+				E24998221A1135A100E9969D /* MessagesViewController.xib in Resources */,
 				544C6ABE1A0FA1360057C2E3 /* LoginViewController.xib in Resources */,
 				544C6A9D1A0FA0490057C2E3 /* Images.xcassets in Resources */,
 				544C6AA11A0FA0490057C2E3 /* UserDetailsViewController.xib in Resources */,
@@ -409,6 +418,7 @@
 				544C6A9B1A0FA0490057C2E3 /* HouseTableViewCell.m in Sources */,
 				544C6A951A0FA0490057C2E3 /* DraggableView.m in Sources */,
 				544C6A9E1A0FA0490057C2E3 /* LoginViewController.m in Sources */,
+				E24998211A1135A100E9969D /* MessagesViewController.m in Sources */,
 				E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */,
 				544C6AAA1A0FA1110057C2E3 /* main.m in Sources */,
 				544C6A991A0FA0490057C2E3 /* HomeViewController.m in Sources */,
