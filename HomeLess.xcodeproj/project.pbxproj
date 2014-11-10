@@ -12,8 +12,6 @@
 		544C6A901A0FA0490057C2E3 /* AddHouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544C6A711A0FA0490057C2E3 /* AddHouseViewController.xib */; };
 		544C6A911A0FA0490057C2E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A731A0FA0490057C2E3 /* AppDelegate.m */; };
 		544C6A921A0FA0490057C2E3 /* CDSideBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A751A0FA0490057C2E3 /* CDSideBarController.m */; };
-		544C6A931A0FA0490057C2E3 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A771A0FA0490057C2E3 /* DetailsViewController.m */; };
-		544C6A941A0FA0490057C2E3 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544C6A781A0FA0490057C2E3 /* DetailsViewController.xib */; };
 		544C6A951A0FA0490057C2E3 /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A7A1A0FA0490057C2E3 /* DraggableView.m */; };
 		544C6A961A0FA0490057C2E3 /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A7C1A0FA0490057C2E3 /* DraggableViewBackground.m */; };
 		544C6A971A0FA0490057C2E3 /* FiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A7E1A0FA0490057C2E3 /* FiltersViewController.m */; };
@@ -55,6 +53,8 @@
 		D4DA7A1214D334F30055F672 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0B14D334F30055F672 /* QuartzCore.framework */; };
 		D4DA7A1314D334F30055F672 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0C14D334F30055F672 /* Security.framework */; };
 		D4DA7A1414D334F30055F672 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0D14D334F30055F672 /* SystemConfiguration.framework */; };
+		E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E293FBFC1A1103F7001F8910 /* DetailsHouseViewController.m */; };
+		E293FBFF1A1103F7001F8910 /* DetailsHouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E293FBFD1A1103F7001F8910 /* DetailsHouseViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,9 +66,6 @@
 		544C6A731A0FA0490057C2E3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Source/Classes/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		544C6A741A0FA0490057C2E3 /* CDSideBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDSideBarController.h; path = Source/Classes/CDSideBarController.h; sourceTree = SOURCE_ROOT; };
 		544C6A751A0FA0490057C2E3 /* CDSideBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDSideBarController.m; path = Source/Classes/CDSideBarController.m; sourceTree = SOURCE_ROOT; };
-		544C6A761A0FA0490057C2E3 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsViewController.h; path = Source/Classes/DetailsViewController.h; sourceTree = SOURCE_ROOT; };
-		544C6A771A0FA0490057C2E3 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsViewController.m; path = Source/Classes/DetailsViewController.m; sourceTree = SOURCE_ROOT; };
-		544C6A781A0FA0490057C2E3 /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailsViewController.xib; path = Source/Classes/DetailsViewController.xib; sourceTree = SOURCE_ROOT; };
 		544C6A791A0FA0490057C2E3 /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DraggableView.h; path = Source/Classes/DraggableView.h; sourceTree = SOURCE_ROOT; };
 		544C6A7A1A0FA0490057C2E3 /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DraggableView.m; path = Source/Classes/DraggableView.m; sourceTree = SOURCE_ROOT; };
 		544C6A7B1A0FA0490057C2E3 /* DraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DraggableViewBackground.h; path = Source/Classes/DraggableViewBackground.h; sourceTree = SOURCE_ROOT; };
@@ -121,6 +118,9 @@
 		D4DA7A0B14D334F30055F672 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D4DA7A0C14D334F30055F672 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D4DA7A0D14D334F30055F672 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E293FBFB1A1103F7001F8910 /* DetailsHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsHouseViewController.h; path = Source/Classes/DetailsHouseViewController.h; sourceTree = SOURCE_ROOT; };
+		E293FBFC1A1103F7001F8910 /* DetailsHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsHouseViewController.m; path = Source/Classes/DetailsHouseViewController.m; sourceTree = SOURCE_ROOT; };
+		E293FBFD1A1103F7001F8910 /* DetailsHouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailsHouseViewController.xib; path = Source/Classes/DetailsHouseViewController.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,9 +169,9 @@
 		5442371E1A0ED7470044EB3F /* Information */ = {
 			isa = PBXGroup;
 			children = (
-				544C6A761A0FA0490057C2E3 /* DetailsViewController.h */,
-				544C6A771A0FA0490057C2E3 /* DetailsViewController.m */,
-				544C6A781A0FA0490057C2E3 /* DetailsViewController.xib */,
+				E293FBFB1A1103F7001F8910 /* DetailsHouseViewController.h */,
+				E293FBFC1A1103F7001F8910 /* DetailsHouseViewController.m */,
+				E293FBFD1A1103F7001F8910 /* DetailsHouseViewController.xib */,
 			);
 			name = Information;
 			sourceTree = "<group>";
@@ -391,6 +391,7 @@
 				544C6ABC1A0FA1360057C2E3 /* login-button-small.png in Resources */,
 				544C6AB81A0FA1360057C2E3 /* Icon.png in Resources */,
 				544C6AB91A0FA1360057C2E3 /* Icon@2x.png in Resources */,
+				E293FBFF1A1103F7001F8910 /* DetailsHouseViewController.xib in Resources */,
 				544C6A901A0FA0490057C2E3 /* AddHouseViewController.xib in Resources */,
 				544C6AA81A0FA1110057C2E3 /* InfoPlist.strings in Resources */,
 				544C6AB51A0FA1360057C2E3 /* Default-568h@2x.png in Resources */,
@@ -402,7 +403,6 @@
 				544C6ABB1A0FA1360057C2E3 /* login-button-small-pressed@2x.png in Resources */,
 				544C6A9C1A0FA0490057C2E3 /* HouseTableViewCell.xib in Resources */,
 				544C6AA91A0FA1110057C2E3 /* HomeLess-Info.plist in Resources */,
-				544C6A941A0FA0490057C2E3 /* DetailsViewController.xib in Resources */,
 				544C6AB61A0FA1360057C2E3 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,9 +423,9 @@
 				544C6A911A0FA0490057C2E3 /* AppDelegate.m in Sources */,
 				544C6A8F1A0FA0490057C2E3 /* AddHouseViewController.m in Sources */,
 				544C6A9B1A0FA0490057C2E3 /* HouseTableViewCell.m in Sources */,
-				544C6A931A0FA0490057C2E3 /* DetailsViewController.m in Sources */,
 				544C6A951A0FA0490057C2E3 /* DraggableView.m in Sources */,
 				544C6A9E1A0FA0490057C2E3 /* LoginViewController.m in Sources */,
+				E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */,
 				544C6AAA1A0FA1110057C2E3 /* main.m in Sources */,
 				544C6A991A0FA0490057C2E3 /* HomeViewController.m in Sources */,
 			);

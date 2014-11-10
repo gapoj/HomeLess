@@ -10,14 +10,14 @@
 	<string>HomeLess</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>29038590AA90A29CA7760EBBC16A0207E35A105E</key>
+		<key>0356D69B47B50B1FE0CF8897B5A000FB6657C31E</key>
 		<string>https://github.com/gapoj/HomeLess.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>HomeLess.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>29038590AA90A29CA7760EBBC16A0207E35A105E</key>
+		<key>0356D69B47B50B1FE0CF8897B5A000FB6657C31E</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>29038590AA90A29CA7760EBBC16A0207E35A105E</string>
+	<string>0356D69B47B50B1FE0CF8897B5A000FB6657C31E</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>29038590AA90A29CA7760EBBC16A0207E35A105E</string>
+			<string>0356D69B47B50B1FE0CF8897B5A000FB6657C31E</string>
 			<key>IDESourceControlWCCName</key>
 			<string>HomeLess</string>
 		</dict>

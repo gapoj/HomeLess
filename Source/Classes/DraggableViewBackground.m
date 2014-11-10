@@ -1,13 +1,12 @@
 
 #import "DraggableViewBackground.h"
+#import "DetailsHouseViewController.h"
 
 @implementation DraggableViewBackground{
     NSInteger cardsLoadedIndex;
     NSMutableArray *loadedCards;
     UIButton* checkButton;
     UIButton* xButton;
-    UIButton* infoButton;
-    UILabel* nameLabel;
 }
 static const int MAX_BUFFER_SIZE = 2;
 static const float CARD_HEIGHT = 300;
@@ -27,6 +26,7 @@ static const float CARD_WIDTH = 260;
         allCards = [[NSMutableArray alloc] init];
         cardsLoadedIndex = 0;
         [self loadCards];
+        self.houseIndex = 0;
     }
     return self;
 }
@@ -39,23 +39,15 @@ static const float CARD_WIDTH = 260;
 -(void)setupView
 {
     self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1];
-    nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 45, 125, 25)];
-    nameLabel.text = @"HomeLess";
-    nameLabel.textColor = [UIColor redColor];
     xButton = [[UIButton alloc]initWithFrame:CGRectMake(80, 415, 59, 59)];
     [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
     [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
-    infoButton = [[UIButton alloc]initWithFrame:CGRectMake(135, 430, 59, 59)];
-    [infoButton setImage:[UIImage imageNamed:@"infoButton"] forState:UIControlStateNormal];
-    [infoButton addTarget:self action:@selector(showInfo) forControlEvents:UIControlEventTouchUpInside];
     checkButton = [[UIButton alloc]initWithFrame:CGRectMake(185, 415, 59, 59)];
     [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
     [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:xButton];
     [self addSubview:checkButton];
-    [self addSubview:infoButton];
-    [self addSubview:nameLabel];
 }
 
 -(DraggableView *)createDraggableViewWithDataAtIndex:(NSInteger)index
@@ -98,6 +90,7 @@ static const float CARD_WIDTH = 260;
         cardsLoadedIndex++;
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
+    self.houseIndex++;
 }
 
 -(void)cardSwipedRight:(UIView *)card
@@ -108,6 +101,7 @@ static const float CARD_WIDTH = 260;
         cardsLoadedIndex++;
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
+    self.houseIndex++;
 }
 
 -(void)swipeRight
@@ -118,6 +112,7 @@ static const float CARD_WIDTH = 260;
         dragView.overlayView.alpha = 1;
     }];
     [dragView rightClickAction];
+    self.houseIndex++;
 }
 
 -(void)swipeLeft
@@ -128,12 +123,6 @@ static const float CARD_WIDTH = 260;
         dragView.overlayView.alpha = 1;
     }];
     [dragView leftClickAction];
+    self.houseIndex++;
 }
-
-
--(void) showInfo
-{
-
-}
-
 @end

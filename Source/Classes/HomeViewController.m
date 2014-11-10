@@ -1,19 +1,14 @@
-//
-//  ViewController.m
-//  HomeLess
-//
-//  Created by Guillermo Apoj on 11/4/14.
-//  Copyright (c) 2014 Globant. All rights reserved.
-//
-
 #import "HomeViewController.h"
 #import "DraggableViewBackground.h"
 #import "UserDetailsViewController.h"
 #import "FiltersViewController.h"
+#import "DetailsHouseViewController.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
-@interface HomeViewController ()
+@interface HomeViewController (){
 
+    UIButton* infoButton;
+}
 @end
 
 @implementation HomeViewController
@@ -27,6 +22,10 @@
     DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:self.view.frame];
     draggableBackground.center = self.view.center;
     [self.view addSubview:draggableBackground];
+    infoButton = [[UIButton alloc]initWithFrame:CGRectMake(135, 430, 59, 59)];
+    [infoButton setImage:[UIImage imageNamed:@"infoButton"] forState:UIControlStateNormal];
+    [infoButton addTarget:self action:@selector(showInfo) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:infoButton];
 }
 
 -(void) viewDidAppear:(BOOL)animated
@@ -56,9 +55,18 @@
 {
     
 }
+
+
+-(void) showHome
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+    }];
+}
+
 - (void)menuButtonClicked:(int)index{
     switch (index) {
         case 0:
+            [self showHome];
             break;
         case 1:
             [self showUserDetails];
@@ -75,5 +83,11 @@
         default:
             break;
     }
+}
+
+-(void) showInfo
+{
+    DetailsHouseViewController *detailsViewController = [[DetailsHouseViewController alloc] init];
+    [self showViewController:detailsViewController sender:self];
 }
 @end

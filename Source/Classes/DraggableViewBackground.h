@@ -10,5 +10,5 @@
 @property (retain,nonatomic)NSArray* houseCards;
 @property (retain,nonatomic)NSMutableArray* allCards; 
 
-
+@property NSInteger houseIndex;
 @end
