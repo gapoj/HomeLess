@@ -26,7 +26,7 @@
     [infoButton addTarget:self action:@selector(showInfo) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:infoButton];
     UILabel *homeLabel = [self createHomeButtonView];
-    DWBubbleMenuButton *menuButton = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(10,10,50,50) expansionDirection:DirectionDown];
+    DWBubbleMenuButton *menuButton = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(270,10,50,50) expansionDirection:DirectionDown];
     menuButton.homeButtonView = homeLabel;
     [menuButton addButtons:[self createDemoButtonArray]];
     [self.view addSubview:menuButton];
@@ -36,6 +36,10 @@
 {
     [super viewDidAppear:animated];
 }
+
+
+
+
 
 - (void)showUserDetails {
     UserDetailsViewController *detailsViewController = [[UserDetailsViewController alloc] init];

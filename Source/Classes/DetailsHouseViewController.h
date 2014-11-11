@@ -1,5 +1,4 @@
 #import <UIKit/UIKit.h>
-#import "CDSideBarController.h"
 
 @interface DetailsHouseViewController : UIViewController
 {
