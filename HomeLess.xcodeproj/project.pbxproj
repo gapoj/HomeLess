@@ -13,7 +13,6 @@
 		544C6A8F1A0FA0490057C2E3 /* AddHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A701A0FA0490057C2E3 /* AddHouseViewController.m */; };
 		544C6A901A0FA0490057C2E3 /* AddHouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544C6A711A0FA0490057C2E3 /* AddHouseViewController.xib */; };
 		544C6A911A0FA0490057C2E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A731A0FA0490057C2E3 /* AppDelegate.m */; };
-		544C6A921A0FA0490057C2E3 /* CDSideBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A751A0FA0490057C2E3 /* CDSideBarController.m */; };
 		544C6A951A0FA0490057C2E3 /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A7A1A0FA0490057C2E3 /* DraggableView.m */; };
 		544C6A961A0FA0490057C2E3 /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A7C1A0FA0490057C2E3 /* DraggableViewBackground.m */; };
 		544C6A971A0FA0490057C2E3 /* FiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A7E1A0FA0490057C2E3 /* FiltersViewController.m */; };
@@ -53,6 +52,7 @@
 		D4DA7A1414D334F30055F672 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0D14D334F30055F672 /* SystemConfiguration.framework */; };
 		E24998211A1135A100E9969D /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E249981F1A1135A100E9969D /* MessagesViewController.m */; };
 		E24998221A1135A100E9969D /* MessagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24998201A1135A100E9969D /* MessagesViewController.xib */; };
+		E2640A8E1A1278390070493F /* DWBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E2640A8D1A1278390070493F /* DWBubbleMenuButton.m */; };
 		E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E293FBFC1A1103F7001F8910 /* DetailsHouseViewController.m */; };
 		E293FBFF1A1103F7001F8910 /* DetailsHouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E293FBFD1A1103F7001F8910 /* DetailsHouseViewController.xib */; };
 /* End PBXBuildFile section */
@@ -67,8 +67,6 @@
 		544C6A711A0FA0490057C2E3 /* AddHouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddHouseViewController.xib; path = Source/Classes/AddHouseViewController.xib; sourceTree = SOURCE_ROOT; };
 		544C6A721A0FA0490057C2E3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Source/Classes/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		544C6A731A0FA0490057C2E3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Source/Classes/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		544C6A741A0FA0490057C2E3 /* CDSideBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDSideBarController.h; path = Source/Classes/CDSideBarController.h; sourceTree = SOURCE_ROOT; };
-		544C6A751A0FA0490057C2E3 /* CDSideBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDSideBarController.m; path = Source/Classes/CDSideBarController.m; sourceTree = SOURCE_ROOT; };
 		544C6A791A0FA0490057C2E3 /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DraggableView.h; path = Source/Classes/DraggableView.h; sourceTree = SOURCE_ROOT; };
 		544C6A7A1A0FA0490057C2E3 /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DraggableView.m; path = Source/Classes/DraggableView.m; sourceTree = SOURCE_ROOT; };
 		544C6A7B1A0FA0490057C2E3 /* DraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DraggableViewBackground.h; path = Source/Classes/DraggableViewBackground.h; sourceTree = SOURCE_ROOT; };
@@ -120,6 +118,8 @@
 		E249981E1A1135A100E9969D /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessagesViewController.h; path = Source/Classes/MessagesViewController.h; sourceTree = SOURCE_ROOT; };
 		E249981F1A1135A100E9969D /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessagesViewController.m; path = Source/Classes/MessagesViewController.m; sourceTree = SOURCE_ROOT; };
 		E24998201A1135A100E9969D /* MessagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessagesViewController.xib; path = Source/Classes/MessagesViewController.xib; sourceTree = SOURCE_ROOT; };
+		E2640A8C1A1278390070493F /* DWBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DWBubbleMenuButton.h; path = Source/Classes/DWBubbleMenuButton.h; sourceTree = SOURCE_ROOT; };
+		E2640A8D1A1278390070493F /* DWBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DWBubbleMenuButton.m; path = Source/Classes/DWBubbleMenuButton.m; sourceTree = SOURCE_ROOT; };
 		E293FBFB1A1103F7001F8910 /* DetailsHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsHouseViewController.h; path = Source/Classes/DetailsHouseViewController.h; sourceTree = SOURCE_ROOT; };
 		E293FBFC1A1103F7001F8910 /* DetailsHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsHouseViewController.m; path = Source/Classes/DetailsHouseViewController.m; sourceTree = SOURCE_ROOT; };
 		E293FBFD1A1103F7001F8910 /* DetailsHouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailsHouseViewController.xib; path = Source/Classes/DetailsHouseViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -304,8 +304,8 @@
 		E2E067F61A0AB41E00A0FE4E /* External Classes */ = {
 			isa = PBXGroup;
 			children = (
-				544C6A741A0FA0490057C2E3 /* CDSideBarController.h */,
-				544C6A751A0FA0490057C2E3 /* CDSideBarController.m */,
+				E2640A8C1A1278390070493F /* DWBubbleMenuButton.h */,
+				E2640A8D1A1278390070493F /* DWBubbleMenuButton.m */,
 			);
 			name = "External Classes";
 			sourceTree = "<group>";
@@ -427,11 +427,11 @@
 				544C6A971A0FA0490057C2E3 /* FiltersViewController.m in Sources */,
 				544C6A9F1A0FA0490057C2E3 /* OverlayView.m in Sources */,
 				544C6A961A0FA0490057C2E3 /* DraggableViewBackground.m in Sources */,
-				544C6A921A0FA0490057C2E3 /* CDSideBarController.m in Sources */,
 				544C6AA01A0FA0490057C2E3 /* UserDetailsViewController.m in Sources */,
 				544C6A9A1A0FA0490057C2E3 /* House.m in Sources */,
 				544C6A911A0FA0490057C2E3 /* AppDelegate.m in Sources */,
 				544C6A8F1A0FA0490057C2E3 /* AddHouseViewController.m in Sources */,
+				E2640A8E1A1278390070493F /* DWBubbleMenuButton.m in Sources */,
 				544C6A9B1A0FA0490057C2E3 /* HouseTableViewCell.m in Sources */,
 				544C6A951A0FA0490057C2E3 /* DraggableView.m in Sources */,
 				544C6A9E1A0FA0490057C2E3 /* LoginViewController.m in Sources */,

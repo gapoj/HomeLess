@@ -51,10 +51,12 @@
                         </button>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dqx-fV-Kyz">
                             <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                            <color key="backgroundColor" red="0.077697948219999993" green="0.80927309780000001" blue="0.066909399999999994" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
                             <segments>
                                 <segment title="YES"/>
                                 <segment title="NO"/>
                             </segments>
+                            <color key="tintColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
                                 <rect key="frame" x="30" y="642" width="103" height="29"/>
                             </variation>
@@ -346,7 +348,7 @@
                     <include reference="Sen-fK-OEe"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="140" y="199"/>
+            <point key="canvasLocation" x="140" y="302"/>
         </view>
     </objects>
     <resources>

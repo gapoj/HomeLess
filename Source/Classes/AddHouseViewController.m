@@ -50,34 +50,19 @@
 }
 
 - (IBAction)onAddPhotos:(id)sender {
-   PhotoAppViewController *vc = [[PhotoAppViewController alloc] init];
-    [self showViewController:vc sender:self];
-   /* if (([UIImagePickerController isSourceTypeAvailable:
-          UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)) {
-        return;
-    }
-    
-    UIImagePickerController *mediaUI = [[UIImagePickerController alloc] init];
-    mediaUI.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
-    // Displays saved pictures from the Camera Roll album.
-    mediaUI.mediaTypes = @[(NSString*)kUTTypeImage];
-    
-    // Hides the controls for moving & scaling pictures
-    mediaUI.allowsEditing = NO;
-    
-    mediaUI.delegate = self;
-    
-    [self presentModalViewController: mediaUI animated: YES];*/
+    UIImagePickerController * picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    [self presentViewController:picker animated:YES completion:^{
+        
+    }];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    //imageView1.image = image;
-   // [picker release];
-    [self dismissModalViewControllerAnimated:YES];
-    
+    self.mainPhoto.image = image;
+    self.mainPhoto.contentMode = UIViewContentModeScaleAspectFit;
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     
