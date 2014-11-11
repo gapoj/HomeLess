@@ -9,7 +9,8 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "AddHouseViewController.h"
 #import "House.h"
-
+#import <MobileCoreServices/UTCoreTypes.h>
+#import "PhotoAppViewController.h"
 @interface AddHouseViewController ()<UITextViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *mainPhoto;
 @property (weak, nonatomic) IBOutlet UITextField *PriceTextField;
@@ -31,8 +32,9 @@
 @property BOOL isDogAllowed;
 @property BOOL isCatAllowed;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *garageSegmentControl;
-@end
+@property (nonatomic) UIImagePickerController *imagePickerController;
 
+@end
 @implementation AddHouseViewController
 
 - (void)viewDidLoad {
@@ -48,19 +50,33 @@
 }
 
 - (IBAction)onAddPhotos:(id)sender {
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+   PhotoAppViewController *vc = [[PhotoAppViewController alloc] init];
+    [self showViewController:vc sender:self];
+   /* if (([UIImagePickerController isSourceTypeAvailable:
+          UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)) {
+        return;
+    }
     
-    [self presentViewController:picker animated:YES completion:NULL];
+    UIImagePickerController *mediaUI = [[UIImagePickerController alloc] init];
+    mediaUI.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    // Displays saved pictures from the Camera Roll album.
+    mediaUI.mediaTypes = @[(NSString*)kUTTypeImage];
+    
+    // Hides the controls for moving & scaling pictures
+    mediaUI.allowsEditing = NO;
+    
+    mediaUI.delegate = self;
+    
+    [self presentModalViewController: mediaUI animated: YES];*/
 }
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.mainPhoto.image = chosenImage;
-     self.mainPhoto.contentMode = UIViewContentModeScaleAspectFit;
-    [picker dismissViewControllerAnimated:YES completion:NULL];
+
+    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    //imageView1.image = image;
+   // [picker release];
+    [self dismissModalViewControllerAnimated:YES];
     
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -129,7 +145,6 @@
         
         }
     }];
-
     
 }
 - (IBAction)onCatPressed:(id)sender {
