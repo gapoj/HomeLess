@@ -6,7 +6,7 @@
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "DWBubbleMenuButton.h"
-
+#import "SendMessageViewController.h"
 @interface HomeViewController (){
 
     UIButton* infoButton;
@@ -64,14 +64,26 @@
 
 -(void) showInfo
 {
-    DetailsHouseViewController *detailsViewController = [[DetailsHouseViewController alloc] init];
-    [self showViewController:detailsViewController sender:self];
+   
+    PFQuery *housesQuery = [House query];
+    [housesQuery whereKey:@"title" equalTo:@"barbara 1"];
+    [housesQuery includeKey:@"owner"];
+    [housesQuery findObjectsInBackgroundWithBlock:^(NSArray *houses, NSError *error) {
+        if(error){
+            NSLog(@"Error: %@",error);
+        }else{
+            SendMessageViewController *vc = [[SendMessageViewController alloc]init];
+            vc.relatedHouse = houses[0];
+            [self showViewController:vc sender:self];
+        }
+    }];
+    //DetailsHouseViewController *detailsViewController = [[DetailsHouseViewController alloc] init];
+    //[self showViewController:detailsViewController sender:self];
 }
 
 -(void) showHome
 {
-    [self dismissViewControllerAnimated:YES completion:^{
-    }];
+   
 }
 
 - (UILabel *)createHomeButtonView {

@@ -10,7 +10,7 @@
 #import "AddHouseViewController.h"
 #import "House.h"
 #import <MobileCoreServices/UTCoreTypes.h>
-#import "PhotoAppViewController.h"
+
 @interface AddHouseViewController ()<UITextViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *mainPhoto;
 @property (weak, nonatomic) IBOutlet UITextField *PriceTextField;

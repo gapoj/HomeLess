@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		180CBF051A11870800AE563C /* PhotoAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CBF031A11870800AE563C /* PhotoAppViewController.m */; };
-		180CBF061A11870800AE563C /* PhotoAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180CBF041A11870800AE563C /* PhotoAppViewController.xib */; };
+		180CBF0F1A12BEDC00AE563C /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CBF0B1A12BEDC00AE563C /* Message.m */; };
+		180CBF101A12BEDC00AE563C /* SendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CBF0D1A12BEDC00AE563C /* SendMessageViewController.m */; };
+		180CBF111A12BEDC00AE563C /* SendMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180CBF0E1A12BEDC00AE563C /* SendMessageViewController.xib */; };
 		30C949AC1829561000B17666 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C949AB1829561000B17666 /* FacebookSDK.framework */; };
 		544C6A8F1A0FA0490057C2E3 /* AddHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A701A0FA0490057C2E3 /* AddHouseViewController.m */; };
 		544C6A901A0FA0490057C2E3 /* AddHouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544C6A711A0FA0490057C2E3 /* AddHouseViewController.xib */; };
@@ -58,11 +59,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		180CBF021A11870800AE563C /* PhotoAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoAppViewController.h; path = Source/Classes/PhotoAppViewController.h; sourceTree = SOURCE_ROOT; };
-		180CBF031A11870800AE563C /* PhotoAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoAppViewController.m; path = Source/Classes/PhotoAppViewController.m; sourceTree = SOURCE_ROOT; };
-		180CBF041A11870800AE563C /* PhotoAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoAppViewController.xib; path = Source/Classes/PhotoAppViewController.xib; sourceTree = SOURCE_ROOT; };
+		180CBF0A1A12BEDC00AE563C /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = Source/Classes/Message.h; sourceTree = SOURCE_ROOT; };
+		180CBF0B1A12BEDC00AE563C /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = Source/Classes/Message.m; sourceTree = SOURCE_ROOT; };
+		180CBF0C1A12BEDC00AE563C /* SendMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendMessageViewController.h; path = Source/Classes/SendMessageViewController.h; sourceTree = SOURCE_ROOT; };
+		180CBF0D1A12BEDC00AE563C /* SendMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SendMessageViewController.m; path = Source/Classes/SendMessageViewController.m; sourceTree = SOURCE_ROOT; };
+		180CBF0E1A12BEDC00AE563C /* SendMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SendMessageViewController.xib; path = Source/Classes/SendMessageViewController.xib; sourceTree = SOURCE_ROOT; };
 		30C949AB1829561000B17666 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		544C6A6F1A0FA0490057C2E3 /* AddHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddHouseViewController.h; path = Source/Classes/AddHouseViewController.h; sourceTree = SOURCE_ROOT; };
 		544C6A701A0FA0490057C2E3 /* AddHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddHouseViewController.m; path = Source/Classes/AddHouseViewController.m; sourceTree = SOURCE_ROOT; };
 		544C6A711A0FA0490057C2E3 /* AddHouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddHouseViewController.xib; path = Source/Classes/AddHouseViewController.xib; sourceTree = SOURCE_ROOT; };
 		544C6A721A0FA0490057C2E3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Source/Classes/AppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -283,6 +285,9 @@
 		E24998231A1147E800E9969D /* MessagesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				180CBF0C1A12BEDC00AE563C /* SendMessageViewController.h */,
+				180CBF0D1A12BEDC00AE563C /* SendMessageViewController.m */,
+				180CBF0E1A12BEDC00AE563C /* SendMessageViewController.xib */,
 				E249981E1A1135A100E9969D /* MessagesViewController.h */,
 				E249981F1A1135A100E9969D /* MessagesViewController.m */,
 				E24998201A1135A100E9969D /* MessagesViewController.xib */,
@@ -313,10 +318,6 @@
 		E2EDA5561A0D2C6600848400 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				180CBF021A11870800AE563C /* PhotoAppViewController.h */,
-				180CBF031A11870800AE563C /* PhotoAppViewController.m */,
-				180CBF041A11870800AE563C /* PhotoAppViewController.xib */,
-				544C6A6F1A0FA0490057C2E3 /* AddHouseViewController.h */,
 				544C6A701A0FA0490057C2E3 /* AddHouseViewController.m */,
 				544C6A711A0FA0490057C2E3 /* AddHouseViewController.xib */,
 				544C6A841A0FA0490057C2E3 /* HouseTableViewCell.h */,
@@ -342,6 +343,8 @@
 		E2EDA5581A0D2CC000848400 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				180CBF0A1A12BEDC00AE563C /* Message.h */,
+				180CBF0B1A12BEDC00AE563C /* Message.m */,
 				544C6A821A0FA0490057C2E3 /* House.h */,
 				544C6A831A0FA0490057C2E3 /* House.m */,
 			);
@@ -403,7 +406,6 @@
 				E293FBFF1A1103F7001F8910 /* DetailsHouseViewController.xib in Resources */,
 				544C6A901A0FA0490057C2E3 /* AddHouseViewController.xib in Resources */,
 				544C6AA81A0FA1110057C2E3 /* InfoPlist.strings in Resources */,
-				180CBF061A11870800AE563C /* PhotoAppViewController.xib in Resources */,
 				544C6AB51A0FA1360057C2E3 /* Default-568h@2x.png in Resources */,
 				E24998221A1135A100E9969D /* MessagesViewController.xib in Resources */,
 				544C6ABE1A0FA1360057C2E3 /* LoginViewController.xib in Resources */,
@@ -411,6 +413,7 @@
 				544C6AA11A0FA0490057C2E3 /* UserDetailsViewController.xib in Resources */,
 				544C6AB71A0FA1360057C2E3 /* Default@2x.png in Resources */,
 				544C6A981A0FA0490057C2E3 /* FiltersViewController.xib in Resources */,
+				180CBF111A12BEDC00AE563C /* SendMessageViewController.xib in Resources */,
 				544C6A9C1A0FA0490057C2E3 /* HouseTableViewCell.xib in Resources */,
 				544C6AA91A0FA1110057C2E3 /* HomeLess-Info.plist in Resources */,
 				544C6AB61A0FA1360057C2E3 /* Default.png in Resources */,
@@ -433,11 +436,12 @@
 				544C6A8F1A0FA0490057C2E3 /* AddHouseViewController.m in Sources */,
 				E2640A8E1A1278390070493F /* DWBubbleMenuButton.m in Sources */,
 				544C6A9B1A0FA0490057C2E3 /* HouseTableViewCell.m in Sources */,
+				180CBF0F1A12BEDC00AE563C /* Message.m in Sources */,
 				544C6A951A0FA0490057C2E3 /* DraggableView.m in Sources */,
 				544C6A9E1A0FA0490057C2E3 /* LoginViewController.m in Sources */,
 				E24998211A1135A100E9969D /* MessagesViewController.m in Sources */,
+				180CBF101A12BEDC00AE563C /* SendMessageViewController.m in Sources */,
 				E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */,
-				180CBF051A11870800AE563C /* PhotoAppViewController.m in Sources */,
 				544C6AAA1A0FA1110057C2E3 /* main.m in Sources */,
 				544C6A991A0FA0490057C2E3 /* HomeViewController.m in Sources */,
 			);
