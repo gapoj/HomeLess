@@ -4,6 +4,7 @@
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "Message.h"
+#import "HomeViewController.h"
 
 @interface MessagesViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -22,19 +23,19 @@
         MessagesViewController *vc = [[MessagesViewController alloc] init];
         vc.inbox = NO;
         [self showViewController:vc sender:self];
-
+        
     } else {
         [self dismissViewControllerAnimated:YES completion:^{
             
         }];
     }
-   
+    
 }
 - (void)loadMessages {
     PFQuery *messagesQuery = [Message query];
     if (self.inbox) {
         [messagesQuery whereKey:@"receiver" equalTo:[PFUser currentUser]];
-
+        
     } else {
         [messagesQuery whereKey:@"sender" equalTo:[PFUser currentUser]];
     }
@@ -51,7 +52,14 @@
     
 }
 - (IBAction)onHomePressed:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    if (!self.inbox) {
+        HomeViewController *detailsViewController = [[HomeViewController alloc]init];
+        [self showViewController:detailsViewController sender:self];
+    }else{
+        [self dismissViewControllerAnimated:YES completion:^{
+        }];
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -65,7 +73,7 @@
         [self.folderButton setTitle:@"Go to inbox" forState:UIControlStateNormal];
         self.folderLabel.text = @"Sent messages";
     }
-
+    
     
 }
 #pragma mark - Table view delegate
@@ -103,7 +111,7 @@
     {
         cell.date.font = [UIFont systemFontOfSize:17.0];
         cell.message.font = [UIFont systemFontOfSize:17.0];
-
+        
     }
     return cell;
 }

@@ -8,6 +8,7 @@
 #import "DWBubbleMenuButton.h"
 #import "SendMessageViewController.h"
 #import "MessagesViewController.h"
+#import "LoginViewController.h"
 
 @interface HomeViewController (){
     
@@ -56,7 +57,8 @@
 -(void) logoutUser
 {
     [PFUser logOut];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    LoginViewController * detailsViewController = [[LoginViewController alloc]init];
+    [self showViewController:detailsViewController sender:self];
 }
 
 -(void) showFavorites

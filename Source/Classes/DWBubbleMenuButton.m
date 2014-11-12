@@ -343,7 +343,7 @@
         case DirectionDown:
         {
             self.homeButtonView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
-            self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1];
+            self.backgroundColor = [UIColor whiteColor];
             CGRect frame = self.frame;
             frame.size.height += buttonHeight;
             self.frame = frame;
