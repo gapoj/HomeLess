@@ -81,8 +81,7 @@
             [self showViewController:vc sender:self];
         }
     }];
-    //DetailsHouseViewController *detailsViewController = [[DetailsHouseViewController alloc] init];
-    //[self showViewController:detailsViewController sender:self];
+ 
 }
 
 - (UILabel *)createHomeButtonView {

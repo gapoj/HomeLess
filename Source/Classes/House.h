@@ -15,10 +15,8 @@
 @property NSString *houseDescription;
 @property NSString *rentOrSale;
 @property NSInteger rooms;
-@property NSInteger bathrooms
-;
-@property NSInteger squareMeters
-;
+@property NSInteger bathrooms;
+@property NSInteger squareMeters;
 
 @property BOOL isDogAllowed;
 @property BOOL isCatAllowed;

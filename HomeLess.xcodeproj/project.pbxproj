@@ -10,6 +10,9 @@
 		180CBF0F1A12BEDC00AE563C /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CBF0B1A12BEDC00AE563C /* Message.m */; };
 		180CBF101A12BEDC00AE563C /* SendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CBF0D1A12BEDC00AE563C /* SendMessageViewController.m */; };
 		180CBF111A12BEDC00AE563C /* SendMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180CBF0E1A12BEDC00AE563C /* SendMessageViewController.xib */; };
+		18C09E2D1A13EADA00887EAA /* HousePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C09E291A13EADA00887EAA /* HousePhoto.m */; };
+		18C09E2E1A13EADA00887EAA /* MessageDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C09E2B1A13EADA00887EAA /* MessageDetailsViewController.m */; };
+		18C09E2F1A13EADA00887EAA /* MessageDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C09E2C1A13EADA00887EAA /* MessageDetailsViewController.xib */; };
 		18EC79641A138C00000BBD48 /* InboxMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EC79621A138C00000BBD48 /* InboxMessageTableViewCell.m */; };
 		18EC79651A138C00000BBD48 /* InboxMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EC79631A138C00000BBD48 /* InboxMessageTableViewCell.xib */; };
 		30C949AC1829561000B17666 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C949AB1829561000B17666 /* FacebookSDK.framework */; };
@@ -66,6 +69,12 @@
 		180CBF0C1A12BEDC00AE563C /* SendMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendMessageViewController.h; path = Source/Classes/SendMessageViewController.h; sourceTree = SOURCE_ROOT; };
 		180CBF0D1A12BEDC00AE563C /* SendMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SendMessageViewController.m; path = Source/Classes/SendMessageViewController.m; sourceTree = SOURCE_ROOT; };
 		180CBF0E1A12BEDC00AE563C /* SendMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SendMessageViewController.xib; path = Source/Classes/SendMessageViewController.xib; sourceTree = SOURCE_ROOT; };
+		18C09E271A13EADA00887EAA /* AddHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddHouseViewController.h; path = ../../Source/Classes/AddHouseViewController.h; sourceTree = "<group>"; };
+		18C09E281A13EADA00887EAA /* HousePhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HousePhoto.h; path = Source/Classes/HousePhoto.h; sourceTree = "<group>"; };
+		18C09E291A13EADA00887EAA /* HousePhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HousePhoto.m; path = Source/Classes/HousePhoto.m; sourceTree = "<group>"; };
+		18C09E2A1A13EADA00887EAA /* MessageDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageDetailsViewController.h; path = Source/Classes/MessageDetailsViewController.h; sourceTree = "<group>"; };
+		18C09E2B1A13EADA00887EAA /* MessageDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageDetailsViewController.m; path = Source/Classes/MessageDetailsViewController.m; sourceTree = "<group>"; };
+		18C09E2C1A13EADA00887EAA /* MessageDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageDetailsViewController.xib; path = Source/Classes/MessageDetailsViewController.xib; sourceTree = "<group>"; };
 		18EC79611A138C00000BBD48 /* InboxMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InboxMessageTableViewCell.h; path = Source/Classes/InboxMessageTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		18EC79621A138C00000BBD48 /* InboxMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InboxMessageTableViewCell.m; path = Source/Classes/InboxMessageTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		18EC79631A138C00000BBD48 /* InboxMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InboxMessageTableViewCell.xib; path = Source/Classes/InboxMessageTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -261,6 +270,11 @@
 		D4DA79DF14D3345A0055F672 = {
 			isa = PBXGroup;
 			children = (
+				18C09E281A13EADA00887EAA /* HousePhoto.h */,
+				18C09E291A13EADA00887EAA /* HousePhoto.m */,
+				18C09E2A1A13EADA00887EAA /* MessageDetailsViewController.h */,
+				18C09E2B1A13EADA00887EAA /* MessageDetailsViewController.m */,
+				18C09E2C1A13EADA00887EAA /* MessageDetailsViewController.xib */,
 				8103BCD219AD217900BCF4C7 /* Classes */,
 				E2EDA5581A0D2CC000848400 /* Data Model */,
 				D4DA79ED14D3345A0055F672 /* Frameworks */,
@@ -326,6 +340,7 @@
 		E2EDA5561A0D2C6600848400 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				18C09E271A13EADA00887EAA /* AddHouseViewController.h */,
 				544C6A701A0FA0490057C2E3 /* AddHouseViewController.m */,
 				544C6A711A0FA0490057C2E3 /* AddHouseViewController.xib */,
 				544C6A841A0FA0490057C2E3 /* HouseTableViewCell.h */,
@@ -425,6 +440,7 @@
 				544C6A9C1A0FA0490057C2E3 /* HouseTableViewCell.xib in Resources */,
 				18EC79651A138C00000BBD48 /* InboxMessageTableViewCell.xib in Resources */,
 				544C6AA91A0FA1110057C2E3 /* HomeLess-Info.plist in Resources */,
+				18C09E2F1A13EADA00887EAA /* MessageDetailsViewController.xib in Resources */,
 				544C6AB61A0FA1360057C2E3 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +470,8 @@
 				E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */,
 				544C6AAA1A0FA1110057C2E3 /* main.m in Sources */,
 				544C6A991A0FA0490057C2E3 /* HomeViewController.m in Sources */,
+				18C09E2D1A13EADA00887EAA /* HousePhoto.m in Sources */,
+				18C09E2E1A13EADA00887EAA /* MessageDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

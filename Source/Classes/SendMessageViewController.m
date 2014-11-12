@@ -5,7 +5,7 @@
 //  Created by Guillermo Apoj on 11/11/14.
 //
 //
-
+#import "HomeViewController.h"
 #import "SendMessageViewController.h"
 
 @interface SendMessageViewController ()<UITextViewDelegate>
@@ -18,6 +18,7 @@
 @end
 
 @implementation SendMessageViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -82,9 +83,7 @@
     return YES;
 }
 
-- (IBAction)onHomePressed:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+
 
 - (IBAction)onCancel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{

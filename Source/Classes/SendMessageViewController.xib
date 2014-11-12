@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendMessageViewController">
@@ -102,31 +101,6 @@
                         <action selector="onCancel:" destination="-1" eventType="touchUpInside" id="mgu-xi-DiA"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnN-fx-lof">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="54" id="BU2-yw-WEN"/>
-                        <constraint firstAttribute="height" constant="49" id="KhT-xt-evu"/>
-                    </constraints>
-                    <state key="normal" image="menuHome">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="BU2-yw-WEN"/>
-                            <exclude reference="KhT-xt-evu"/>
-                        </mask>
-                    </variation>
-                    <variation key="widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="BU2-yw-WEN"/>
-                            <include reference="KhT-xt-evu"/>
-                        </mask>
-                    </variation>
-                    <connections>
-                        <action selector="onHomePressed:" destination="-1" eventType="touchUpInside" id="thP-CP-rXP"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.2416964731" blue="1" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
             <constraints>
@@ -134,7 +108,6 @@
                 <constraint firstItem="nFW-2f-ICN" firstAttribute="centerX" secondItem="JOe-bQ-mdH" secondAttribute="centerX" id="4Sx-d2-upQ"/>
                 <constraint firstItem="0ri-WN-MZw" firstAttribute="bottom" secondItem="Mhh-G9-5dX" secondAttribute="bottom" id="7Y5-5z-jdf"/>
                 <constraint firstItem="ws4-pR-8QU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="1" id="Brw-Gv-bXc"/>
-                <constraint firstItem="0ri-WN-MZw" firstAttribute="top" secondItem="mnN-fx-lof" secondAttribute="bottom" constant="50" id="DYJ-8h-BZL"/>
                 <constraint firstItem="dVj-hK-E5l" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ds2-sH-GdG"/>
                 <constraint firstItem="JOe-bQ-mdH" firstAttribute="top" secondItem="dVj-hK-E5l" secondAttribute="bottom" constant="8" symbolic="YES" id="GY3-bt-Uh8"/>
                 <constraint firstItem="dVj-hK-E5l" firstAttribute="top" secondItem="zyw-0L-frO" secondAttribute="bottom" constant="8" symbolic="YES" id="HQ2-pw-0ej"/>
@@ -151,7 +124,6 @@
                 <constraint firstItem="nFW-2f-ICN" firstAttribute="top" secondItem="ws4-pR-8QU" secondAttribute="bottom" constant="23" id="UuV-ce-Kix"/>
                 <constraint firstAttribute="trailing" secondItem="0ri-WN-MZw" secondAttribute="trailing" constant="32" id="V68-lm-GHu"/>
                 <constraint firstAttribute="trailing" secondItem="JOe-bQ-mdH" secondAttribute="trailing" constant="2" id="ayE-Fo-K18"/>
-                <constraint firstItem="mnN-fx-lof" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="h0y-n7-4QF"/>
                 <constraint firstItem="nFW-2f-ICN" firstAttribute="leading" secondItem="zyw-0L-frO" secondAttribute="trailing" constant="19" id="ifX-3M-mYv"/>
                 <constraint firstAttribute="trailing" secondItem="Qv1-Ff-ADj" secondAttribute="trailing" constant="58" id="lzd-ws-Xtx"/>
                 <constraint firstItem="Mhh-G9-5dX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="55" id="mCo-9N-DUR">
@@ -169,31 +141,28 @@
                     <exclude reference="0ri-WN-MZw"/>
                     <exclude reference="JOe-bQ-mdH"/>
                     <exclude reference="Mhh-G9-5dX"/>
-                    <exclude reference="mnN-fx-lof"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="Brw-Gv-bXc"/>
-                    <exclude reference="Hus-wU-n3M"/>
-                    <exclude reference="QeX-kw-jwi"/>
                     <exclude reference="Hv8-jT-aYG"/>
                     <exclude reference="lzd-ws-Xtx"/>
-                    <exclude reference="RbP-u4-kYM"/>
-                    <exclude reference="UpK-oJ-OOn"/>
+                    <exclude reference="Ds2-sH-GdG"/>
+                    <exclude reference="HQ2-pw-0ej"/>
                     <exclude reference="436-GX-2Tf"/>
                     <exclude reference="4Sx-d2-upQ"/>
                     <exclude reference="UuV-ce-Kix"/>
                     <exclude reference="ifX-3M-mYv"/>
-                    <exclude reference="Ds2-sH-GdG"/>
-                    <exclude reference="HQ2-pw-0ej"/>
+                    <exclude reference="Brw-Gv-bXc"/>
+                    <exclude reference="Hus-wU-n3M"/>
+                    <exclude reference="QeX-kw-jwi"/>
+                    <exclude reference="RbP-u4-kYM"/>
+                    <exclude reference="UpK-oJ-OOn"/>
+                    <exclude reference="7Y5-5z-jdf"/>
+                    <exclude reference="V68-lm-GHu"/>
+                    <exclude reference="JEF-K4-VJC"/>
+                    <exclude reference="mCo-9N-DUR"/>
                     <exclude reference="GY3-bt-Uh8"/>
                     <exclude reference="ayE-Fo-K18"/>
                     <exclude reference="syf-Xo-V6R"/>
-                    <exclude reference="JEF-K4-VJC"/>
-                    <exclude reference="mCo-9N-DUR"/>
-                    <exclude reference="h0y-n7-4QF"/>
-                    <exclude reference="7Y5-5z-jdf"/>
-                    <exclude reference="DYJ-8h-BZL"/>
-                    <exclude reference="V68-lm-GHu"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -206,38 +175,34 @@
                     <include reference="0ri-WN-MZw"/>
                     <include reference="JOe-bQ-mdH"/>
                     <include reference="Mhh-G9-5dX"/>
-                    <include reference="mnN-fx-lof"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="Brw-Gv-bXc"/>
-                    <include reference="Hus-wU-n3M"/>
-                    <include reference="QeX-kw-jwi"/>
                     <include reference="Hv8-jT-aYG"/>
                     <include reference="lzd-ws-Xtx"/>
-                    <include reference="RbP-u4-kYM"/>
-                    <include reference="UpK-oJ-OOn"/>
+                    <include reference="Ds2-sH-GdG"/>
+                    <include reference="HQ2-pw-0ej"/>
                     <include reference="436-GX-2Tf"/>
                     <include reference="4Sx-d2-upQ"/>
                     <include reference="UuV-ce-Kix"/>
                     <include reference="ifX-3M-mYv"/>
-                    <include reference="Ds2-sH-GdG"/>
-                    <include reference="HQ2-pw-0ej"/>
+                    <include reference="Brw-Gv-bXc"/>
+                    <include reference="Hus-wU-n3M"/>
+                    <include reference="QeX-kw-jwi"/>
+                    <include reference="RbP-u4-kYM"/>
+                    <include reference="UpK-oJ-OOn"/>
+                    <include reference="7Y5-5z-jdf"/>
+                    <include reference="V68-lm-GHu"/>
+                    <include reference="JEF-K4-VJC"/>
+                    <include reference="mCo-9N-DUR"/>
                     <include reference="GY3-bt-Uh8"/>
                     <include reference="ayE-Fo-K18"/>
                     <include reference="syf-Xo-V6R"/>
-                    <include reference="JEF-K4-VJC"/>
-                    <include reference="mCo-9N-DUR"/>
-                    <include reference="h0y-n7-4QF"/>
-                    <include reference="7Y5-5z-jdf"/>
-                    <include reference="DYJ-8h-BZL"/>
-                    <include reference="V68-lm-GHu"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="477" y="158"/>
         </view>
     </objects>
     <resources>
-        <image name="menuHome" width="256" height="256"/>
         <image name="sent-25" width="25" height="25"/>
         <image name="trash-25" width="25" height="25"/>
     </resources>

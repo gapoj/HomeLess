@@ -119,11 +119,11 @@
                     <exclude reference="YTX-KK-tG0"/>
                     <exclude reference="dQ3-fy-FRZ"/>
                     <exclude reference="Fkb-ft-uh6"/>
+                    <exclude reference="I9a-bt-Sii"/>
                     <exclude reference="CfU-4a-AxB"/>
                     <exclude reference="cFH-Um-FFC"/>
                     <exclude reference="gGg-Rk-xRi"/>
                     <exclude reference="lG9-EM-9d0"/>
-                    <exclude reference="I9a-bt-Sii"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -139,11 +139,11 @@
                     <include reference="YTX-KK-tG0"/>
                     <include reference="dQ3-fy-FRZ"/>
                     <include reference="Fkb-ft-uh6"/>
+                    <include reference="I9a-bt-Sii"/>
                     <include reference="CfU-4a-AxB"/>
                     <include reference="cFH-Um-FFC"/>
                     <include reference="gGg-Rk-xRi"/>
                     <include reference="lG9-EM-9d0"/>
-                    <include reference="I9a-bt-Sii"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="137" y="104"/>
