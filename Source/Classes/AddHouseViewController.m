@@ -86,6 +86,9 @@
     sliderVal = self.bathroomsSlider.value;
     self.bathroomsLabel.text= [NSString stringWithFormat:@"%d", sliderVal];
 }
+- (IBAction)onHomeButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 - (IBAction)onSave:(id)sender {
     House *newHouse = [House object];
     newHouse.owner = [PFUser currentUser];

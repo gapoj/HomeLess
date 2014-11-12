@@ -74,6 +74,9 @@
         }
     }];
 }
+- (IBAction)onHomeButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark Actions
 

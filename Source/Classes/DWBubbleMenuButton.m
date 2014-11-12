@@ -149,6 +149,8 @@
 }
 
 - (void)dismissButtons {
+    self.backgroundColor = [UIColor whiteColor];
+
     if ([self.delegate respondsToSelector:@selector(bubbleMenuButtonWillCollapse:)]) {
         [self.delegate bubbleMenuButtonWillCollapse:self];
     }
@@ -341,7 +343,7 @@
         case DirectionDown:
         {
             self.homeButtonView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
-            
+            self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1];
             CGRect frame = self.frame;
             frame.size.height += buttonHeight;
             self.frame = frame;

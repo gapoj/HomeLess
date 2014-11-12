@@ -82,6 +82,9 @@
     return YES;
 }
 
+- (IBAction)onHomePressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (IBAction)onCancel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{
@@ -132,13 +135,8 @@
                                                                          delegate:nil
                                                                 cancelButtonTitle:@"OK"
                                                                 otherButtonTitles: nil];
-                    
                     [myAlertView show];
-                    
-                    
                 }];
-                
-                
             }
         }];
     }

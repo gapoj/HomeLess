@@ -10,7 +10,7 @@
 #import "MessagesViewController.h"
 
 @interface HomeViewController (){
-
+    
     UIButton* infoButton;
 }
 @end
@@ -28,7 +28,7 @@
     [infoButton addTarget:self action:@selector(showInfo) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:infoButton];
     UILabel *homeLabel = [self createHomeButtonView];
-    DWBubbleMenuButton *menuButton = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(270,10,50,50) expansionDirection:DirectionDown];
+    DWBubbleMenuButton *menuButton = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(260,10,50,50) expansionDirection:DirectionDown];
     menuButton.homeButtonView = homeLabel;
     [menuButton addButtons:[self createDemoButtonArray]];
     [self.view addSubview:menuButton];
@@ -38,10 +38,6 @@
 {
     [super viewDidAppear:animated];
 }
-
-
-
-
 
 - (void)showUserDetails {
     UserDetailsViewController *detailsViewController = [[UserDetailsViewController alloc] init];
@@ -70,7 +66,7 @@
 
 -(void) showInfo
 {
-   
+    
     PFQuery *housesQuery = [House query];
     [housesQuery whereKey:@"title" equalTo:@"karen 2 "];
     [housesQuery includeKey:@"owner"];
@@ -87,11 +83,6 @@
     //[self showViewController:detailsViewController sender:self];
 }
 
--(void) showHome
-{
-   
-}
-
 - (UILabel *)createHomeButtonView {
     UILabel *label = [[UILabel alloc] init ];
     label.frame = CGRectMake(10, 10, 50, 50);
@@ -103,7 +94,7 @@
 
 - (NSArray *)createDemoButtonArray {
     NSMutableArray *buttonsMutable = [[NSMutableArray alloc] init];
-    NSArray *imageList = @[[UIImage imageNamed:@"menuHome"], [UIImage imageNamed:@"menuUsers"], [UIImage imageNamed:@"menuFavorite"],[UIImage imageNamed:@"menuFilters"],[UIImage imageNamed:@"menuChat"],[UIImage imageNamed:@"menuLogout"]];
+    NSArray *imageList = @[[UIImage imageNamed:@"menuUsers"], [UIImage imageNamed:@"menuFavorite"],[UIImage imageNamed:@"menuFilters"],[UIImage imageNamed:@"menuChat"],[UIImage imageNamed:@"menuLogout"]];
     int i = 0;
     for (UIImage *image in imageList){
         UIButton *button = [[UIButton alloc]init];
@@ -120,21 +111,18 @@
 - (void)showNextController:(UIButton *)sender {
     switch (sender.tag) {
         case 0:
-            [self showHome];
-            break;
-        case 1:
             [self showUserDetails];
             break;
-        case 2:
+        case 1:
             [self showFavorites];
             break;
-        case 3:
+        case 2:
             [self showFiltersrDetails];
             break;
-        case 4:
-             [self showMessages];
+        case 3:
+            [self showMessages];
             break;
-        case 5:
+        case 4:
             [self logoutUser];
             break;
         default:
