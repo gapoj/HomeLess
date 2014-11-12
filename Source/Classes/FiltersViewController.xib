@@ -6,14 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FiltersViewController">
             <connections>
-                <outlet property="bathsSlider" destination="8RU-33-0LR" id="2Hy-6f-pYc"/>
-                <outlet property="bathsValueLabel" destination="HGE-nU-8hQ" id="5Dl-8D-2lo"/>
                 <outlet property="petLabel" destination="Flq-pv-F9R" id="EnS-SN-6D7"/>
-                <outlet property="roomsSlider" destination="O5r-De-2HN" id="42P-fE-Fjv"/>
-                <outlet property="roomsValueLabel" destination="Ls6-iI-uSb" id="Dl9-7m-Shf"/>
                 <outlet property="scroller" destination="Qnf-P4-Ugb" id="G8m-wU-rDj"/>
-                <outlet property="sqrMetersSlider" destination="LHX-aJ-usj" id="KCH-Vg-8ym"/>
-                <outlet property="sqrValueLabel" destination="LEP-86-IYG" id="rVV-0L-kxM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -49,155 +43,6 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qnf-P4-Ugb">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoP-Uc-S5x">
-                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <state key="normal" image="cat">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="36" y="759" width="60" height="55"/>
-                            </variation>
-                            <connections>
-                                <action selector="onCatPressed:" destination="-1" eventType="touchUpInside" id="qrh-Ib-ZyO"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdh-c4-dZE">
-                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <state key="normal" image="dog">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="125" y="759" width="60" height="55"/>
-                            </variation>
-                            <connections>
-                                <action selector="onDogPressed:" destination="-1" eventType="touchUpInside" id="MzR-28-xYf"/>
-                            </connections>
-                        </button>
-                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dqx-fV-Kyz">
-                            <rect key="frame" x="-61" y="-14" width="123" height="29"/>
-                            <color key="backgroundColor" red="0.077697948219999993" green="0.80927309780000001" blue="0.066909399999999994" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
-                            <segments>
-                                <segment title="YES"/>
-                                <segment title="NO"/>
-                            </segments>
-                            <color key="tintColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="30" y="644" width="103" height="29"/>
-                            </variation>
-                        </segmentedControl>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbn-x8-OFF">
-                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="33" y="612" width="165" height="18"/>
-                            </variation>
-                        </label>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="8RU-33-0LR">
-                            <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                            <color key="tintColor" red="1" green="0.095412352610000001" blue="0.091958460160000005" alpha="1" colorSpace="calibratedRGB"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="22" y="507" width="223" height="31"/>
-                            </variation>
-                            <connections>
-                                <action selector="onBathsChanged:" destination="-1" eventType="valueChanged" id="CL9-Zg-sxq"/>
-                            </connections>
-                        </slider>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bathrooms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bF-cD-MwG">
-                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="18" y="478" width="167" height="21"/>
-                            </variation>
-                        </label>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="11" translatesAutoresizingMaskIntoConstraints="NO" id="LHX-aJ-usj">
-                            <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                            <color key="tintColor" red="1" green="0.095412352610000001" blue="0.091958460160000005" alpha="1" colorSpace="calibratedRGB"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="19" y="262" width="223" height="31"/>
-                            </variation>
-                            <connections>
-                                <action selector="onSqrMetersChanged:" destination="-1" eventType="valueChanged" id="Cb9-oq-PnW"/>
-                            </connections>
-                        </slider>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Square meters" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qn-OL-0aH">
-                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="18" y="237" width="167" height="21"/>
-                            </variation>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEP-86-IYG">
-                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="196" y="237" width="44" height="21"/>
-                            </variation>
-                        </label>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="O5r-De-2HN">
-                            <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                            <color key="tintColor" red="1" green="0.095412352610000001" blue="0.091958460160000005" alpha="1" colorSpace="calibratedRGB"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="17" y="142" width="223" height="31"/>
-                            </variation>
-                            <connections>
-                                <action selector="onRoomsChanged:" destination="-1" eventType="valueChanged" id="y7x-E5-l1I"/>
-                            </connections>
-                        </slider>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rooms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j12-uM-ohs">
-                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="18" y="113" width="167" height="21"/>
-                            </variation>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ls6-iI-uSb">
-                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="193" y="113" width="44" height="21"/>
-                            </variation>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flq-pv-F9R">
-                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="193" y="776" width="117" height="21"/>
-                            </variation>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Pet Policy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABE-w8-z11">
-                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <color key="backgroundColor" red="0.066591541857545788" green="0.25338921690305782" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="718" width="400" height="21"/>
-                            </variation>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Others" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgt-yf-MZm">
-                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <color key="backgroundColor" red="0.066591541860000006" green="0.25338921689999999" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="575" width="400" height="21"/>
-                            </variation>
-                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Bathrooms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4k-7p-Dt5">
                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                             <color key="backgroundColor" red="0.066591541860000006" green="0.25338921689999999" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
@@ -205,7 +50,7 @@
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="437" width="400" height="21"/>
+                                <rect key="frame" x="0.0" y="390" width="400" height="21"/>
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Price range" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA9-EA-EZe">
@@ -215,7 +60,7 @@
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="326" width="400" height="21"/>
+                                <rect key="frame" x="0.0" y="279" width="400" height="21"/>
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Square footage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k60-Rs-2cL">
@@ -225,7 +70,7 @@
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="198" width="400" height="21"/>
+                                <rect key="frame" x="0.0" y="181" width="400" height="21"/>
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Rooms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwH-Hl-upb">
@@ -236,15 +81,6 @@
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
                                 <rect key="frame" x="0.0" y="84" width="400" height="21"/>
-                            </variation>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGE-nU-8hQ">
-                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="196" y="478" width="44" height="21"/>
                             </variation>
                         </label>
                         <segmentedControl opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j1Y-Ed-wa2">
@@ -259,22 +95,22 @@
                                 <rect key="frame" x="70" y="21" width="167" height="29"/>
                             </variation>
                         </segmentedControl>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ 500" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xOT-RV-6P6">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ 500" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xOT-RV-6P6">
                             <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                             <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="18" y="372" width="97" height="30"/>
+                                <rect key="frame" x="18" y="325" width="97" height="30"/>
                             </variation>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ 10000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ErE-yf-2ba">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ 10000" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ErE-yf-2ba">
                             <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                             <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="152" y="372" width="97" height="30"/>
+                                <rect key="frame" x="152" y="325" width="97" height="30"/>
                             </variation>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYQ-1I-Qxd">
@@ -283,65 +119,220 @@
                             <color key="textColor" red="0.56511124319999995" green="0.56511124319999995" blue="0.56511124319999995" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="123" y="376" width="21" height="21"/>
+                                <rect key="frame" x="123" y="329" width="21" height="21"/>
+                            </variation>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Min value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jXZ-vq-d9W">
+                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                            <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="18" y="223" width="97" height="30"/>
+                            </variation>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Oid-Kz-teC">
+                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                            <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="152" y="223" width="97" height="30"/>
+                            </variation>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQC-53-aAE">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.56511124319999995" green="0.56511124319999995" blue="0.56511124319999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="123" y="227" width="21" height="21"/>
+                            </variation>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Min value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CUr-Iv-WOk">
+                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                            <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="18" y="124" width="97" height="30"/>
+                            </variation>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wyd-8o-OiT">
+                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                            <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="152" y="124" width="97" height="30"/>
+                            </variation>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDy-Me-uDe">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.56511124319999995" green="0.56511124319999995" blue="0.56511124319999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="123" y="128" width="21" height="21"/>
+                            </variation>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Min value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="p64-q1-car">
+                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                            <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="18" y="434" width="97" height="30"/>
+                            </variation>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="m5X-Uh-GxK">
+                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                            <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="152" y="434" width="97" height="30"/>
+                            </variation>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIU-w9-fHb">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.56511124319999995" green="0.56511124319999995" blue="0.56511124319999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="123" y="438" width="21" height="21"/>
+                            </variation>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoP-Uc-S5x">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <state key="normal" image="cat">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="38" y="660" width="60" height="55"/>
+                            </variation>
+                            <connections>
+                                <action selector="onCatPressed:" destination="-1" eventType="touchUpInside" id="qrh-Ib-ZyO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdh-c4-dZE">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <state key="normal" image="dog">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="127" y="660" width="60" height="55"/>
+                            </variation>
+                            <connections>
+                                <action selector="onDogPressed:" destination="-1" eventType="touchUpInside" id="MzR-28-xYf"/>
+                            </connections>
+                        </button>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dqx-fV-Kyz">
+                            <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                            <color key="backgroundColor" red="0.077697948219999993" green="0.80927309780000001" blue="0.066909399999999994" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
+                            <segments>
+                                <segment title="YES"/>
+                                <segment title="NO"/>
+                            </segments>
+                            <color key="tintColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="30" y="561" width="103" height="29"/>
+                            </variation>
+                        </segmentedControl>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbn-x8-OFF">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="33" y="529" width="165" height="18"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flq-pv-F9R">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="195" y="677" width="117" height="21"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Pet Policy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABE-w8-z11">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <color key="backgroundColor" red="0.066591541857545788" green="0.25338921690305782" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="615" width="400" height="21"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Others" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgt-yf-MZm">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <color key="backgroundColor" red="0.066591541860000006" green="0.25338921689999999" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="492" width="400" height="21"/>
                             </variation>
                         </label>
                     </subviews>
                     <variation key="default">
                         <mask key="subviews">
-                            <exclude reference="DoP-Uc-S5x"/>
-                            <exclude reference="Kdh-c4-dZE"/>
-                            <exclude reference="dqx-fV-Kyz"/>
-                            <exclude reference="Qbn-x8-OFF"/>
-                            <exclude reference="8RU-33-0LR"/>
-                            <exclude reference="9bF-cD-MwG"/>
-                            <exclude reference="LHX-aJ-usj"/>
-                            <exclude reference="7Qn-OL-0aH"/>
-                            <exclude reference="LEP-86-IYG"/>
-                            <exclude reference="O5r-De-2HN"/>
-                            <exclude reference="j12-uM-ohs"/>
-                            <exclude reference="Ls6-iI-uSb"/>
-                            <exclude reference="Flq-pv-F9R"/>
-                            <exclude reference="ABE-w8-z11"/>
-                            <exclude reference="xgt-yf-MZm"/>
                             <exclude reference="J4k-7p-Dt5"/>
                             <exclude reference="OA9-EA-EZe"/>
                             <exclude reference="k60-Rs-2cL"/>
                             <exclude reference="KwH-Hl-upb"/>
-                            <exclude reference="HGE-nU-8hQ"/>
                             <exclude reference="j1Y-Ed-wa2"/>
                             <exclude reference="xOT-RV-6P6"/>
                             <exclude reference="ErE-yf-2ba"/>
                             <exclude reference="DYQ-1I-Qxd"/>
+                            <exclude reference="jXZ-vq-d9W"/>
+                            <exclude reference="Oid-Kz-teC"/>
+                            <exclude reference="YQC-53-aAE"/>
+                            <exclude reference="CUr-Iv-WOk"/>
+                            <exclude reference="wyd-8o-OiT"/>
+                            <exclude reference="BDy-Me-uDe"/>
+                            <exclude reference="p64-q1-car"/>
+                            <exclude reference="m5X-Uh-GxK"/>
+                            <exclude reference="pIU-w9-fHb"/>
+                            <exclude reference="DoP-Uc-S5x"/>
+                            <exclude reference="Kdh-c4-dZE"/>
+                            <exclude reference="dqx-fV-Kyz"/>
+                            <exclude reference="Qbn-x8-OFF"/>
+                            <exclude reference="Flq-pv-F9R"/>
+                            <exclude reference="ABE-w8-z11"/>
+                            <exclude reference="xgt-yf-MZm"/>
                         </mask>
                     </variation>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="0.0" y="75" width="320" height="897"/>
                         <mask key="subviews">
-                            <include reference="DoP-Uc-S5x"/>
-                            <include reference="Kdh-c4-dZE"/>
-                            <include reference="dqx-fV-Kyz"/>
-                            <include reference="Qbn-x8-OFF"/>
-                            <include reference="8RU-33-0LR"/>
-                            <include reference="9bF-cD-MwG"/>
-                            <include reference="LHX-aJ-usj"/>
-                            <include reference="7Qn-OL-0aH"/>
-                            <include reference="LEP-86-IYG"/>
-                            <include reference="O5r-De-2HN"/>
-                            <include reference="j12-uM-ohs"/>
-                            <include reference="Ls6-iI-uSb"/>
-                            <include reference="Flq-pv-F9R"/>
-                            <include reference="ABE-w8-z11"/>
-                            <include reference="xgt-yf-MZm"/>
                             <include reference="J4k-7p-Dt5"/>
                             <include reference="OA9-EA-EZe"/>
                             <include reference="k60-Rs-2cL"/>
                             <include reference="KwH-Hl-upb"/>
-                            <include reference="HGE-nU-8hQ"/>
                             <include reference="j1Y-Ed-wa2"/>
                             <include reference="xOT-RV-6P6"/>
                             <include reference="ErE-yf-2ba"/>
                             <include reference="DYQ-1I-Qxd"/>
+                            <include reference="jXZ-vq-d9W"/>
+                            <include reference="Oid-Kz-teC"/>
+                            <include reference="YQC-53-aAE"/>
+                            <include reference="CUr-Iv-WOk"/>
+                            <include reference="wyd-8o-OiT"/>
+                            <include reference="BDy-Me-uDe"/>
+                            <include reference="p64-q1-car"/>
+                            <include reference="m5X-Uh-GxK"/>
+                            <include reference="pIU-w9-fHb"/>
+                            <include reference="DoP-Uc-S5x"/>
+                            <include reference="Kdh-c4-dZE"/>
+                            <include reference="dqx-fV-Kyz"/>
+                            <include reference="Qbn-x8-OFF"/>
+                            <include reference="Flq-pv-F9R"/>
+                            <include reference="ABE-w8-z11"/>
+                            <include reference="xgt-yf-MZm"/>
                         </mask>
                     </variation>
                 </scrollView>

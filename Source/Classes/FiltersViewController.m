@@ -16,12 +16,6 @@
 #import "DWBubbleMenuButton.h"
 
 @interface FiltersViewController ()
-@property (weak, nonatomic) IBOutlet UISlider *roomsSlider;
-@property (weak, nonatomic) IBOutlet UISlider *sqrMetersSlider;
-@property (weak, nonatomic) IBOutlet UISlider *bathsSlider;
-@property (weak, nonatomic) IBOutlet UILabel *roomsValueLabel;
-@property (weak, nonatomic) IBOutlet UILabel *sqrValueLabel;
-@property (weak, nonatomic) IBOutlet UILabel *bathsValueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *petLabel;
 @property BOOL isDogAllowed;
 @property BOOL isCatAllowed;
@@ -38,23 +32,9 @@
 }
 
 - (IBAction)onSaveButtonPressed:(id)sender {
+
 }
 
-- (IBAction)onRoomsChanged:(id)sender {
-    int sliderVal =0;
-    sliderVal = self.roomsSlider.value;
-    self.roomsValueLabel.text= [NSString stringWithFormat:@"%d", sliderVal];
-}
-- (IBAction)onSqrMetersChanged:(id)sender {
-    int sliderVal =0;
-    sliderVal = self.sqrMetersSlider.value*25;
-    self.sqrValueLabel.text= [NSString stringWithFormat:@"%d", sliderVal];
-}
-- (IBAction)onBathsChanged:(id)sender {
-    int sliderVal =0;
-    sliderVal = self.bathsSlider.value;
-    self.bathsValueLabel.text= [NSString stringWithFormat:@"%d", sliderVal];
-}
 - (IBAction)onCatPressed:(id)sender {
     self.isCatAllowed = ! self.isCatAllowed;
     [self updatePetAllowedLabel];
