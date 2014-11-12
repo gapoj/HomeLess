@@ -58,6 +58,7 @@
 		E2640A8E1A1278390070493F /* DWBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E2640A8D1A1278390070493F /* DWBubbleMenuButton.m */; };
 		E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E293FBFC1A1103F7001F8910 /* DetailsHouseViewController.m */; };
 		E293FBFF1A1103F7001F8910 /* DetailsHouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E293FBFD1A1103F7001F8910 /* DetailsHouseViewController.xib */; };
+		E2C2EF2C1A13CF0A0066A36D /* HousePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C2EF2B1A13CF0A0066A36D /* HousePhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +131,8 @@
 		E293FBFB1A1103F7001F8910 /* DetailsHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsHouseViewController.h; path = Source/Classes/DetailsHouseViewController.h; sourceTree = SOURCE_ROOT; };
 		E293FBFC1A1103F7001F8910 /* DetailsHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsHouseViewController.m; path = Source/Classes/DetailsHouseViewController.m; sourceTree = SOURCE_ROOT; };
 		E293FBFD1A1103F7001F8910 /* DetailsHouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailsHouseViewController.xib; path = Source/Classes/DetailsHouseViewController.xib; sourceTree = SOURCE_ROOT; };
+		E2C2EF2A1A13CF0A0066A36D /* HousePhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HousePhoto.h; path = Source/Classes/HousePhoto.h; sourceTree = SOURCE_ROOT; };
+		E2C2EF2B1A13CF0A0066A36D /* HousePhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HousePhoto.m; path = Source/Classes/HousePhoto.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +354,8 @@
 		E2EDA5581A0D2CC000848400 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				E2C2EF2A1A13CF0A0066A36D /* HousePhoto.h */,
+				E2C2EF2B1A13CF0A0066A36D /* HousePhoto.m */,
 				180CBF0A1A12BEDC00AE563C /* Message.h */,
 				180CBF0B1A12BEDC00AE563C /* Message.m */,
 				544C6A821A0FA0490057C2E3 /* House.h */,
@@ -454,6 +459,7 @@
 				E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */,
 				544C6AAA1A0FA1110057C2E3 /* main.m in Sources */,
 				544C6A991A0FA0490057C2E3 /* HomeViewController.m in Sources */,
+				E2C2EF2C1A13CF0A0066A36D /* HousePhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

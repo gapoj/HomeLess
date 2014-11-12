@@ -9,6 +9,7 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "AddHouseViewController.h"
 #import "House.h"
+#import "HousePhoto.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 
 @interface AddHouseViewController ()<UITextViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -110,27 +111,34 @@
         
         newHouse.withGarage = YES;
     } else {
-         newHouse.withGarage = NO;
+        newHouse.withGarage = NO;
     }
-    
     [newHouse saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(error){
             NSLog(@"%@",error);
-                    }else{
-        
+        }else{
+            [self saveMainPhoto];
+        }
+    }];
+    
+}
+
+-(void) saveMainPhoto
+{
+    HousePhoto *housePhoto = [HousePhoto object];
+    housePhoto.owner = [PFUser currentUser];
+    NSData* data = UIImageJPEGRepresentation(self.mainPhoto.image, 0.5f);
+    PFFile *imageFile = [PFFile fileWithData:data];
+    housePhoto.parsePhoto = imageFile;
+    housePhoto.title = @"";
+    [housePhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(error){
+            NSLog(@"%@",error);
+        }else{
             [self dismissViewControllerAnimated:YES completion:^{
-                UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Succes"
-                                                                      message:@"The house was saved"
-                                                                     delegate:nil
-                                                            cancelButtonTitle:@"OK"
-                                                            otherButtonTitles: nil];
-                
+                UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Succes" message:@"The house was saved" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
                 [myAlertView show];
-
-                
             }];
-
-        
         }
     }];
     
