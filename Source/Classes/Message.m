@@ -15,6 +15,9 @@
 @dynamic  receiver;
 @dynamic  houseRelated;
 @dynamic  readed;
+@dynamic  conversationID;
+@dynamic  date;
+@dynamic  numberInConversation;
 + (NSString*) parseClassName
 {
     return @"Message";

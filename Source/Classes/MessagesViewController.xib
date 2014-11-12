@@ -2,10 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessagesViewController">
             <connections>
+                <outlet property="folderButton" destination="I1S-wH-Fgs" id="TxZ-9N-xLi"/>
+                <outlet property="folderLabel" destination="HB0-cL-1CL" id="jf9-tB-wJx"/>
+                <outlet property="tableView" destination="Zpy-Sg-LSX" id="iw3-D0-bLA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,26 +21,96 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zpy-Sg-LSX">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="21" width="400" height="579"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="382" id="1dP-Mi-kAl"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="1dP-Mi-kAl"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="1dP-Mi-kAl"/>
+                        </mask>
                     </variation>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="lIg-Xu-zWO"/>
-                        <outlet property="delegate" destination="-1" id="LwD-rY-QLC"/>
+                        <outlet property="dataSource" destination="-1" id="kBv-V9-2fX"/>
+                        <outlet property="delegate" destination="-1" id="mN4-v1-fjX"/>
                     </connections>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="inbox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HB0-cL-1CL">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1S-wH-Fgs">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="121" id="iA3-OA-CBu"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="iA3-OA-CBu"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="iA3-OA-CBu"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="changeFolder:" destination="-1" eventType="touchUpInside" id="GiU-Gz-TZq"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.016714702000000001" green="0.076191601989999996" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Zpy-Sg-LSX" firstAttribute="top" secondItem="I1S-wH-Fgs" secondAttribute="bottom" constant="33" id="CfU-4a-AxB"/>
+                <constraint firstItem="I1S-wH-Fgs" firstAttribute="top" secondItem="HB0-cL-1CL" secondAttribute="bottom" constant="8" symbolic="YES" id="Fkb-ft-uh6"/>
+                <constraint firstItem="HB0-cL-1CL" firstAttribute="centerX" secondItem="Zpy-Sg-LSX" secondAttribute="centerX" id="WaS-DT-aeG"/>
+                <constraint firstItem="HB0-cL-1CL" firstAttribute="leading" secondItem="I1S-wH-Fgs" secondAttribute="leading" id="YTX-KK-tG0"/>
+                <constraint firstAttribute="bottom" secondItem="Zpy-Sg-LSX" secondAttribute="bottom" id="cFH-Um-FFC"/>
+                <constraint firstItem="HB0-cL-1CL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="dQ3-fy-FRZ"/>
+                <constraint firstAttribute="trailing" secondItem="Zpy-Sg-LSX" secondAttribute="trailing" id="gGg-Rk-xRi"/>
+                <constraint firstItem="Zpy-Sg-LSX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lG9-EM-9d0"/>
+            </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="Zpy-Sg-LSX"/>
+                    <exclude reference="HB0-cL-1CL"/>
+                    <exclude reference="I1S-wH-Fgs"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="WaS-DT-aeG"/>
+                    <exclude reference="YTX-KK-tG0"/>
+                    <exclude reference="dQ3-fy-FRZ"/>
+                    <exclude reference="Fkb-ft-uh6"/>
+                    <exclude reference="CfU-4a-AxB"/>
+                    <exclude reference="cFH-Um-FFC"/>
+                    <exclude reference="gGg-Rk-xRi"/>
+                    <exclude reference="lG9-EM-9d0"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
                     <include reference="Zpy-Sg-LSX"/>
+                    <include reference="HB0-cL-1CL"/>
+                    <include reference="I1S-wH-Fgs"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="WaS-DT-aeG"/>
+                    <include reference="YTX-KK-tG0"/>
+                    <include reference="dQ3-fy-FRZ"/>
+                    <include reference="Fkb-ft-uh6"/>
+                    <include reference="CfU-4a-AxB"/>
+                    <include reference="cFH-Um-FFC"/>
+                    <include reference="gGg-Rk-xRi"/>
+                    <include reference="lG9-EM-9d0"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="137" y="104"/>
         </view>
     </objects>
 </document>

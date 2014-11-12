@@ -13,4 +13,5 @@
 
 @interface SendMessageViewController : UIViewController
 @property House *relatedHouse;
+@property Message * previousMessage;
 @end

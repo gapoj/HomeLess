@@ -7,6 +7,8 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "DWBubbleMenuButton.h"
 #import "SendMessageViewController.h"
+#import "MessagesViewController.h"
+
 @interface HomeViewController (){
 
     UIButton* infoButton;
@@ -45,7 +47,11 @@
     UserDetailsViewController *detailsViewController = [[UserDetailsViewController alloc] init];
     [self showViewController:detailsViewController sender:self];
 }
-
+- (void)showMessages {
+    MessagesViewController *vc = [[MessagesViewController alloc] init];
+    vc.inbox = YES;
+    [self showViewController:vc sender:self];
+}
 - (void)showFiltersrDetails {
     FiltersViewController *detailsViewController = [[FiltersViewController alloc] init];
     [self showViewController:detailsViewController sender:self];
@@ -66,7 +72,7 @@
 {
    
     PFQuery *housesQuery = [House query];
-    [housesQuery whereKey:@"title" equalTo:@"barbara 1"];
+    [housesQuery whereKey:@"title" equalTo:@"karen 2 "];
     [housesQuery includeKey:@"owner"];
     [housesQuery findObjectsInBackgroundWithBlock:^(NSArray *houses, NSError *error) {
         if(error){
@@ -126,6 +132,9 @@
             [self showFiltersrDetails];
             break;
         case 4:
+             [self showMessages];
+            break;
+        case 5:
             [self logoutUser];
             break;
         default:

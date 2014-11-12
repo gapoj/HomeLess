@@ -5,7 +5,7 @@
 //  Created by Guillermo Apoj on 11/11/14.
 //
 //
-#import "Message.h"
+
 #import "SendMessageViewController.h"
 
 @interface SendMessageViewController ()<UITextViewDelegate>
@@ -13,7 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *houseTitleLabel;
 @property (strong, nonatomic) IBOutlet UITextView *messageTextView;
 - (IBAction)onCancel:(id)sender;
-- (IBAction)onSrnd:(id)sender;
+- (IBAction)onSend:(id)sender;
 
 @end
 
@@ -23,9 +23,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     self.houseTitleLabel.text = self.relatedHouse.title;
+    if (self.previousMessage) {
+        self.subjectTextField.text = [NSString stringWithFormat:@"RE: %@",self.previousMessage.subject];
+    }
     
 }
 - (void)didReceiveMemoryWarning {
@@ -85,7 +89,7 @@
     
 }
 
-- (IBAction)onSrnd:(id)sender {
+- (IBAction)onSend:(id)sender {
     Message *newMessagge = [Message object];
        if([self.messageTextView.text length]==0 ){
         UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
@@ -97,16 +101,25 @@
         [myAlertView show];
     }else{
         newMessagge.message = self.messageTextView.text;
-        if ([self.subjectTextField.text length]==0) {
+        if (![self.subjectTextField.text isEqualToString:@""]) {
             newMessagge.subject= self.subjectTextField.text;
         } else {
             newMessagge.subject = @"No subject";
         }
         
-        
+        newMessagge.readed = NO;
+        newMessagge.date = [[NSDate alloc] init];
         newMessagge.sender = [PFUser currentUser];
         newMessagge.receiver= self.relatedHouse.owner;
         newMessagge.houseRelated = self.relatedHouse;
+        if (self.previousMessage) {
+            newMessagge.conversationID = self.previousMessage.conversationID;
+            newMessagge.numberInConversation = self.previousMessage.numberInConversation + 1;
+
+        } else {
+            newMessagge.conversationID =[NSString stringWithFormat:@"%@ %@" ,self.relatedHouse.objectId, newMessagge.date];
+            newMessagge.numberInConversation = 1;
+        }
         
         [newMessagge saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if(error){

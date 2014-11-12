@@ -15,4 +15,7 @@
 @property PFUser *receiver;
 @property House * houseRelated;
 @property bool readed;
+@property NSString * conversationID;
+@property NSDate * date;
+@property NSInteger numberInConversation;
 @end
