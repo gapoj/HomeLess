@@ -104,7 +104,7 @@
     
     [cell.message sizeToFit];
     
-    NSDate *theDate = message.date;
+    NSDate *theDate =[message getLocalTimeDate];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     //[formatter setDateFormat:@"HH:mm a"];
     [formatter setDateFormat:@"yyyy-MM-dd"];
@@ -136,7 +136,7 @@
     
     [cell.message sizeToFit];
     
-    NSDate *theDate = message.date;
+    NSDate *theDate =[message getLocalTimeDate];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     //[formatter setDateFormat:@"HH:mm a"];
     [formatter setDateFormat:@"yyyy-MM-dd"];
@@ -158,7 +158,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Message * message = [self mensajePrueba];//self.messages[indexPath.row];
+    Message * message = self.messages[indexPath.row];//
 
     UITableViewCell *cell;
     if (self.inbox) {

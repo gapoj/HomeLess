@@ -5,6 +5,8 @@
 //  Created by Guillermo Apoj on 11/12/14.
 //
 //
+#import "OutBoxTableViewCell.h"
+#import "InboxMessageTableViewCell.h"
 #import "HomeViewController.h"
 #import "MessageDetailsViewController.h"
 #import "SendMessageViewController.h"
@@ -16,7 +18,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *HouseLabel;
 @property (strong, nonatomic) IBOutlet UITextView *messageTextView;
 @property (strong, nonatomic) IBOutlet UILabel *sentToOrSentByLabel;
-
+@property NSArray *history;
 @end
 
 @implementation MessageDetailsViewController
@@ -33,6 +35,10 @@
          self.responseButton.hidden = NO;
         self.sentToOrSentByLabel.text =@"Sent by:";
          self.otherUserLabel.text= self.message.sender.username;
+        if(!self.message.readed){
+            self.message.readed = YES;
+            [self.message saveInBackground];
+        }
     }
     
     self.messageTextView.text = self.message.message;
@@ -50,7 +56,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 0;
+    return 1;
 }
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     return nil;

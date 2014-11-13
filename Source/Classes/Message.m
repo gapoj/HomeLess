@@ -27,4 +27,19 @@
 {
     [self registerSubclass];
 }
+-(NSDate *) getLocalTimeDate{
+    NSTimeZone *tz = [NSTimeZone localTimeZone];
+    NSInteger seconds = [tz secondsFromGMTForDate: self.date];
+    return [NSDate dateWithTimeInterval: seconds sinceDate: self.date];
+}
+
+
+
+-(void) setDateToGlobalTime{
+     self.date = [[NSDate alloc] init];
+    NSTimeZone *tz = [NSTimeZone localTimeZone];
+    NSInteger seconds = -[tz secondsFromGMTForDate: self.date];
+    self.date=[NSDate dateWithTimeInterval: seconds sinceDate: self.date];
+}
+
 @end

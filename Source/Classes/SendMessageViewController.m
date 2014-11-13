@@ -111,6 +111,7 @@
         
         newMessagge.readed = NO;
         newMessagge.date = [[NSDate alloc] init];
+        [newMessagge setDateToGlobalTime];
         newMessagge.sender = [PFUser currentUser];
         newMessagge.receiver= self.relatedHouse.owner;
         newMessagge.houseRelated = self.relatedHouse;

@@ -18,4 +18,10 @@
 @property NSString * conversationID;
 @property NSDate * date;
 @property NSInteger numberInConversation;
+
+-(NSDate *) getLocalTimeDate;
+
+
+-(void) setDateToGlobalTime;
+
 @end
