@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HistoricalInboxTableViewCell : UITableViewCell
+@interface HistoricalInboxTableViewCell : UITableViewCell <UITextViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *date;
 @property (strong, nonatomic) IBOutlet UITextView *message;
 

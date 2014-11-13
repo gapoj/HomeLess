@@ -5,8 +5,7 @@
 //  Created by Guillermo Apoj on 11/12/14.
 //
 //
-#import "OutBoxTableViewCell.h"
-#import "InboxMessageTableViewCell.h"
+
 #import "HomeViewController.h"
 #import "MessageDetailsViewController.h"
 #import "SendMessageViewController.h"
@@ -42,6 +41,9 @@
     }
     
     self.messageTextView.text = self.message.message;
+    self.tableview.rowHeight = UITableViewAutomaticDimension;
+    self.tableview.estimatedRowHeight = 100;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,10 +58,15 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return 2;
 }
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return nil;
+    HistoricalInboxTableViewCell *cell = (HistoricalInboxTableViewCell *)[tableView dequeueReusableCellWithIdentifier: @"HistoricalInboxCell"];
+    if (!cell) {
+        [tableView registerNib:[UINib nibWithNibName:@"HistoricalInboxTableViewCell" bundle:nil] forCellReuseIdentifier:@"HistoricalInboxCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"HistoricalInboxCell"];
+    }
+    return cell;
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
@@ -74,5 +81,37 @@
             break;
     }
     return sectionName;
+}
+- (HistoricalInboxTableViewCell *)createInboxCell:(UITableView *)tableView message:(Message *)message
+{
+    HistoricalInboxTableViewCell *cell = (HistoricalInboxTableViewCell *)[tableView dequeueReusableCellWithIdentifier: @"InboxMessageCell"];
+    if (!cell) {
+        [tableView registerNib:[UINib nibWithNibName:@"InboxMessageTableViewCell" bundle:nil] forCellReuseIdentifier:@"InboxMessageCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"InboxMessageCell"];
+    }
+    
+    cell.message.text =message.subject;
+    
+    [cell.message sizeToFit];
+    
+    NSDate *theDate =[message getLocalTimeDate];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    //[formatter setDateFormat:@"HH:mm a"];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *timeString = [formatter stringFromDate:theDate];
+    cell.date.text = timeString;
+    
+    
+    if(!message.readed){
+        cell.date.font = [UIFont boldSystemFontOfSize:10.0];
+        cell.message.font = [UIFont boldSystemFontOfSize:13.0];
+    }
+    else
+    {
+        cell.date.font = [UIFont systemFontOfSize:10.0];
+        cell.message.font = [UIFont systemFontOfSize:13.0];
+        
+    }
+    return cell;
 }
 @end
