@@ -353,7 +353,7 @@
                     <include reference="Qnf-P4-Ugb"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="140" y="302"/>
+            <point key="canvasLocation" x="111" y="197"/>
         </view>
     </objects>
     <resources>
