@@ -1,53 +1,42 @@
-//
-//  AddHouseViewController.m
-//  HomeLess
-//
-//  Created by Guillermo Apoj on 11/6/14.
-//
-//
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "AddHouseViewController.h"
 #import "House.h"
 #import "HousePhoto.h"
 #import <MobileCoreServices/UTCoreTypes.h>
+#import "MyCell.h"
 
-@interface AddHouseViewController ()<UITextViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface AddHouseViewController ()<UITextViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIImageView *mainPhoto;
 @property (weak, nonatomic) IBOutlet UITextField *PriceTextField;
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *rentOrSaleSegmentControl;
 @property (strong, nonatomic) IBOutlet UISlider *roomsSlider;
-- (IBAction)roomsValueChanged:(id)sender;
 @property (strong, nonatomic) IBOutlet UISlider *squareMetersSlider;
-- (IBAction)squareMetersChanged:(id)sender;
 @property (strong, nonatomic) IBOutlet UISlider *bathroomsSlider;
-- (IBAction)bathroomsChanged:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *roomsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *squareMetersLabel;
 @property (strong, nonatomic) IBOutlet UILabel *bathroomsLabel;
 @property (weak, nonatomic) IBOutlet UITextView *desc;
-- (IBAction)onSave:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *petLabel;
 @property BOOL isDogAllowed;
 @property BOOL isCatAllowed;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *garageSegmentControl;
 @property (nonatomic) UIImagePickerController *imagePickerController;
-
+@property (weak, nonatomic) IBOutlet UICollectionView *myCollection;
+@property NSMutableArray *photos;
 @end
 @implementation AddHouseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.photos = [NSMutableArray array];
+    [self.myCollection registerNib:[UINib nibWithNibName:@"MyCell" bundle:nil] forCellWithReuseIdentifier:@"CELL"] ;
     [scroller setScrollEnabled:YES];
     [scroller setContentSize:CGSizeMake(320, 1500)];
     self.desc.delegate = self;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)onAddPhotos:(id)sender {
@@ -59,19 +48,37 @@
     }];
 }
 
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.photos.count
+    ;
+}
+
+- (MyCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    MyCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CELL" forIndexPath:indexPath];
+    if (self.photos.count > 0) {
+        cell.image.image = [self.photos objectAtIndex:indexPath.row];
+    }
+    return cell;
+}
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    self.mainPhoto.image = image;
-    self.mainPhoto.contentMode = UIViewContentModeScaleAspectFit;
+    if (self.mainPhoto.image) {
+        [self.photos addObject:image];
+        [self.myCollection reloadData];
+    }else{
+        self.mainPhoto.image = image;
+        self.mainPhoto.contentMode = UIViewContentModeScaleAspectFit;
+    }
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
-    
 }
 
-////////////////**********************************
 - (IBAction)roomsValueChanged:(id)sender {
     int sliderVal =0;
     sliderVal = self.roomsSlider.value;
@@ -117,36 +124,66 @@
         if(error){
             NSLog(@"%@",error);
         }else{
-            [self saveMainPhoto];
+            [self savePhotos];
         }
     }];
     
 }
 
--(void) saveMainPhoto
+-(void) savePhotos
 {
-    HousePhoto *housePhoto = [HousePhoto object];
-    housePhoto.owner = [PFUser currentUser];
-    NSData* data = UIImageJPEGRepresentation(self.mainPhoto.image, 0.5f);
-    PFFile *imageFile = [PFFile fileWithData:data];
-    housePhoto.parsePhoto = imageFile;
-    housePhoto.title = @"";
-    [housePhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(error){
-            NSLog(@"%@",error);
-        }else{
-            [self dismissViewControllerAnimated:YES completion:^{
-                UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Succes" message:@"The house was saved" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-                [myAlertView show];
-            }];
-        }
-    }];
-    
+    if (self.mainPhoto.image) {
+        HousePhoto *housePhoto = [HousePhoto object];
+        housePhoto.owner = [PFUser currentUser];
+        NSData* data = UIImageJPEGRepresentation(self.mainPhoto.image, 0.5f);
+        PFFile *imageFile = [PFFile fileWithData:data];
+        housePhoto.parsePhoto = imageFile;
+                housePhoto.isMain = YES;
+        [housePhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if(error){
+                NSLog(@"%@",error);
+            }else{
+                if (self.photos.count > 0) {
+                    [self addAdditionalPhotos];
+                }else{
+                    [self dismissViewControllerAnimated:YES completion:^{
+                        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Succes" message:@"The house was saved" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                        [myAlertView show];
+                    }];
+                }
+            }
+        }];
+    }
 }
+
+-(void) addAdditionalPhotos{
+    for (UIImage *image in self.photos) {
+        HousePhoto *housePhoto = [HousePhoto object];
+        housePhoto.owner = [PFUser currentUser];
+        NSData* data = UIImageJPEGRepresentation(image, 0.5f);
+        PFFile *imageFile = [PFFile fileWithData:data];
+        housePhoto.parsePhoto = imageFile;
+        housePhoto.isMain = NO;
+        [housePhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if(error){
+                NSLog(@"%@",error);
+            }else{
+                if ([self.photos indexOfObject:image] == self.photos.count-1) {
+                    [self dismissViewControllerAnimated:YES completion:^{
+                        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Succes" message:@"The house was saved" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                        [myAlertView show];
+                    }];
+                }
+            }
+        }];
+    }
+}
+
 - (IBAction)onCatPressed:(id)sender {
     self.isCatAllowed = !self.isCatAllowed;
     [self updatePetAllowedLabel];
 }
+
 - (IBAction)onDogPressed:(id)sender {
     self.isDogAllowed = !self.isDogAllowed;
     [self updatePetAllowedLabel];

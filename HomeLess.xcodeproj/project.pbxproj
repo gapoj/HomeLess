@@ -60,6 +60,8 @@
 		E24998211A1135A100E9969D /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E249981F1A1135A100E9969D /* MessagesViewController.m */; };
 		E24998221A1135A100E9969D /* MessagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24998201A1135A100E9969D /* MessagesViewController.xib */; };
 		E2640A8E1A1278390070493F /* DWBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E2640A8D1A1278390070493F /* DWBubbleMenuButton.m */; };
+		E26DB31E1A14E296009704C9 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26DB31D1A14E296009704C9 /* MyCell.xib */; };
+		E26DB3211A14E2E5009704C9 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E26DB3201A14E2E5009704C9 /* MyCell.m */; };
 		E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E293FBFC1A1103F7001F8910 /* DetailsHouseViewController.m */; };
 		E293FBFF1A1103F7001F8910 /* DetailsHouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E293FBFD1A1103F7001F8910 /* DetailsHouseViewController.xib */; };
 		E2C2EF2C1A13CF0A0066A36D /* HousePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C2EF2B1A13CF0A0066A36D /* HousePhoto.m */; };
@@ -139,6 +141,9 @@
 		E24998201A1135A100E9969D /* MessagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessagesViewController.xib; path = Source/Classes/MessagesViewController.xib; sourceTree = SOURCE_ROOT; };
 		E2640A8C1A1278390070493F /* DWBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DWBubbleMenuButton.h; path = Source/Classes/DWBubbleMenuButton.h; sourceTree = SOURCE_ROOT; };
 		E2640A8D1A1278390070493F /* DWBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DWBubbleMenuButton.m; path = Source/Classes/DWBubbleMenuButton.m; sourceTree = SOURCE_ROOT; };
+		E26DB31D1A14E296009704C9 /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = SOURCE_ROOT; };
+		E26DB31F1A14E2E5009704C9 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCell.h; path = Source/Classes/MyCell.h; sourceTree = SOURCE_ROOT; };
+		E26DB3201A14E2E5009704C9 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCell.m; path = Source/Classes/MyCell.m; sourceTree = SOURCE_ROOT; };
 		E293FBFB1A1103F7001F8910 /* DetailsHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsHouseViewController.h; path = Source/Classes/DetailsHouseViewController.h; sourceTree = SOURCE_ROOT; };
 		E293FBFC1A1103F7001F8910 /* DetailsHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsHouseViewController.m; path = Source/Classes/DetailsHouseViewController.m; sourceTree = SOURCE_ROOT; };
 		E293FBFD1A1103F7001F8910 /* DetailsHouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailsHouseViewController.xib; path = Source/Classes/DetailsHouseViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -346,6 +351,9 @@
 		E2EDA5561A0D2C6600848400 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				E26DB31D1A14E296009704C9 /* MyCell.xib */,
+				E26DB31F1A14E2E5009704C9 /* MyCell.h */,
+				E26DB3201A14E2E5009704C9 /* MyCell.m */,
 				18C09E301A13ED4900887EAA /* AddHouseViewController.h */,
 				544C6A701A0FA0490057C2E3 /* AddHouseViewController.m */,
 				544C6A711A0FA0490057C2E3 /* AddHouseViewController.xib */,
@@ -447,6 +455,7 @@
 				544C6A981A0FA0490057C2E3 /* FiltersViewController.xib in Resources */,
 				180CBF111A12BEDC00AE563C /* SendMessageViewController.xib in Resources */,
 				544C6A9C1A0FA0490057C2E3 /* HouseTableViewCell.xib in Resources */,
+				E26DB31E1A14E296009704C9 /* MyCell.xib in Resources */,
 				18EC79651A138C00000BBD48 /* InboxMessageTableViewCell.xib in Resources */,
 				544C6AA91A0FA1110057C2E3 /* HomeLess-Info.plist in Resources */,
 				18C09E351A13ED7D00887EAA /* MessageDetailsViewController.xib in Resources */,
@@ -482,6 +491,7 @@
 				544C6A991A0FA0490057C2E3 /* HomeViewController.m in Sources */,
 				E2C2EF2C1A13CF0A0066A36D /* HousePhoto.m in Sources */,
 				18C09E341A13ED7D00887EAA /* MessageDetailsViewController.m in Sources */,
+				E26DB3211A14E2E5009704C9 /* MyCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

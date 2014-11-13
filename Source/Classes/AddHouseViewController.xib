@@ -9,17 +9,15 @@
                 <outlet property="PriceTextField" destination="onz-BK-G7U" id="cdw-OD-GrC"/>
                 <outlet property="addressTextField" destination="RPH-rH-zf6" id="b5n-Fo-eQf"/>
                 <outlet property="bathroomsLabel" destination="RiO-d2-iwe" id="kdH-YN-flu"/>
-                <outlet property="bathroomsSlider" destination="53m-AE-60c" id="IPx-1J-clW"/>
                 <outlet property="desc" destination="HmQ-bM-zE9" id="idc-CQ-JN8"/>
                 <outlet property="garageSegmentControl" destination="hW7-oL-rxN" id="3bh-mY-KYQ"/>
                 <outlet property="mainPhoto" destination="ATW-2u-G8M" id="gdk-p0-8AX"/>
+                <outlet property="myCollection" destination="oJP-Bp-wgj" id="yPy-y1-Yx1"/>
                 <outlet property="petLabel" destination="EoK-6g-JyB" id="rL5-wh-x3E"/>
                 <outlet property="rentOrSaleSegmentControl" destination="3nZ-8D-7br" id="mRC-iF-Qnz"/>
                 <outlet property="roomsLabel" destination="9mE-rQ-FEc" id="qj5-Wl-Pzm"/>
-                <outlet property="roomsSlider" destination="QZV-5i-Cmu" id="36P-PS-Hyn"/>
                 <outlet property="scroller" destination="E9N-Dg-XF7" id="jPm-HP-KyU"/>
                 <outlet property="squareMetersLabel" destination="wvq-Yo-sAG" id="4sS-xS-75F"/>
-                <outlet property="squareMetersSlider" destination="rv2-6M-xld" id="Arr-39-N2t"/>
                 <outlet property="titleTextField" destination="lju-mf-3P3" id="dZE-AN-1Gl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -332,16 +330,6 @@
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iei-TU-N8g">
-                            <rect key="frame" x="27" y="1205" width="49" height="48"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button" image="addPhoto">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="onAddPhotos:" destination="-1" eventType="touchUpInside" id="qf5-Qx-wkb"/>
-                            </connections>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EoK-6g-JyB">
                             <rect key="frame" x="201" y="853" width="119" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -355,17 +343,22 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ATW-2u-G8M">
                             <rect key="frame" x="27" y="942" width="251" height="128"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.077697948219999993" green="0.80927309780000001" blue="0.066909399999999994" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.077697948219999993" green="0.80927309780000001" blue="0.066909399999999994" alpha="0.57000000000000006" colorSpace="calibratedRGB"/>
                         </imageView>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="none" id="oJP-Bp-wgj">
-                            <rect key="frame" x="27" y="1078" width="253" height="119"/>
+                            <rect key="frame" x="27" y="1119" width="253" height="119"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Oh-R1-8rG">
+                            <color key="backgroundColor" red="0.077697948219999993" green="0.80927309780000001" blue="0.066909399999999994" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="7" id="2Oh-R1-8rG">
                                 <size key="itemSize" width="58" height="50"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="Xwc-Dq-BCM"/>
+                                <outlet property="delegate" destination="-1" id="M2F-BA-myP"/>
+                            </connections>
                         </collectionView>
                         <segmentedControl opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="3nZ-8D-7br">
                             <rect key="frame" x="81" y="13" width="167" height="29"/>
@@ -380,6 +373,30 @@
                                 <rect key="frame" x="85" y="22" width="167" height="29"/>
                             </variation>
                         </segmentedControl>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Photo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T3E-ch-JHp">
+                            <rect key="frame" x="81" y="1069" width="81" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Photos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2eV-Mi-tTt">
+                            <rect key="frame" x="84" y="1240" width="123" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iei-TU-N8g">
+                            <rect key="frame" x="27" y="1264" width="49" height="48"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button" image="addPhoto">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onAddPhotos:" destination="-1" eventType="touchUpInside" id="qf5-Qx-wkb"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HGA-uC-M3q">
