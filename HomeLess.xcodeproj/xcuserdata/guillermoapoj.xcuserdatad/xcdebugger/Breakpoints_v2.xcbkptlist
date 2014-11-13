@@ -313,7 +313,7 @@
                   symbolName = "-[HomeViewController showInfo]"
                   moduleName = "HomeLess"
                   urlString = "file:///Users/guillermoapoj/Desktop/HomeLess/Source/Classes/HomeViewController.m"
-                  timestampString = "437513153.605283"
+                  timestampString = "437577980.176697"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "75"
@@ -327,7 +327,7 @@
                   symbolName = "__30-[HomeViewController showInfo]_block_invoke"
                   moduleName = "HomeLess"
                   urlString = "file:///Users/guillermoapoj/Desktop/HomeLess/Source/Classes/HomeViewController.m"
-                  timestampString = "437513153.605449"
+                  timestampString = "437577980.176856"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "75"
@@ -335,6 +335,22 @@
                   offsetFromSymbolStart = "67">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/Classes/MessagesViewController.m"
+            timestampString = "437577724.17957"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "-createOutboxCell:message:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

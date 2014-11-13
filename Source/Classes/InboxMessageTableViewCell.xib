@@ -14,36 +14,49 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbN-m5-7Is">
-                        <rect key="frame" x="8" y="26" width="312" height="46"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="messageBubbleGray" translatesAutoresizingMaskIntoConstraints="NO" id="GmO-nk-c2t">
+                        <rect key="frame" x="-8" y="2" width="336" height="84"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkW-zY-q8B">
+                        <rect key="frame" x="0.0" y="2" width="68" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="68" id="0PX-Bn-bu6"/>
+                            <constraint firstAttribute="height" constant="26" id="PNF-Jm-psD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkW-zY-q8B">
-                        <rect key="frame" x="8" y="4" width="304" height="29"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbN-m5-7Is">
+                        <rect key="frame" x="38" y="11" width="263" height="59"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" red="0.2147178787" green="1" blue="0.1974473263" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="GkW-zY-q8B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-4" id="302-0p-vhZ"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="GkW-zY-q8B" secondAttribute="bottom" constant="35" id="THb-Dm-hcW"/>
-                    <constraint firstItem="GkW-zY-q8B" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="TzR-Ao-TKe"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="PbN-m5-7Is" secondAttribute="bottom" constant="-4" id="UdW-Y5-G31"/>
-                    <constraint firstAttribute="trailing" secondItem="PbN-m5-7Is" secondAttribute="trailing" id="etX-Pm-Pdc"/>
-                    <constraint firstItem="GkW-zY-q8B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hoi-za-4bv"/>
-                    <constraint firstItem="GkW-zY-q8B" firstAttribute="leading" secondItem="PbN-m5-7Is" secondAttribute="leading" id="hzo-Ve-vpW"/>
-                    <constraint firstItem="PbN-m5-7Is" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="18" id="ozw-tc-mEF"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="GkW-zY-q8B" secondAttribute="trailing" constant="244" id="2GZ-7d-U1r"/>
+                    <constraint firstItem="GkW-zY-q8B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="9hd-5s-Jb0"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="PbN-m5-7Is" secondAttribute="bottom" constant="-1" id="D2c-ef-3Bf"/>
+                    <constraint firstItem="GmO-nk-c2t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-16" id="Fbn-Nh-1ND"/>
+                    <constraint firstItem="GmO-nk-c2t" firstAttribute="top" secondItem="GkW-zY-q8B" secondAttribute="top" id="Hul-5u-Z4G"/>
+                    <constraint firstItem="PbN-m5-7Is" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="OLE-Ev-tbS"/>
+                    <constraint firstItem="GmO-nk-c2t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-16" id="YRk-za-ui4"/>
+                    <constraint firstItem="PbN-m5-7Is" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="30" id="he3-Zh-2ff"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="GmO-nk-c2t" secondAttribute="trailing" constant="-16" id="iQC-Yb-uUq"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="GmO-nk-c2t" secondAttribute="bottom" constant="-15" id="lPh-Zb-RrS"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="PbN-m5-7Is" secondAttribute="trailing" constant="11" id="rmm-0D-wzI"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="date" destination="GkW-zY-q8B" id="XyJ-fc-91u"/>
-                <outlet property="message" destination="PbN-m5-7Is" id="JqV-g4-yFg"/>
+                <outlet property="message" destination="PbN-m5-7Is" id="EYc-x0-QwR"/>
             </connections>
-            <point key="canvasLocation" x="363" y="317.5"/>
+            <point key="canvasLocation" x="363" y="303.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="messageBubbleGray" width="43" height="32"/>
+    </resources>
 </document>

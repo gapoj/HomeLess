@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -167,16 +168,18 @@
                     <exclude reference="AKG-Ae-8mv"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="JXt-Th-8vo"/>
                     <exclude reference="4Nu-RF-Tab"/>
                     <exclude reference="L7p-N1-gRj"/>
                     <exclude reference="Opd-Xr-Jah"/>
                     <exclude reference="aoA-78-WHK"/>
                     <exclude reference="oEB-R2-tfH"/>
-                    <exclude reference="giy-fi-Qiy"/>
                     <exclude reference="UeJ-0F-iSm"/>
                     <exclude reference="c6L-Sc-Veq"/>
                     <exclude reference="pPp-tf-w3G"/>
+                    <exclude reference="giy-fi-Qiy"/>
+                    <exclude reference="JXt-Th-8vo"/>
+                    <exclude reference="Vfb-A9-lI2"/>
+                    <exclude reference="gcn-d2-0uC"/>
                     <exclude reference="MM5-7h-55Y"/>
                     <exclude reference="YAk-84-lre"/>
                     <exclude reference="r7c-d9-sm6"/>
@@ -185,8 +188,6 @@
                     <exclude reference="88o-Ky-fbK"/>
                     <exclude reference="TlC-2L-U2e"/>
                     <exclude reference="Uh4-PR-Zda"/>
-                    <exclude reference="Vfb-A9-lI2"/>
-                    <exclude reference="gcn-d2-0uC"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -200,16 +201,18 @@
                     <include reference="AKG-Ae-8mv"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="JXt-Th-8vo"/>
                     <include reference="4Nu-RF-Tab"/>
                     <include reference="L7p-N1-gRj"/>
                     <include reference="Opd-Xr-Jah"/>
                     <include reference="aoA-78-WHK"/>
                     <include reference="oEB-R2-tfH"/>
-                    <include reference="giy-fi-Qiy"/>
                     <include reference="UeJ-0F-iSm"/>
                     <include reference="c6L-Sc-Veq"/>
                     <include reference="pPp-tf-w3G"/>
+                    <include reference="giy-fi-Qiy"/>
+                    <include reference="JXt-Th-8vo"/>
+                    <include reference="Vfb-A9-lI2"/>
+                    <include reference="gcn-d2-0uC"/>
                     <include reference="MM5-7h-55Y"/>
                     <include reference="YAk-84-lre"/>
                     <include reference="r7c-d9-sm6"/>
@@ -218,8 +221,6 @@
                     <include reference="88o-Ky-fbK"/>
                     <include reference="TlC-2L-U2e"/>
                     <include reference="Uh4-PR-Zda"/>
-                    <include reference="Vfb-A9-lI2"/>
-                    <include reference="gcn-d2-0uC"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="162" y="-208"/>

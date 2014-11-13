@@ -1,6 +1,7 @@
 
 #import "MessagesViewController.h"
 #import "InboxMessageTableViewCell.h"
+#import "OutBoxTableViewCell.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "Message.h"
@@ -82,17 +83,22 @@
 #pragma mark - Table view delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.messages count];
+    return 1;//[self.messages count];
 }
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+-(Message*)mensajePrueba{
+    Message * msg =  [Message object];
+    msg.subject = @"prueba de asunto";
+    msg.date=[[NSDate alloc] init];
+    msg.readed = NO;
+    return msg;
+}
+- (InboxMessageTableViewCell *)createInboxCell:(UITableView *)tableView message:(Message *)message
 {
     InboxMessageTableViewCell *cell = (InboxMessageTableViewCell *)[tableView dequeueReusableCellWithIdentifier: @"InboxMessageCell"];
     if (!cell) {
         [tableView registerNib:[UINib nibWithNibName:@"InboxMessageTableViewCell" bundle:nil] forCellReuseIdentifier:@"InboxMessageCell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"InboxMessageCell"];
     }
-    Message * message = self.messages[indexPath.row];
     
     cell.message.text =message.subject;
     
@@ -101,22 +107,68 @@
     NSDate *theDate = message.date;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     //[formatter setDateFormat:@"HH:mm a"];
-    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
     NSString *timeString = [formatter stringFromDate:theDate];
     cell.date.text = timeString;
     
     
     if(!message.readed){
-        cell.date.font = [UIFont boldSystemFontOfSize:17.0];
-        cell.message.font = [UIFont boldSystemFontOfSize:17.0];
+        cell.date.font = [UIFont boldSystemFontOfSize:10.0];
+        cell.message.font = [UIFont boldSystemFontOfSize:13.0];
     }
     else
     {
-        cell.date.font = [UIFont systemFontOfSize:17.0];
-        cell.message.font = [UIFont systemFontOfSize:17.0];
+        cell.date.font = [UIFont systemFontOfSize:10.0];
+        cell.message.font = [UIFont systemFontOfSize:13.0];
         
     }
     return cell;
+}
+- (OutBoxTableViewCell *)createOutboxCell:(UITableView *)tableView message:(Message *)message
+{
+    OutBoxTableViewCell *cell = (OutBoxTableViewCell *)[tableView dequeueReusableCellWithIdentifier: @"OutBoxMessageCell"];
+    if (!cell) {
+        [tableView registerNib:[UINib nibWithNibName:@"OutBoxTableViewCell" bundle:nil] forCellReuseIdentifier:@"OutBoxMessageCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"OutBoxMessageCell"];
+    }
+    
+    cell.message.text =message.subject;
+    
+    [cell.message sizeToFit];
+    
+    NSDate *theDate = message.date;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    //[formatter setDateFormat:@"HH:mm a"];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *timeString = [formatter stringFromDate:theDate];
+    cell.date.text = timeString;
+    
+    
+    if(!message.readed){
+        cell.date.font = [UIFont boldSystemFontOfSize:10.0];
+        cell.message.font = [UIFont boldSystemFontOfSize:13.0];
+    }
+    else
+    {
+        cell.date.font = [UIFont systemFontOfSize:10.0];
+        cell.message.font = [UIFont systemFontOfSize:13.0];
+        
+    }
+    return cell;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Message * message = [self mensajePrueba];//self.messages[indexPath.row];
+
+    UITableViewCell *cell;
+    if (self.inbox) {
+        cell = [self createInboxCell:tableView message:message];
+
+    } else {
+        cell = [self createOutboxCell:tableView message:message];
+
+    }
+        return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

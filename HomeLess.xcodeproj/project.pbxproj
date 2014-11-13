@@ -10,6 +10,8 @@
 		180CBF0F1A12BEDC00AE563C /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CBF0B1A12BEDC00AE563C /* Message.m */; };
 		180CBF101A12BEDC00AE563C /* SendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CBF0D1A12BEDC00AE563C /* SendMessageViewController.m */; };
 		180CBF111A12BEDC00AE563C /* SendMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180CBF0E1A12BEDC00AE563C /* SendMessageViewController.xib */; };
+		181A5F7D1A14E71200B1F726 /* OutBoxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A5F7B1A14E71200B1F726 /* OutBoxTableViewCell.m */; };
+		181A5F7E1A14E71200B1F726 /* OutBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181A5F7C1A14E71200B1F726 /* OutBoxTableViewCell.xib */; };
 		18C09E341A13ED7D00887EAA /* MessageDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C09E321A13ED7D00887EAA /* MessageDetailsViewController.m */; };
 		18C09E351A13ED7D00887EAA /* MessageDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C09E331A13ED7D00887EAA /* MessageDetailsViewController.xib */; };
 		18EC79641A138C00000BBD48 /* InboxMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EC79621A138C00000BBD48 /* InboxMessageTableViewCell.m */; };
@@ -69,6 +71,9 @@
 		180CBF0C1A12BEDC00AE563C /* SendMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendMessageViewController.h; path = Source/Classes/SendMessageViewController.h; sourceTree = SOURCE_ROOT; };
 		180CBF0D1A12BEDC00AE563C /* SendMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SendMessageViewController.m; path = Source/Classes/SendMessageViewController.m; sourceTree = SOURCE_ROOT; };
 		180CBF0E1A12BEDC00AE563C /* SendMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SendMessageViewController.xib; path = Source/Classes/SendMessageViewController.xib; sourceTree = SOURCE_ROOT; };
+		181A5F7A1A14E71200B1F726 /* OutBoxTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutBoxTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		181A5F7B1A14E71200B1F726 /* OutBoxTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutBoxTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		181A5F7C1A14E71200B1F726 /* OutBoxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OutBoxTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		18C09E301A13ED4900887EAA /* AddHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddHouseViewController.h; path = Source/Classes/AddHouseViewController.h; sourceTree = SOURCE_ROOT; };
 		18C09E311A13ED7D00887EAA /* MessageDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageDetailsViewController.h; path = Source/Classes/MessageDetailsViewController.h; sourceTree = SOURCE_ROOT; };
 		18C09E321A13ED7D00887EAA /* MessageDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageDetailsViewController.m; path = Source/Classes/MessageDetailsViewController.m; sourceTree = SOURCE_ROOT; };
@@ -299,6 +304,9 @@
 		E24998231A1147E800E9969D /* MessagesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				181A5F7A1A14E71200B1F726 /* OutBoxTableViewCell.h */,
+				181A5F7B1A14E71200B1F726 /* OutBoxTableViewCell.m */,
+				181A5F7C1A14E71200B1F726 /* OutBoxTableViewCell.xib */,
 				18C09E311A13ED7D00887EAA /* MessageDetailsViewController.h */,
 				18C09E321A13ED7D00887EAA /* MessageDetailsViewController.m */,
 				18C09E331A13ED7D00887EAA /* MessageDetailsViewController.xib */,
@@ -426,6 +434,7 @@
 			files = (
 				544C6AB81A0FA1360057C2E3 /* Icon.png in Resources */,
 				544C6AB91A0FA1360057C2E3 /* Icon@2x.png in Resources */,
+				181A5F7E1A14E71200B1F726 /* OutBoxTableViewCell.xib in Resources */,
 				E293FBFF1A1103F7001F8910 /* DetailsHouseViewController.xib in Resources */,
 				544C6A901A0FA0490057C2E3 /* AddHouseViewController.xib in Resources */,
 				544C6AA81A0FA1110057C2E3 /* InfoPlist.strings in Resources */,
@@ -466,6 +475,7 @@
 				18EC79641A138C00000BBD48 /* InboxMessageTableViewCell.m in Sources */,
 				544C6A9E1A0FA0490057C2E3 /* LoginViewController.m in Sources */,
 				E24998211A1135A100E9969D /* MessagesViewController.m in Sources */,
+				181A5F7D1A14E71200B1F726 /* OutBoxTableViewCell.m in Sources */,
 				180CBF101A12BEDC00AE563C /* SendMessageViewController.m in Sources */,
 				E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */,
 				544C6AAA1A0FA1110057C2E3 /* main.m in Sources */,
