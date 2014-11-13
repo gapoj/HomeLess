@@ -413,7 +413,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uEX-H6-Dni">
-                    <rect key="frame" x="17" y="30" width="35" height="33"/>
+                    <rect key="frame" x="220" y="30" width="35" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="save">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -425,6 +425,16 @@
                         <action selector="onSave:" destination="-1" eventType="touchUpInside" id="emc-bk-kbh"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HomeLess" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dd6-BN-K0J">
+                    <rect key="frame" x="8" y="26" width="170" height="42"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="23" y="36" width="170" height="42"/>
+                    </variation>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.2416964731" blue="1" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

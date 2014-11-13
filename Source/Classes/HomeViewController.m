@@ -13,6 +13,7 @@
 @interface HomeViewController (){
     
     UIButton* infoButton;
+    UILabel *name;
 }
 @end
 
@@ -33,6 +34,11 @@
     menuButton.homeButtonView = homeLabel;
     [menuButton addButtons:[self createDemoButtonArray]];
     [self.view addSubview:menuButton];
+    name = [[UILabel alloc]initWithFrame:CGRectMake(10, 30, 170, 42)];
+    name.font = [UIFont systemFontOfSize:33];
+    name.text = @"HomeLess";
+    name.textColor = [UIColor colorWithRed:.64 green:.5 blue:1 alpha:1];
+    [self.view addSubview:name];
 }
 
 -(void) viewDidAppear:(BOOL)animated
@@ -68,20 +74,9 @@
 
 -(void) showInfo
 {
-    
-    PFQuery *housesQuery = [House query];
-    [housesQuery whereKey:@"title" equalTo:@"karen 2 "];
-    [housesQuery includeKey:@"owner"];
-    [housesQuery findObjectsInBackgroundWithBlock:^(NSArray *houses, NSError *error) {
-        if(error){
-            NSLog(@"Error: %@",error);
-        }else{
-            SendMessageViewController *vc = [[SendMessageViewController alloc]init];
-            vc.relatedHouse = houses[0];
-            [self showViewController:vc sender:self];
-        }
-    }];
- 
+    DetailsHouseViewController *detailsViewController = [[DetailsHouseViewController alloc]init];
+    [self showViewController:detailsViewController sender:self];
+
 }
 
 - (UILabel *)createHomeButtonView {

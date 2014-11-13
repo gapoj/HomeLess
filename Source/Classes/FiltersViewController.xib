@@ -16,18 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sen-fK-OEe">
-                    <rect key="frame" x="-36" y="-22" width="72" height="44"/>
-                    <state key="normal" image="save">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="22" width="40" height="42"/>
-                    </variation>
-                    <connections>
-                        <action selector="onSaveButtonPressed:" destination="-1" eventType="touchUpInside" id="Ge6-nI-Hda"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiZ-pf-zyD">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <state key="normal" image="menuHome">
@@ -336,21 +324,44 @@
                         </mask>
                     </variation>
                 </scrollView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HomeLess" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kb7-ar-w83">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="8" y="22" width="170" height="42"/>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sen-fK-OEe">
+                    <rect key="frame" x="-36" y="-22" width="72" height="44"/>
+                    <state key="normal" image="save">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="192" y="22" width="40" height="42"/>
+                    </variation>
+                    <connections>
+                        <action selector="onSaveButtonPressed:" destination="-1" eventType="touchUpInside" id="Ge6-nI-Hda"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.24169647312310572" blue="1" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="Sen-fK-OEe"/>
                     <exclude reference="YiZ-pf-zyD"/>
                     <exclude reference="Qnf-P4-Ugb"/>
+                    <exclude reference="Kb7-ar-w83"/>
+                    <exclude reference="Sen-fK-OEe"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
-                    <include reference="Sen-fK-OEe"/>
                     <include reference="YiZ-pf-zyD"/>
                     <include reference="Qnf-P4-Ugb"/>
+                    <include reference="Kb7-ar-w83"/>
+                    <include reference="Sen-fK-OEe"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="111" y="197"/>

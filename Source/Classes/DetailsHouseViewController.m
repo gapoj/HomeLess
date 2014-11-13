@@ -4,6 +4,7 @@
 #import "FiltersViewController.h"
 #import "HomeViewController.h"
 @interface FiltersViewController ()
+
 @end
 
 @implementation DetailsHouseViewController
@@ -17,5 +18,8 @@
 - (IBAction)onPageChanged:(UIPageControl *)sender {
     NSInteger a = sender.currentPage;
     a++;
+}
+- (IBAction)onHomeButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
