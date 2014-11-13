@@ -7,21 +7,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OutBoxMessageCell" rowHeight="77" id="KGk-i7-Jjw" customClass="OutBoxTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OutBoxMessageCell" rowHeight="90" id="KGk-i7-Jjw" customClass="OutBoxTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="messageBubbleBlue" translatesAutoresizingMaskIntoConstraints="NO" id="D4H-kc-DoI">
-                        <rect key="frame" x="0.0" y="0.0" width="351" height="84"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="send" translatesAutoresizingMaskIntoConstraints="NO" id="D4H-kc-DoI">
+                        <rect key="frame" x="2" y="4" width="334" height="84"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSE-1z-1pu">
-                        <rect key="frame" x="252" y="0.0" width="68" height="26"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TF1-vu-DIX">
+                        <rect key="frame" x="29" y="15" width="250" height="59"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSE-1z-1pu">
+                        <rect key="frame" x="243" y="4" width="68" height="26"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="68" id="2wa-aM-j02"/>
-                            <constraint firstAttribute="width" constant="68" id="rhU-6P-E5i"/>
+                            <constraint firstAttribute="width" constant="68" id="dni-oN-p0g"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -34,69 +40,32 @@
                         <variation key="widthClass=compact">
                             <mask key="constraints">
                                 <include reference="2wa-aM-j02"/>
-                                <exclude reference="rhU-6P-E5i"/>
                             </mask>
                         </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TF1-vu-DIX">
-                        <rect key="frame" x="18" y="9" width="250" height="59"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="RSE-1z-1pu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ADY-sq-bb0"/>
-                    <constraint firstItem="TF1-vu-DIX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="BJm-Ks-gT0"/>
-                    <constraint firstItem="RSE-1z-1pu" firstAttribute="top" secondItem="D4H-kc-DoI" secondAttribute="top" id="CXX-LI-NNX"/>
-                    <constraint firstAttribute="trailing" secondItem="RSE-1z-1pu" secondAttribute="trailing" id="H6G-DV-eLR"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="D4H-kc-DoI" secondAttribute="bottom" constant="-16" id="L5x-bO-JMx"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="TF1-vu-DIX" secondAttribute="trailing" constant="44" id="TLH-Oh-nxw"/>
-                    <constraint firstItem="TF1-vu-DIX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Vva-Wv-mJU"/>
-                    <constraint firstItem="TF1-vu-DIX" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="d7m-oR-r3q"/>
-                    <constraint firstItem="D4H-kc-DoI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="e1B-S6-byA"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="RSE-1z-1pu" secondAttribute="bottom" constant="42" id="hr9-we-M7A"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="D4H-kc-DoI" secondAttribute="trailing" constant="-39" id="yNE-1I-jQy"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="RSE-1z-1pu" secondAttribute="bottom" constant="51" id="3bs-4z-aSw"/>
+                    <constraint firstItem="TF1-vu-DIX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5pH-fK-wpd"/>
+                    <constraint firstItem="TF1-vu-DIX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="7ST-fj-M4h"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="D4H-kc-DoI" secondAttribute="bottom" constant="-7" id="BMH-Qp-lFm"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="RSE-1z-1pu" secondAttribute="trailing" constant="19" id="Kee-pq-cjM"/>
+                    <constraint firstItem="TF1-vu-DIX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="21" id="NY1-Zg-Rjp"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="TF1-vu-DIX" secondAttribute="trailing" constant="51" id="ZG4-61-FwU"/>
+                    <constraint firstItem="D4H-kc-DoI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="bJQ-Lh-Igi"/>
+                    <constraint firstItem="RSE-1z-1pu" firstAttribute="top" secondItem="D4H-kc-DoI" secondAttribute="top" id="kHw-js-VUb"/>
+                    <constraint firstItem="D4H-kc-DoI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-6" id="pWb-3u-BIn"/>
+                    <constraint firstItem="D4H-kc-DoI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-4" id="uiY-m3-d4a"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="L5x-bO-JMx"/>
-                        <exclude reference="e1B-S6-byA"/>
-                        <exclude reference="yNE-1I-jQy"/>
-                        <exclude reference="BJm-Ks-gT0"/>
-                        <exclude reference="TLH-Oh-nxw"/>
-                        <exclude reference="Vva-Wv-mJU"/>
-                        <exclude reference="d7m-oR-r3q"/>
-                        <exclude reference="ADY-sq-bb0"/>
-                        <exclude reference="CXX-LI-NNX"/>
-                        <exclude reference="H6G-DV-eLR"/>
-                        <exclude reference="hr9-we-M7A"/>
-                    </mask>
-                </variation>
-                <variation key="widthClass=compact">
-                    <mask key="constraints">
-                        <include reference="L5x-bO-JMx"/>
-                        <include reference="e1B-S6-byA"/>
-                        <include reference="yNE-1I-jQy"/>
-                        <include reference="BJm-Ks-gT0"/>
-                        <include reference="TLH-Oh-nxw"/>
-                        <include reference="Vva-Wv-mJU"/>
-                        <include reference="d7m-oR-r3q"/>
-                        <include reference="ADY-sq-bb0"/>
-                        <include reference="CXX-LI-NNX"/>
-                        <include reference="H6G-DV-eLR"/>
-                        <include reference="hr9-we-M7A"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="date" destination="RSE-1z-1pu" id="Nfm-2W-gKf"/>
                 <outlet property="message" destination="TF1-vu-DIX" id="RJU-8y-6nW"/>
             </connections>
-            <point key="canvasLocation" x="140" y="243.5"/>
+            <point key="canvasLocation" x="149" y="244"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="messageBubbleBlue" width="43" height="32"/>
+        <image name="send" width="209" height="98"/>
     </resources>
 </document>
