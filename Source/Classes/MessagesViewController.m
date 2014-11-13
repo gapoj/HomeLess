@@ -83,7 +83,7 @@
 #pragma mark - Table view delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;//[self.messages count];
+    return [self.messages count];
 }
 -(Message*)mensajePrueba{
     Message * msg =  [Message object];

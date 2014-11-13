@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UITextView *messageTextView;
 @property (strong, nonatomic) IBOutlet UILabel *sentToOrSentByLabel;
 @property NSArray *history;
+@property NSString * currentUserID;
 @end
 
 @implementation MessageDetailsViewController
@@ -25,15 +26,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadMessages];
     self.HouseLabel.text = self.message.houseRelated.title;
-    if ([self.message.sender.objectId isEqualToString:[PFUser currentUser].objectId]) {
+    self.currentUserID =[PFUser currentUser].objectId;
+    if ([self.message.sender.objectId isEqualToString:self.currentUserID]) {
         self.responseButton.hidden = YES;
         self.sentToOrSentByLabel.text =@"Sent to:";
-        self.otherUserLabel.text= self.message.receiver.username;
+        
+        self.otherUserLabel.text= self.message.receiver[@"profile"][@"name"];
     } else {
-         self.responseButton.hidden = NO;
+        self.responseButton.hidden = NO;
         self.sentToOrSentByLabel.text =@"Sent by:";
-         self.otherUserLabel.text= self.message.sender.username;
+        self.otherUserLabel.text= self.message.sender[@"profile"][@"name"];
         if(!self.message.readed){
             self.message.readed = YES;
             [self.message saveInBackground];
@@ -42,10 +46,30 @@
     
     self.messageTextView.text = self.message.message;
     self.tableview.rowHeight = UITableViewAutomaticDimension;
-    self.tableview.estimatedRowHeight = 100;
+    self.tableview.estimatedRowHeight = 60;
     
 }
-
+- (void)loadOtherUserName {
+    
+}
+- (void)loadMessages {
+    PFQuery *messagesQuery = [Message query];
+    [messagesQuery whereKey:@"conversationID" equalTo:self.message.conversationID];
+    
+    
+    [messagesQuery includeKey:@"sender"];
+    [messagesQuery includeKey:@"receiver"];
+    [messagesQuery includeKey:@"houseRelated"];
+    [messagesQuery findObjectsInBackgroundWithBlock:^(NSArray *messages, NSError *error) {
+        if(error){
+            NSLog(@"Error: %@",error);
+        }else{
+            self.history= messages;
+            [self.tableview reloadData];
+        }
+    }];
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -58,13 +82,19 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return self.history.count;
 }
-- (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    HistoricalInboxTableViewCell *cell = (HistoricalInboxTableViewCell *)[tableView dequeueReusableCellWithIdentifier: @"HistoricalInboxCell"];
-    if (!cell) {
-        [tableView registerNib:[UINib nibWithNibName:@"HistoricalInboxTableViewCell" bundle:nil] forCellReuseIdentifier:@"HistoricalInboxCell"];
-        cell = [tableView dequeueReusableCellWithIdentifier:@"HistoricalInboxCell"];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Message * message = self.history[indexPath.row];//
+    
+    UITableViewCell *cell;
+    if ([self.message.sender.objectId isEqualToString:self.currentUserID]) {
+        cell = [self createInboxCell:tableView message:message];
+        
+    } else {
+        cell = [self createOutboxCell:tableView message:message];
+        
     }
     return cell;
 }
@@ -84,15 +114,46 @@
 }
 - (HistoricalInboxTableViewCell *)createInboxCell:(UITableView *)tableView message:(Message *)message
 {
-    HistoricalInboxTableViewCell *cell = (HistoricalInboxTableViewCell *)[tableView dequeueReusableCellWithIdentifier: @"InboxMessageCell"];
+    HistoricalInboxTableViewCell *cell = (HistoricalInboxTableViewCell *)[tableView dequeueReusableCellWithIdentifier: @"HistoricalInboxCell"];
     if (!cell) {
-        [tableView registerNib:[UINib nibWithNibName:@"InboxMessageTableViewCell" bundle:nil] forCellReuseIdentifier:@"InboxMessageCell"];
-        cell = [tableView dequeueReusableCellWithIdentifier:@"InboxMessageCell"];
+        [tableView registerNib:[UINib nibWithNibName:@"HistoricalInboxTableViewCell" bundle:nil] forCellReuseIdentifier:@"HistoricalInboxCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"HistoricalInboxCell"];
     }
     
-    cell.message.text =message.subject;
+    cell.message.text =message.message;
     
     [cell.message sizeToFit];
+    
+    NSDate *theDate =[message getLocalTimeDate];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *timeString = [formatter stringFromDate:theDate];
+    cell.date.text = timeString;
+    
+    
+    if(!message.readed){
+        cell.date.font = [UIFont boldSystemFontOfSize:10.0];
+        cell.message.font = [UIFont boldSystemFontOfSize:13.0];
+    }
+    else
+    {
+        cell.date.font = [UIFont systemFontOfSize:10.0];
+        cell.message.font = [UIFont systemFontOfSize:13.0];
+        
+    }
+    return cell;
+}
+- (HistoricalOutBoxTableViewCell *)createOutboxCell:(UITableView *)tableView message:(Message *)message
+{
+    HistoricalOutBoxTableViewCell *cell = (HistoricalOutBoxTableViewCell *)[tableView dequeueReusableCellWithIdentifier: @"HistoricalOutBoxCell"];
+    if (!cell) {
+        [tableView registerNib:[UINib nibWithNibName:@"HistoricalOutBoxTableViewCell" bundle:nil] forCellReuseIdentifier:@"HistoricalOutBoxCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"HistoricalOutBoxCell"];
+    }
+    
+    cell.message.text =message.message;
+    
+     [cell.message sizeToFit];
     
     NSDate *theDate =[message getLocalTimeDate];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
