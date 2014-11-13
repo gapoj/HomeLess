@@ -48,9 +48,13 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1S-wH-Fgs">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.077697948219999993" green="0.80927309780000001" blue="0.066909399999999994" alpha="0.56999999999999995" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="121" id="iA3-OA-CBu"/>
                     </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" red="1" green="0.095412352610000001" blue="0.091958460160000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="iA3-OA-CBu"/>
