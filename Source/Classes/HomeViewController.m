@@ -34,7 +34,7 @@
     menuButton.homeButtonView = homeLabel;
     [menuButton addButtons:[self createDemoButtonArray]];
     [self.view addSubview:menuButton];
-    name = [[UILabel alloc]initWithFrame:CGRectMake(10, 30, 170, 42)];
+    name = [[UILabel alloc]initWithFrame:CGRectMake(70, 33, 170, 42)];
     name.font = [UIFont systemFontOfSize:33];
     name.text = @"HomeLess";
     name.textColor = [UIColor colorWithRed:.64 green:.5 blue:1 alpha:1];
