@@ -21,7 +21,7 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Bathrooms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4k-7p-Dt5">
                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <color key="backgroundColor" red="0.066591541860000006" green="0.25338921689999999" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.027450980392156862" green="0.043137254901960784" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -31,7 +31,7 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Price range" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA9-EA-EZe">
                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <color key="backgroundColor" red="0.066591541860000006" green="0.25338921689999999" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.027450980392156862" green="0.043137254901960784" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -41,7 +41,7 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Square footage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k60-Rs-2cL">
                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <color key="backgroundColor" red="0.066591541860000006" green="0.25338921689999999" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.027450980392156862" green="0.043137254901960784" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Rooms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwH-Hl-upb">
                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <color key="backgroundColor" red="0.066591541860000006" green="0.25338921689999999" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.027450980392156862" green="0.043137254901960784" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -245,7 +245,7 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Others" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgt-yf-MZm">
                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <color key="backgroundColor" red="0.066591541860000006" green="0.25338921689999999" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.027450980392156862" green="0.043137254901960784" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
