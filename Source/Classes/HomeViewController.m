@@ -81,10 +81,10 @@
 
 - (UILabel *)createHomeButtonView {
     UILabel *label = [[UILabel alloc] init ];
-    label.frame = CGRectMake(10, 10, 50, 50);
-    label.layer.cornerRadius = label.frame.size.height / 2.f;
+    label.frame = CGRectMake(10, 20, 50, 25);
+   // label.layer.cornerRadius = label.frame.size.height / 2.f;
     label.clipsToBounds = YES;
-    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menuIcon"]];
+    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menu"]];
     return label;
 }
 
