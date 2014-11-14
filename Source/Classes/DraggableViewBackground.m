@@ -22,7 +22,7 @@ static const float CARD_WIDTH = 260;
 {   PFQuery *housesQuery = [House query];
     [housesQuery whereKey:@"owner" notEqualTo:[PFUser currentUser]];
     [housesQuery includeKey:@"owner"];
-    [housesQuery orderByAscending:@""];
+    
     [housesQuery findObjectsInBackgroundWithBlock:^(NSArray *houses, NSError *error) {
         if(error){
             NSLog(@"Error: %@",error);
@@ -40,7 +40,7 @@ static const float CARD_WIDTH = 260;
 -(void)loadPhotos{
     PFQuery *photoQuery = [HousePhoto query];
     [photoQuery whereKey:@"house"containedIn: houseCards];
-    [photoQuery whereKey:@"isMain" equalTo:@"true"];
+    [photoQuery whereKey:@"isMain" equalTo:[NSNumber numberWithBool:YES]];
     [photoQuery includeKey:@"house"];
     [photoQuery findObjectsInBackgroundWithBlock:^(NSArray *photos, NSError *error) {
         if(error){
