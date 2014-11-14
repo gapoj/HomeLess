@@ -46,7 +46,7 @@
                         <constraint firstAttribute="height" constant="30" id="2jv-Dh-JOS"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
                         <mask key="constraints">
@@ -65,7 +65,7 @@
                         <constraint firstAttribute="width" constant="100" id="4WL-ns-Ivx"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
                         <mask key="constraints">
@@ -81,48 +81,49 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gender:" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sTr-Bh-4MF">
                     <rect key="frame" x="80" y="29" width="230" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date of Birth:" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="O1t-1V-Nmb">
                     <rect key="frame" x="80" y="29" width="230" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="RelationShip:" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tHP-w1-Xe4">
                     <rect key="frame" x="80" y="29" width="230" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="N/A" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jxr-eR-Xa6">
                     <rect key="frame" x="80" y="29" width="230" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="N/A" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pmq-z4-Mzs">
                     <rect key="frame" x="80" y="29" width="230" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="N/A" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IVI-us-dsg">
                     <rect key="frame" x="80" y="29" width="230" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="N/A" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="UFp-P9-qfn">
                     <rect key="frame" x="80" y="29" width="230" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MuZ-j2-KZl">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" red="0.0" green="0.2416964731" blue="1" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="sectionIndexBackgroundColor" red="0.0" green="0.2416964731" blue="1" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="sW4-6Z-1dy"/>
@@ -154,7 +155,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiA-hd-Quf">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="54" id="7Qg-RF-Ju0"/>
+                        <constraint firstAttribute="width" constant="54" id="7Qg-RF-Ju0">
+                            <variation key="widthClass=compact" constant="45"/>
+                        </constraint>
                     </constraints>
                     <state key="normal" image="menuHome">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -209,7 +212,9 @@
                 <constraint firstItem="DYe-FB-2EA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="13" id="dC1-Wi-yyQ"/>
                 <constraint firstItem="tHP-w1-Xe4" firstAttribute="baseline" secondItem="IVI-us-dsg" secondAttribute="baseline" id="dOB-0I-ynF"/>
                 <constraint firstItem="Jxr-eR-Xa6" firstAttribute="leading" secondItem="DYe-FB-2EA" secondAttribute="trailing" constant="16" id="eB0-Q6-Xlq"/>
-                <constraint firstItem="KiA-hd-Quf" firstAttribute="trailing" secondItem="Jxr-eR-Xa6" secondAttribute="trailing" id="ggm-im-nce"/>
+                <constraint firstItem="KiA-hd-Quf" firstAttribute="trailing" secondItem="Jxr-eR-Xa6" secondAttribute="trailing" id="ggm-im-nce">
+                    <variation key="widthClass=compact" constant="-9"/>
+                </constraint>
                 <constraint firstItem="Jxr-eR-Xa6" firstAttribute="leading" secondItem="UFp-P9-qfn" secondAttribute="leading" id="h0P-J7-iFU"/>
                 <constraint firstItem="Pmq-z4-Mzs" firstAttribute="trailing" secondItem="IVI-us-dsg" secondAttribute="trailing" id="iRI-Ti-bbk"/>
                 <constraint firstItem="MuZ-j2-KZl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jm3-0N-O3o"/>
@@ -221,7 +226,9 @@
                 <constraint firstItem="KiA-hd-Quf" firstAttribute="top" secondItem="rFP-xO-f5i" secondAttribute="top" id="qER-nZ-pTd"/>
                 <constraint firstItem="sTr-Bh-4MF" firstAttribute="leading" secondItem="DYe-FB-2EA" secondAttribute="leading" id="qhe-aB-i18"/>
                 <constraint firstItem="DYe-FB-2EA" firstAttribute="top" secondItem="rFP-xO-f5i" secondAttribute="bottom" constant="43" id="rQi-93-dQu"/>
-                <constraint firstItem="Jxr-eR-Xa6" firstAttribute="top" secondItem="KiA-hd-Quf" secondAttribute="bottom" constant="54" id="uS5-KU-HKr"/>
+                <constraint firstItem="Jxr-eR-Xa6" firstAttribute="top" secondItem="KiA-hd-Quf" secondAttribute="bottom" constant="54" id="uS5-KU-HKr">
+                    <variation key="widthClass=compact" constant="62"/>
+                </constraint>
                 <constraint firstItem="MuZ-j2-KZl" firstAttribute="top" secondItem="tHP-w1-Xe4" secondAttribute="bottom" constant="8" symbolic="YES" id="whF-ve-xyV">
                     <variation key="widthClass=compact" constant="29"/>
                 </constraint>

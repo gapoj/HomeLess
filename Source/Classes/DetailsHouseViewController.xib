@@ -264,7 +264,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="263" y="29" width="54" height="49"/>
+                        <rect key="frame" x="263" y="29" width="45" height="41"/>
                     </variation>
                     <connections>
                         <action selector="onHomeButtonPressed:" destination="-1" eventType="touchUpInside" id="Tsc-GD-CUw"/>
@@ -276,7 +276,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="201" y="29" width="54" height="49"/>
+                        <rect key="frame" x="201" y="29" width="45" height="41"/>
                     </variation>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HomeLess" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wj-6Q-Dm4">
