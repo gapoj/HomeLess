@@ -105,22 +105,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Source/Classes/DraggableView.m"
-            timestampString = "437337818.723736"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "-rightClickAction"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Source/Classes/PhotoAppViewController.m"
             timestampString = "437356601.797002"
             startingColumnNumber = "9223372036854775807"
@@ -202,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/Classes/DraggableViewBackground.m"
-            timestampString = "437678573.325381"
+            timestampString = "437682175.095658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "-cardSwipedRight:"
             landmarkType = "5">
          </BreakpointContent>
@@ -217,13 +201,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Source/Classes/DraggableViewBackground.m"
-            timestampString = "437678697.831569"
+            filePath = "Source/Classes/FiltersViewController.m"
+            timestampString = "437679248.337339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-loadPhotos"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-onSaveButtonPressed:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

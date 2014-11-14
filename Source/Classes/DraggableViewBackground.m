@@ -3,7 +3,7 @@
 #import "DetailsHouseViewController.h"
 #import "House.h"
 #import "HousePhoto.h"
-
+#import "Favorite.h"
 
 @implementation DraggableViewBackground{
     NSInteger cardsLoadedIndex;
@@ -139,6 +139,7 @@ static const float CARD_WIDTH = 260;
 
 -(void)cardSwipedRight:(UIView *)card
 {
+    [self addFavorite];
     [loadedCards removeObjectAtIndex:0];
     if (cardsLoadedIndex < [allCards count]) {
         [loadedCards addObject:[allCards objectAtIndex:cardsLoadedIndex]];
@@ -147,7 +148,25 @@ static const float CARD_WIDTH = 260;
     }
     self.houseIndex++;
 }
+-(void)addFavorite{
+    Favorite *  favorite=[Favorite object];
+    favorite.user = [PFUser currentUser];
+    HousePhoto *photo = [houseCards objectAtIndex:self.houseIndex];
 
+    favorite.house = photo.house;
+    [favorite saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+        if(error){
+            NSLog(@"%@",error);
+        }else{
+           
+                    UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Succes" message:@"The house was added to favorites" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                    [myAlertView show];
+            
+            }
+        }
+    ];
+
+}
 -(void)swipeRight
 {
     DraggableView *dragView = [loadedCards firstObject];
