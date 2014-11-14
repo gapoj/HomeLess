@@ -10,10 +10,6 @@
 		180CBF0F1A12BEDC00AE563C /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CBF0B1A12BEDC00AE563C /* Message.m */; };
 		180CBF101A12BEDC00AE563C /* SendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CBF0D1A12BEDC00AE563C /* SendMessageViewController.m */; };
 		180CBF111A12BEDC00AE563C /* SendMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180CBF0E1A12BEDC00AE563C /* SendMessageViewController.xib */; };
-		181A5F7D1A14E71200B1F726 /* OutBoxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A5F7B1A14E71200B1F726 /* OutBoxTableViewCell.m */; };
-		181A5F7E1A14E71200B1F726 /* OutBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181A5F7C1A14E71200B1F726 /* OutBoxTableViewCell.xib */; };
-		18A3353E1A1508950042E39C /* HistoricalInboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3353C1A1508950042E39C /* HistoricalInboxTableViewCell.m */; };
-		18A3353F1A1508950042E39C /* HistoricalInboxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A3353D1A1508950042E39C /* HistoricalInboxTableViewCell.xib */; };
 		18A335431A15179A0042E39C /* HistoricalOutBoxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A335411A15179A0042E39C /* HistoricalOutBoxTableViewCell.m */; };
 		18A335441A15179A0042E39C /* HistoricalOutBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A335421A15179A0042E39C /* HistoricalOutBoxTableViewCell.xib */; };
 		18C09E341A13ED7D00887EAA /* MessageDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C09E321A13ED7D00887EAA /* MessageDetailsViewController.m */; };
@@ -63,8 +59,12 @@
 		D4DA7A1414D334F30055F672 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DA7A0D14D334F30055F672 /* SystemConfiguration.framework */; };
 		E24998211A1135A100E9969D /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E249981F1A1135A100E9969D /* MessagesViewController.m */; };
 		E24998221A1135A100E9969D /* MessagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24998201A1135A100E9969D /* MessagesViewController.xib */; };
+		E24E23461A1630FB0037088A /* HistoricalInboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E24E23401A1630FB0037088A /* HistoricalInboxTableViewCell.m */; };
+		E24E23471A1630FB0037088A /* HistoricalInboxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24E23411A1630FB0037088A /* HistoricalInboxTableViewCell.xib */; };
+		E24E23481A1630FB0037088A /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24E23421A1630FB0037088A /* MyCell.xib */; };
+		E24E23491A1630FB0037088A /* OutBoxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E24E23441A1630FB0037088A /* OutBoxTableViewCell.m */; };
+		E24E234A1A1630FB0037088A /* OutBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24E23451A1630FB0037088A /* OutBoxTableViewCell.xib */; };
 		E2640A8E1A1278390070493F /* DWBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E2640A8D1A1278390070493F /* DWBubbleMenuButton.m */; };
-		E26DB31E1A14E296009704C9 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26DB31D1A14E296009704C9 /* MyCell.xib */; };
 		E26DB3211A14E2E5009704C9 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E26DB3201A14E2E5009704C9 /* MyCell.m */; };
 		E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E293FBFC1A1103F7001F8910 /* DetailsHouseViewController.m */; };
 		E293FBFF1A1103F7001F8910 /* DetailsHouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E293FBFD1A1103F7001F8910 /* DetailsHouseViewController.xib */; };
@@ -77,12 +77,6 @@
 		180CBF0C1A12BEDC00AE563C /* SendMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendMessageViewController.h; path = Source/Classes/SendMessageViewController.h; sourceTree = SOURCE_ROOT; };
 		180CBF0D1A12BEDC00AE563C /* SendMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SendMessageViewController.m; path = Source/Classes/SendMessageViewController.m; sourceTree = SOURCE_ROOT; };
 		180CBF0E1A12BEDC00AE563C /* SendMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SendMessageViewController.xib; path = Source/Classes/SendMessageViewController.xib; sourceTree = SOURCE_ROOT; };
-		181A5F7A1A14E71200B1F726 /* OutBoxTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutBoxTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		181A5F7B1A14E71200B1F726 /* OutBoxTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutBoxTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		181A5F7C1A14E71200B1F726 /* OutBoxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OutBoxTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		18A3353B1A1508950042E39C /* HistoricalInboxTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoricalInboxTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		18A3353C1A1508950042E39C /* HistoricalInboxTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoricalInboxTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		18A3353D1A1508950042E39C /* HistoricalInboxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoricalInboxTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		18A335401A15179A0042E39C /* HistoricalOutBoxTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoricalOutBoxTableViewCell.h; path = Source/Classes/HistoricalOutBoxTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		18A335411A15179A0042E39C /* HistoricalOutBoxTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoricalOutBoxTableViewCell.m; path = Source/Classes/HistoricalOutBoxTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		18A335421A15179A0042E39C /* HistoricalOutBoxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistoricalOutBoxTableViewCell.xib; path = Source/Classes/HistoricalOutBoxTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -149,9 +143,15 @@
 		E249981E1A1135A100E9969D /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessagesViewController.h; path = Source/Classes/MessagesViewController.h; sourceTree = SOURCE_ROOT; };
 		E249981F1A1135A100E9969D /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessagesViewController.m; path = Source/Classes/MessagesViewController.m; sourceTree = SOURCE_ROOT; };
 		E24998201A1135A100E9969D /* MessagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessagesViewController.xib; path = Source/Classes/MessagesViewController.xib; sourceTree = SOURCE_ROOT; };
+		E24E233F1A1630FB0037088A /* HistoricalInboxTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoricalInboxTableViewCell.h; path = Source/Classes/HistoricalInboxTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		E24E23401A1630FB0037088A /* HistoricalInboxTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoricalInboxTableViewCell.m; path = Source/Classes/HistoricalInboxTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		E24E23411A1630FB0037088A /* HistoricalInboxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistoricalInboxTableViewCell.xib; path = Source/Classes/HistoricalInboxTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		E24E23421A1630FB0037088A /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyCell.xib; path = Source/Classes/MyCell.xib; sourceTree = SOURCE_ROOT; };
+		E24E23431A1630FB0037088A /* OutBoxTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OutBoxTableViewCell.h; path = Source/Classes/OutBoxTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		E24E23441A1630FB0037088A /* OutBoxTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OutBoxTableViewCell.m; path = Source/Classes/OutBoxTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		E24E23451A1630FB0037088A /* OutBoxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OutBoxTableViewCell.xib; path = Source/Classes/OutBoxTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		E2640A8C1A1278390070493F /* DWBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DWBubbleMenuButton.h; path = Source/Classes/DWBubbleMenuButton.h; sourceTree = SOURCE_ROOT; };
 		E2640A8D1A1278390070493F /* DWBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DWBubbleMenuButton.m; path = Source/Classes/DWBubbleMenuButton.m; sourceTree = SOURCE_ROOT; };
-		E26DB31D1A14E296009704C9 /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = SOURCE_ROOT; };
 		E26DB31F1A14E2E5009704C9 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCell.h; path = Source/Classes/MyCell.h; sourceTree = SOURCE_ROOT; };
 		E26DB3201A14E2E5009704C9 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCell.m; path = Source/Classes/MyCell.m; sourceTree = SOURCE_ROOT; };
 		E293FBFB1A1103F7001F8910 /* DetailsHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsHouseViewController.h; path = Source/Classes/DetailsHouseViewController.h; sourceTree = SOURCE_ROOT; };
@@ -319,9 +319,12 @@
 		E24998231A1147E800E9969D /* Messages */ = {
 			isa = PBXGroup;
 			children = (
-				181A5F7A1A14E71200B1F726 /* OutBoxTableViewCell.h */,
-				181A5F7B1A14E71200B1F726 /* OutBoxTableViewCell.m */,
-				181A5F7C1A14E71200B1F726 /* OutBoxTableViewCell.xib */,
+				E24E233F1A1630FB0037088A /* HistoricalInboxTableViewCell.h */,
+				E24E23401A1630FB0037088A /* HistoricalInboxTableViewCell.m */,
+				E24E23411A1630FB0037088A /* HistoricalInboxTableViewCell.xib */,
+				E24E23431A1630FB0037088A /* OutBoxTableViewCell.h */,
+				E24E23441A1630FB0037088A /* OutBoxTableViewCell.m */,
+				E24E23451A1630FB0037088A /* OutBoxTableViewCell.xib */,
 				18C09E311A13ED7D00887EAA /* MessageDetailsViewController.h */,
 				18C09E321A13ED7D00887EAA /* MessageDetailsViewController.m */,
 				18C09E331A13ED7D00887EAA /* MessageDetailsViewController.xib */,
@@ -334,9 +337,6 @@
 				E249981E1A1135A100E9969D /* MessagesViewController.h */,
 				E249981F1A1135A100E9969D /* MessagesViewController.m */,
 				E24998201A1135A100E9969D /* MessagesViewController.xib */,
-				18A3353B1A1508950042E39C /* HistoricalInboxTableViewCell.h */,
-				18A3353C1A1508950042E39C /* HistoricalInboxTableViewCell.m */,
-				18A3353D1A1508950042E39C /* HistoricalInboxTableViewCell.xib */,
 				18A335401A15179A0042E39C /* HistoricalOutBoxTableViewCell.h */,
 				18A335411A15179A0042E39C /* HistoricalOutBoxTableViewCell.m */,
 				18A335421A15179A0042E39C /* HistoricalOutBoxTableViewCell.xib */,
@@ -367,7 +367,7 @@
 		E2EDA5561A0D2C6600848400 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				E26DB31D1A14E296009704C9 /* MyCell.xib */,
+				E24E23421A1630FB0037088A /* MyCell.xib */,
 				E26DB31F1A14E2E5009704C9 /* MyCell.h */,
 				E26DB3201A14E2E5009704C9 /* MyCell.m */,
 				18C09E301A13ED4900887EAA /* AddHouseViewController.h */,
@@ -456,11 +456,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24E23471A1630FB0037088A /* HistoricalInboxTableViewCell.xib in Resources */,
 				18A335441A15179A0042E39C /* HistoricalOutBoxTableViewCell.xib in Resources */,
 				544C6AB81A0FA1360057C2E3 /* Icon.png in Resources */,
 				544C6AB91A0FA1360057C2E3 /* Icon@2x.png in Resources */,
-				18A3353F1A1508950042E39C /* HistoricalInboxTableViewCell.xib in Resources */,
-				181A5F7E1A14E71200B1F726 /* OutBoxTableViewCell.xib in Resources */,
+				E24E23481A1630FB0037088A /* MyCell.xib in Resources */,
 				E293FBFF1A1103F7001F8910 /* DetailsHouseViewController.xib in Resources */,
 				544C6A901A0FA0490057C2E3 /* AddHouseViewController.xib in Resources */,
 				544C6AA81A0FA1110057C2E3 /* InfoPlist.strings in Resources */,
@@ -470,10 +470,10 @@
 				544C6A9D1A0FA0490057C2E3 /* Images.xcassets in Resources */,
 				544C6AA11A0FA0490057C2E3 /* UserDetailsViewController.xib in Resources */,
 				544C6AB71A0FA1360057C2E3 /* Default@2x.png in Resources */,
+				E24E234A1A1630FB0037088A /* OutBoxTableViewCell.xib in Resources */,
 				544C6A981A0FA0490057C2E3 /* FiltersViewController.xib in Resources */,
 				180CBF111A12BEDC00AE563C /* SendMessageViewController.xib in Resources */,
 				544C6A9C1A0FA0490057C2E3 /* HouseTableViewCell.xib in Resources */,
-				E26DB31E1A14E296009704C9 /* MyCell.xib in Resources */,
 				18EC79651A138C00000BBD48 /* InboxMessageTableViewCell.xib in Resources */,
 				544C6AA91A0FA1110057C2E3 /* HomeLess-Info.plist in Resources */,
 				18C09E351A13ED7D00887EAA /* MessageDetailsViewController.xib in Resources */,
@@ -503,12 +503,12 @@
 				18EC79641A138C00000BBD48 /* InboxMessageTableViewCell.m in Sources */,
 				544C6A9E1A0FA0490057C2E3 /* LoginViewController.m in Sources */,
 				E24998211A1135A100E9969D /* MessagesViewController.m in Sources */,
-				181A5F7D1A14E71200B1F726 /* OutBoxTableViewCell.m in Sources */,
 				180CBF101A12BEDC00AE563C /* SendMessageViewController.m in Sources */,
 				E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */,
 				544C6AAA1A0FA1110057C2E3 /* main.m in Sources */,
 				544C6A991A0FA0490057C2E3 /* HomeViewController.m in Sources */,
-				18A3353E1A1508950042E39C /* HistoricalInboxTableViewCell.m in Sources */,
+				E24E23461A1630FB0037088A /* HistoricalInboxTableViewCell.m in Sources */,
+				E24E23491A1630FB0037088A /* OutBoxTableViewCell.m in Sources */,
 				E2C2EF2C1A13CF0A0066A36D /* HousePhoto.m in Sources */,
 				18C09E341A13ED7D00887EAA /* MessageDetailsViewController.m in Sources */,
 				E26DB3211A14E2E5009704C9 /* MyCell.m in Sources */,
