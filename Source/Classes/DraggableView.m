@@ -23,6 +23,7 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
+    self.backgroundColor = [UIColor colorWithRed:0.75 green:0.92 blue:0.83 alpha:.5];
     if (self) {
         [self setupView];
         information = [[UILabel alloc]initWithFrame:CGRectMake(-50, 200, 280, 100)];

@@ -149,7 +149,7 @@
 }
 
 - (void)dismissButtons {
-    self.backgroundColor = [UIColor colorWithRed:0.75 green:0.92 blue:0.83 alpha:.1];
+    self.backgroundColor = [UIColor whiteColor];
     if ([self.delegate respondsToSelector:@selector(bubbleMenuButtonWillCollapse:)]) {
         [self.delegate bubbleMenuButtonWillCollapse:self];
     }

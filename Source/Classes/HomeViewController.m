@@ -21,11 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithRed:0.75 green:0.92 blue:0.83 alpha:.5];
     DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:self.view.frame];
     draggableBackground.center = self.view.center;
     [self.view addSubview:draggableBackground];
-    infoButton = [[UIButton alloc]initWithFrame:CGRectMake(135, 430, 75, 75)];
+    infoButton = [[UIButton alloc]initWithFrame:CGRectMake(125, 430, 75, 75)];
     [infoButton setImage:[UIImage imageNamed:@"infoButton"] forState:UIControlStateNormal];
     [infoButton addTarget:self action:@selector(showInfo) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:infoButton];
@@ -82,7 +81,6 @@
 - (UILabel *)createHomeButtonView {
     UILabel *label = [[UILabel alloc] init ];
     label.frame = CGRectMake(10, 20, 50, 25);
-   // label.layer.cornerRadius = label.frame.size.height / 2.f;
     label.clipsToBounds = YES;
     label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menu"]];
     return label;

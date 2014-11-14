@@ -71,10 +71,10 @@ static const float CARD_WIDTH = 260;
 
 -(void)setupView
 {
-    xButton = [[UIButton alloc]initWithFrame:CGRectMake(60, 415, 75, 75)];
+    xButton = [[UIButton alloc]initWithFrame:CGRectMake(50, 415, 75, 75)];
     [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
     [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
-    checkButton = [[UIButton alloc]initWithFrame:CGRectMake(210, 415, 75, 75)];
+    checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 415, 75, 75)];
     [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
     [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
     
