@@ -29,13 +29,13 @@ static const float CARD_WIDTH = 260;
         }else{
             houseCards  = houses;
             [self loadPhotos];
-           
+            
         }
     }];
     loadedCards = [[NSMutableArray alloc] init];
     allCards = [[NSMutableArray alloc] init];
     cardsLoadedIndex = 0;
-       self.houseIndex = 0;
+    self.houseIndex = 0;
 }
 -(void)loadPhotos{
     PFQuery *photoQuery = [HousePhoto query];
@@ -71,10 +71,10 @@ static const float CARD_WIDTH = 260;
 
 -(void)setupView
 {
-    xButton = [[UIButton alloc]initWithFrame:CGRectMake(60, 415, 75, 75)];
+    xButton = [[UIButton alloc]initWithFrame:CGRectMake(50, 415, 75, 75)];
     [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
     [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
-    checkButton = [[UIButton alloc]initWithFrame:CGRectMake(210, 415, 75, 75)];
+    checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 415, 75, 75)];
     [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
     [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
     
@@ -90,13 +90,13 @@ static const float CARD_WIDTH = 260;
     if (file != nil) {
         NSError *error;
         NSData * data = [file getData: &error];
-            if (!error) {
-                draggableView.imageHouse.image = [UIImage imageWithData:data];
-                draggableView.imageHouse.contentMode = UIViewContentModeScaleAspectFit;
-            }
-       
+        if (!error) {
+            draggableView.imageHouse.image = [UIImage imageWithData:data];
+            draggableView.imageHouse.contentMode = UIViewContentModeScaleAspectFit;
+        }
+        
     }
-  
+    
     draggableView.delegate = self;
     draggableView.information.text =photo.house.title;
     return draggableView;
@@ -152,20 +152,12 @@ static const float CARD_WIDTH = 260;
     Favorite *  favorite=[Favorite object];
     favorite.user = [PFUser currentUser];
     HousePhoto *photo = [houseCards objectAtIndex:self.houseIndex];
-
     favorite.house = photo.house;
     [favorite saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
         if(error){
             NSLog(@"%@",error);
-        }else{
-           
-                    UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Succes" message:@"The house was added to favorites" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-                    [myAlertView show];
-            
-            }
         }
-    ];
-
+    }];
 }
 -(void)swipeRight
 {

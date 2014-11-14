@@ -17,12 +17,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Subject" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nFW-2f-ICN">
-                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                    <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyw-0L-frO">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -101,11 +95,19 @@
                         <action selector="onCancel:" destination="-1" eventType="touchUpInside" id="mgu-xi-DiA"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Subject" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nFW-2f-ICN">
+                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                    <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.2416964731" blue="1" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="nFW-2f-ICN" firstAttribute="top" secondItem="Qv1-Ff-ADj" secondAttribute="bottom" constant="4" id="436-GX-2Tf"/>
-                <constraint firstItem="nFW-2f-ICN" firstAttribute="centerX" secondItem="JOe-bQ-mdH" secondAttribute="centerX" id="4Sx-d2-upQ"/>
+                <constraint firstItem="nFW-2f-ICN" firstAttribute="centerX" secondItem="JOe-bQ-mdH" secondAttribute="centerX" id="4Sx-d2-upQ">
+                    <variation key="widthClass=compact" constant="48"/>
+                </constraint>
                 <constraint firstItem="0ri-WN-MZw" firstAttribute="bottom" secondItem="Mhh-G9-5dX" secondAttribute="bottom" id="7Y5-5z-jdf"/>
                 <constraint firstItem="ws4-pR-8QU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="1" id="Brw-Gv-bXc"/>
                 <constraint firstItem="dVj-hK-E5l" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ds2-sH-GdG"/>
@@ -133,7 +135,6 @@
             </constraints>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="nFW-2f-ICN"/>
                     <exclude reference="zyw-0L-frO"/>
                     <exclude reference="ws4-pR-8QU"/>
                     <exclude reference="Qv1-Ff-ADj"/>
@@ -141,6 +142,7 @@
                     <exclude reference="0ri-WN-MZw"/>
                     <exclude reference="JOe-bQ-mdH"/>
                     <exclude reference="Mhh-G9-5dX"/>
+                    <exclude reference="nFW-2f-ICN"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="Hv8-jT-aYG"/>
@@ -167,7 +169,6 @@
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
-                    <include reference="nFW-2f-ICN"/>
                     <include reference="zyw-0L-frO"/>
                     <include reference="ws4-pR-8QU"/>
                     <include reference="Qv1-Ff-ADj"/>
@@ -175,6 +176,7 @@
                     <include reference="0ri-WN-MZw"/>
                     <include reference="JOe-bQ-mdH"/>
                     <include reference="Mhh-G9-5dX"/>
+                    <include reference="nFW-2f-ICN"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="Hv8-jT-aYG"/>

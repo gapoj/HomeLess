@@ -18,7 +18,7 @@
                         <rect key="frame" x="2" y="4" width="334" height="84"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TF1-vu-DIX">
-                        <rect key="frame" x="29" y="15" width="250" height="59"/>
+                        <rect key="frame" x="29" y="19" width="250" height="59"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -46,8 +46,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="RSE-1z-1pu" secondAttribute="bottom" constant="51" id="3bs-4z-aSw"/>
-                    <constraint firstItem="TF1-vu-DIX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5pH-fK-wpd"/>
-                    <constraint firstItem="TF1-vu-DIX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="7ST-fj-M4h"/>
+                    <constraint firstItem="TF1-vu-DIX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="4" id="5pH-fK-wpd"/>
+                    <constraint firstItem="TF1-vu-DIX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="7ST-fj-M4h"/>
                     <constraint firstAttribute="bottomMargin" secondItem="D4H-kc-DoI" secondAttribute="bottom" constant="-7" id="BMH-Qp-lFm"/>
                     <constraint firstAttribute="trailingMargin" secondItem="RSE-1z-1pu" secondAttribute="trailing" constant="19" id="Kee-pq-cjM"/>
                     <constraint firstItem="TF1-vu-DIX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="21" id="NY1-Zg-Rjp"/>
