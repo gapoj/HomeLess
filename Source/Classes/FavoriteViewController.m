@@ -1,5 +1,4 @@
 
-
 #import "FavoriteViewController.h"
 #import "HouseTableViewCell.h"
 #import "House.h"
@@ -29,6 +28,9 @@
             self.favorites = favorites;
         }
     }];
+}
+- (IBAction)onHomeButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
