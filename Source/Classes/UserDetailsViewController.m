@@ -202,18 +202,18 @@
     [self showViewController:vc sender:self];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    NSString *sectionName;
-    switch (section)
-    {
-        case 0:
-            sectionName = @"My Houses";
-            break;
-        default:
-            sectionName = @"";
-            break;
-    }
-    return sectionName;
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    NSString *sectionName;
+//    switch (section)
+//    {
+//        case 0:
+//            sectionName = @"My Houses";
+//            break;
+//        default:
+//            sectionName = @"";
+//            break;
+//    }
+//    return sectionName;
+//}
 @end
