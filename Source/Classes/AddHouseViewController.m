@@ -212,7 +212,7 @@
 
 #pragma mark textview
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    NSLog(@"touchesBegan:withEvent:");
+   
     [self.view endEditing:YES];
     [super touchesBegan:touches withEvent:event];
 }
@@ -222,14 +222,13 @@
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
-    NSLog(@"textViewDidBeginEditing:");
-    textView.backgroundColor = [UIColor colorWithRed:.93 green:.87 blue:.93 alpha:.5];
-    textView.text = @"";
+       textView.backgroundColor = [UIColor colorWithRed:.93 green:.87 blue:.93 alpha:.5];
+    
     
     
 }
 - (BOOL)textViewShouldEndEditing:(UITextView *)textView{
-    NSLog(@"textViewShouldEndEditing:");
+  
     textView.backgroundColor = [UIColor whiteColor];
     return YES;
 }

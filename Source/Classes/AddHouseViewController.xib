@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -9,6 +9,7 @@
                 <outlet property="PriceTextField" destination="onz-BK-G7U" id="cdw-OD-GrC"/>
                 <outlet property="addressTextField" destination="RPH-rH-zf6" id="b5n-Fo-eQf"/>
                 <outlet property="bathroomsLabel" destination="RiO-d2-iwe" id="kdH-YN-flu"/>
+                <outlet property="bathroomsSlider" destination="53m-AE-60c" id="RPI-Uu-elV"/>
                 <outlet property="desc" destination="HmQ-bM-zE9" id="idc-CQ-JN8"/>
                 <outlet property="garageSegmentControl" destination="hW7-oL-rxN" id="3bh-mY-KYQ"/>
                 <outlet property="mainPhoto" destination="ATW-2u-G8M" id="gdk-p0-8AX"/>
@@ -16,8 +17,10 @@
                 <outlet property="petLabel" destination="EoK-6g-JyB" id="rL5-wh-x3E"/>
                 <outlet property="rentOrSaleSegmentControl" destination="3nZ-8D-7br" id="mRC-iF-Qnz"/>
                 <outlet property="roomsLabel" destination="9mE-rQ-FEc" id="qj5-Wl-Pzm"/>
+                <outlet property="roomsSlider" destination="QZV-5i-Cmu" id="d7u-Mw-Vhd"/>
                 <outlet property="scroller" destination="E9N-Dg-XF7" id="jPm-HP-KyU"/>
                 <outlet property="squareMetersLabel" destination="wvq-Yo-sAG" id="4sS-xS-75F"/>
+                <outlet property="squareMetersSlider" destination="rv2-6M-xld" id="a3c-hj-dFM"/>
                 <outlet property="titleTextField" destination="lju-mf-3P3" id="dZE-AN-1Gl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -290,7 +293,7 @@
                                 <rect key="frame" x="18" y="370" width="97" height="30"/>
                             </variation>
                         </textField>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="house description here" id="HmQ-bM-zE9">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="HmQ-bM-zE9">
                             <rect key="frame" x="8" y="238" width="320" height="61"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
