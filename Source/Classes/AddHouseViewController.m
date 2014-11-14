@@ -102,7 +102,7 @@
     newHouse.owner = [PFUser currentUser];
     newHouse.title = self.titleTextField.text;
     newHouse.address = self.addressTextField.text;
-    newHouse.price = self.PriceTextField.text;
+    newHouse.price = [self.PriceTextField.text integerValue];
     newHouse.houseDescription = self.desc.text;
     newHouse.bathrooms = [self.bathroomsLabel.text integerValue];
     newHouse.rooms = [self.roomsLabel.text integerValue];

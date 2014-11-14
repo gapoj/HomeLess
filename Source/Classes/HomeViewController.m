@@ -9,11 +9,13 @@
 #import "SendMessageViewController.h"
 #import "MessagesViewController.h"
 #import "LoginViewController.h"
+#import "HousePhoto.h"
 
 @interface HomeViewController (){
     
     UIButton* infoButton;
     UILabel *name;
+    DraggableViewBackground *draggableBackground;
 }
 @end
 
@@ -22,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:0.75 green:0.92 blue:0.83 alpha:.5];
-    DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:self.view.frame];
+    draggableBackground = [[DraggableViewBackground alloc]initWithFrame:self.view.frame];
     draggableBackground.center = self.view.center;
     [self.view addSubview:draggableBackground];
     infoButton = [[UIButton alloc]initWithFrame:CGRectMake(135, 430, 75, 75)];
@@ -75,6 +77,11 @@
 -(void) showInfo
 {
     DetailsHouseViewController *detailsViewController = [[DetailsHouseViewController alloc]init];
+    HousePhoto *photo = draggableBackground.houseCards[draggableBackground.houseIndex];
+
+    
+    
+    detailsViewController.house = photo.house;
     [self showViewController:detailsViewController sender:self];
 
 }

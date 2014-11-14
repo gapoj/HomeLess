@@ -11,7 +11,7 @@
 @interface House : PFObject <PFSubclassing>
 @property NSString *title;
 @property NSString *address;
-@property NSString *price;
+@property NSInteger *price;
 @property NSString *houseDescription;
 @property NSString *rentOrSale;
 @property NSInteger rooms;
