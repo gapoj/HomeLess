@@ -59,18 +59,6 @@
                                 <rect key="frame" x="0.0" y="84" width="400" height="21"/>
                             </variation>
                         </label>
-                        <segmentedControl opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j1Y-Ed-wa2">
-                            <rect key="frame" x="-61" y="-14" width="123" height="29"/>
-                            <color key="backgroundColor" red="0.097542601256781047" green="1" blue="0.18270826795867634" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                            <segments>
-                                <segment title="Rent"/>
-                                <segment title="Sale"/>
-                            </segments>
-                            <color key="tintColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="70" y="21" width="167" height="29"/>
-                            </variation>
-                        </segmentedControl>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ 500" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xOT-RV-6P6">
                             <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                             <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
@@ -253,6 +241,18 @@
                                 <rect key="frame" x="0.0" y="492" width="400" height="21"/>
                             </variation>
                         </label>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Nn4-xJ-ECU">
+                            <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                            <color key="backgroundColor" red="0.077697948219999993" green="0.80927309780000001" blue="0.066909399999999994" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
+                            <segments>
+                                <segment title="RENT"/>
+                                <segment title="SALE"/>
+                            </segments>
+                            <color key="tintColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="67" y="25" width="167" height="29"/>
+                            </variation>
+                        </segmentedControl>
                     </subviews>
                     <variation key="default">
                         <mask key="subviews">
@@ -260,7 +260,6 @@
                             <exclude reference="OA9-EA-EZe"/>
                             <exclude reference="k60-Rs-2cL"/>
                             <exclude reference="KwH-Hl-upb"/>
-                            <exclude reference="j1Y-Ed-wa2"/>
                             <exclude reference="xOT-RV-6P6"/>
                             <exclude reference="ErE-yf-2ba"/>
                             <exclude reference="DYQ-1I-Qxd"/>
@@ -280,6 +279,7 @@
                             <exclude reference="Flq-pv-F9R"/>
                             <exclude reference="ABE-w8-z11"/>
                             <exclude reference="xgt-yf-MZm"/>
+                            <exclude reference="Nn4-xJ-ECU"/>
                         </mask>
                     </variation>
                     <variation key="widthClass=compact" fixedFrame="YES">
@@ -289,7 +289,6 @@
                             <include reference="OA9-EA-EZe"/>
                             <include reference="k60-Rs-2cL"/>
                             <include reference="KwH-Hl-upb"/>
-                            <include reference="j1Y-Ed-wa2"/>
                             <include reference="xOT-RV-6P6"/>
                             <include reference="ErE-yf-2ba"/>
                             <include reference="DYQ-1I-Qxd"/>
@@ -309,25 +308,17 @@
                             <include reference="Flq-pv-F9R"/>
                             <include reference="ABE-w8-z11"/>
                             <include reference="xgt-yf-MZm"/>
+                            <include reference="Nn4-xJ-ECU"/>
                         </mask>
                     </variation>
                 </scrollView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kb7-ar-w83">
-                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="22" width="170" height="42"/>
-                    </variation>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sen-fK-OEe">
                     <rect key="frame" x="-36" y="-22" width="72" height="44"/>
                     <state key="normal" image="save">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="192" y="28" width="34" height="36"/>
+                        <rect key="frame" x="259" y="28" width="34" height="36"/>
                     </variation>
                     <connections>
                         <action selector="onSaveButtonPressed:" destination="-1" eventType="touchUpInside" id="Ge6-nI-Hda"/>
@@ -339,29 +330,38 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="240" y="26" width="45" height="41"/>
+                        <rect key="frame" x="8" y="25" width="45" height="41"/>
                     </variation>
                     <connections>
                         <action selector="onHomePressed:" destination="-1" eventType="touchUpInside" id="ZGP-kW-jHI"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kb7-ar-w83">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="67" y="22" width="170" height="42"/>
+                    </variation>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="Qnf-P4-Ugb"/>
-                    <exclude reference="Kb7-ar-w83"/>
                     <exclude reference="Sen-fK-OEe"/>
                     <exclude reference="YiZ-pf-zyD"/>
+                    <exclude reference="Kb7-ar-w83"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
                     <include reference="Qnf-P4-Ugb"/>
-                    <include reference="Kb7-ar-w83"/>
                     <include reference="Sen-fK-OEe"/>
                     <include reference="YiZ-pf-zyD"/>
+                    <include reference="Kb7-ar-w83"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="111" y="197"/>
