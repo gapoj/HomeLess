@@ -4,7 +4,7 @@
 #import "House.h"
 @interface HousePhoto : PFObject <PFSubclassing>
 @property NSString* title;
-@property PFUser *owner;
+@property House *house;
 @property UIImageView *myPhoto;
 @property PFFile *parsePhoto;
 @property BOOL isMain;

@@ -120,21 +120,23 @@
     } else {
         newHouse.withGarage = NO;
     }
+    
     [newHouse saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(error){
             NSLog(@"%@",error);
         }else{
-            [self savePhotos];
+            
+            [self savePhotos:newHouse];
         }
     }];
     
 }
 
--(void) savePhotos
+-(void) savePhotos: (House *) house
 {
     NSData* data;
     HousePhoto *housePhoto = [HousePhoto object];
-    housePhoto.owner = [PFUser currentUser];
+    housePhoto.house = house;
     if (self.mainPhoto.image) {
         data = UIImageJPEGRepresentation(self.mainPhoto.image, 0.5f);
     }else{
@@ -148,7 +150,7 @@
             NSLog(@"%@",error);
         }else{
             if (self.photos.count > 0) {
-                [self addAdditionalPhotos];
+                [self addAdditionalPhotos:house];
             }else{
                 [self dismissViewControllerAnimated:YES completion:^{
                     UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Succes" message:@"The house was saved" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
@@ -159,10 +161,11 @@
     }];
 }
 
--(void) addAdditionalPhotos{
+-(void) addAdditionalPhotos: (House *) house
+{
     for (UIImage *image in self.photos) {
         HousePhoto *housePhoto = [HousePhoto object];
-        housePhoto.owner = [PFUser currentUser];
+       housePhoto.house = house;
         NSData* data = UIImageJPEGRepresentation(image, 0.5f);
         PFFile *imageFile = [PFFile fileWithData:data];
         housePhoto.parsePhoto = imageFile;

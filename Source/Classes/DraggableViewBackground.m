@@ -1,6 +1,9 @@
 
 #import "DraggableViewBackground.h"
 #import "DetailsHouseViewController.h"
+#import "House.h"
+#import "HousePhoto.h"
+
 
 @implementation DraggableViewBackground{
     NSInteger cardsLoadedIndex;
@@ -15,18 +18,48 @@ static const float CARD_WIDTH = 260;
 @synthesize houseCards;
 @synthesize allCards;
 
+- (void)loadData
+{   PFQuery *housesQuery = [House query];
+    [housesQuery whereKey:@"owner" notEqualTo:[PFUser currentUser]];
+    [housesQuery includeKey:@"owner"];
+    [housesQuery orderByAscending:@""];
+    [housesQuery findObjectsInBackgroundWithBlock:^(NSArray *houses, NSError *error) {
+        if(error){
+            NSLog(@"Error: %@",error);
+        }else{
+            houseCards  = houses;
+            [self loadPhotos];
+           
+        }
+    }];
+    loadedCards = [[NSMutableArray alloc] init];
+    allCards = [[NSMutableArray alloc] init];
+    cardsLoadedIndex = 0;
+       self.houseIndex = 0;
+}
+-(void)loadPhotos{
+    PFQuery *photoQuery = [HousePhoto query];
+    [photoQuery whereKey:@"house"containedIn: houseCards];
+    [photoQuery whereKey:@"isMain" equalTo:@"true"];
+    [photoQuery includeKey:@"house"];
+    [photoQuery findObjectsInBackgroundWithBlock:^(NSArray *photos, NSError *error) {
+        if(error){
+            NSLog(@"Error: %@",error);
+        }else{
+            houseCards  = photos;
+            [self loadCards];
+            
+        }
+    }];
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         [super layoutSubviews];
         [self setupView];
-        houseCards = [self loadHouseCards];
-        loadedCards = [[NSMutableArray alloc] init];
-        allCards = [[NSMutableArray alloc] init];
-        cardsLoadedIndex = 0;
-        [self loadCards];
-        self.houseIndex = 0;
+        [self loadData];
     }
     return self;
 }
@@ -52,8 +85,20 @@ static const float CARD_WIDTH = 260;
 -(DraggableView *)createDraggableViewWithDataAtIndex:(NSInteger)index
 {
     DraggableView *draggableView = [[DraggableView alloc]initWithFrame:CGRectMake(30, 100, CARD_WIDTH, CARD_HEIGHT)];
-    draggableView.imageHouse.image = [UIImage imageNamed:[houseCards objectAtIndex:index]];
+    HousePhoto *photo = [houseCards objectAtIndex:index];
+    PFFile *file =  photo.parsePhoto;
+    if (file != nil) {
+        NSError *error;
+        NSData * data = [file getData: &error];
+            if (!error) {
+                draggableView.imageHouse.image = [UIImage imageWithData:data];
+                draggableView.imageHouse.contentMode = UIViewContentModeScaleAspectFit;
+            }
+       
+    }
+  
     draggableView.delegate = self;
+    draggableView.information.text =photo.house.title;
     return draggableView;
 }
 

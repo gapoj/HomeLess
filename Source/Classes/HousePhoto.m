@@ -3,7 +3,7 @@
 
 @implementation HousePhoto
 @dynamic title;
-@dynamic owner;
+@dynamic house;
 @dynamic myPhoto;
 @dynamic isMain;
 
