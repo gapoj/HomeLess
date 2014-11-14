@@ -25,7 +25,7 @@
     self.desc.text = self.house.houseDescription;
     self.housetitle.text = self.house.title;
    self.baths.text=[NSString stringWithFormat:@"%lu", self.house.bathrooms];
-   self.price.text=[NSString stringWithFormat:@"%lu", self.house.price];
+ //  self.price.text=[NSString stringWithFormat:@"%lu", self.house.price];
    self.squareMeters.text=[NSString stringWithFormat:@"%lu", self.house.bathrooms];
    self.rooms.text=[NSString stringWithFormat:@"%lu", self.house.bathrooms];
     
