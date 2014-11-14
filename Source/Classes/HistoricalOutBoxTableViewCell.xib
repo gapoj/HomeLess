@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oL-dL-3YK">
-                        <rect key="frame" x="21" y="9" width="231" height="47"/>
+                        <rect key="frame" x="21" y="11" width="231" height="47"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="231" id="qUl-50-uAd"/>
                         </constraints>
@@ -43,9 +43,9 @@
                     <constraint firstItem="Tfb-iB-LSU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-5" id="GCv-vB-jzk"/>
                     <constraint firstItem="M7R-6f-4f5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-7" id="Jnh-G2-lpW"/>
                     <constraint firstAttribute="bottomMargin" secondItem="M7R-6f-4f5" secondAttribute="bottom" constant="-9" id="KkI-xw-0tV"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="3oL-dL-3YK" secondAttribute="bottom" constant="-5" id="QQA-IG-oyY"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="3oL-dL-3YK" secondAttribute="bottom" constant="-7" id="QQA-IG-oyY"/>
                     <constraint firstItem="Tfb-iB-LSU" firstAttribute="leading" secondItem="3oL-dL-3YK" secondAttribute="trailing" id="Zx8-rW-fWi"/>
-                    <constraint firstItem="3oL-dL-3YK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="cJG-bz-lzM"/>
+                    <constraint firstItem="3oL-dL-3YK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="cJG-bz-lzM"/>
                     <constraint firstItem="3oL-dL-3YK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="13" id="gIJ-Ol-cjK"/>
                     <constraint firstItem="M7R-6f-4f5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vUz-92-ErN"/>
                     <constraint firstItem="Tfb-iB-LSU" firstAttribute="trailing" secondItem="M7R-6f-4f5" secondAttribute="trailing" id="ySC-nC-2Ea"/>
