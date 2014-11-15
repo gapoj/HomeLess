@@ -11,4 +11,6 @@
 @property (retain,nonatomic)NSMutableArray* allCards; 
 
 @property NSInteger houseIndex;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 @end

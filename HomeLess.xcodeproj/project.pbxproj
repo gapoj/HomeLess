@@ -200,11 +200,11 @@
 			isa = PBXGroup;
 			children = (
 				544C6A791A0FA0490057C2E3 /* DraggableView.h */,
-				18D5A6581A17BC9900ECAB2D /* HomeViewController.h */,
-				18D5A65B1A17BE6E00ECAB2D /* HomeViewController.m */,
 				544C6A7A1A0FA0490057C2E3 /* DraggableView.m */,
 				544C6A7B1A0FA0490057C2E3 /* DraggableViewBackground.h */,
 				544C6A7C1A0FA0490057C2E3 /* DraggableViewBackground.m */,
+				18D5A6581A17BC9900ECAB2D /* HomeViewController.h */,
+				18D5A65B1A17BE6E00ECAB2D /* HomeViewController.m */,
 				544C6A8A1A0FA0490057C2E3 /* OverlayView.h */,
 				544C6A8B1A0FA0490057C2E3 /* OverlayView.m */,
 			);

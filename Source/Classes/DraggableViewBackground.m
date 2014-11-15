@@ -19,10 +19,11 @@ static const float CARD_WIDTH = 260;
 @synthesize allCards;
 
 - (void)loadData
-{   PFQuery *housesQuery = [House query];
+{
+    [self.activityIndicator startAnimating];
+    PFQuery *housesQuery = [House query];
     [housesQuery whereKey:@"owner" notEqualTo:[PFUser currentUser]];
     [housesQuery includeKey:@"owner"];
-    
     [housesQuery findObjectsInBackgroundWithBlock:^(NSArray *houses, NSError *error) {
         if(error){
             NSLog(@"Error: %@",error);
@@ -48,7 +49,7 @@ static const float CARD_WIDTH = 260;
         }else{
             houseCards  = photos;
             [self loadCards];
-            
+            [self.activityIndicator stopAnimating];
         }
     }];
 }
@@ -64,11 +65,6 @@ static const float CARD_WIDTH = 260;
     return self;
 }
 
--(NSArray *) loadHouseCards
-{
-    return [[NSArray alloc]initWithObjects:@"house1",@"house2",@"house3",@"house4",@"house5",@"house1",@"house2",@"house3",@"house4",@"house5", nil];
-}
-
 -(void)setupView
 {
     xButton = [[UIButton alloc]initWithFrame:CGRectMake(50, 415, 75, 75)];
@@ -77,7 +73,10 @@ static const float CARD_WIDTH = 260;
     checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 415, 75, 75)];
     [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
     [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
-    
+    self.activityIndicator = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(150, 190, 35, 35)];
+    self.activityIndicator.backgroundColor = [UIColor colorWithRed:0.75 green:0.92 blue:0.83 alpha:1];
+    [self addSubview:self.activityIndicator];
+    [self bringSubviewToFront:self.activityIndicator];
     [self addSubview:xButton];
     [self addSubview:checkButton];
 }
@@ -94,7 +93,6 @@ static const float CARD_WIDTH = 260;
             draggableView.imageHouse.image = [UIImage imageWithData:data];
             draggableView.imageHouse.contentMode = UIViewContentModeScaleAspectFit;
         }
-        
     }
     
     draggableView.delegate = self;

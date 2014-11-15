@@ -10,8 +10,8 @@
 #import "MessagesViewController.h"
 #import "LoginViewController.h"
 #import "HousePhoto.h"
-// cocambie y suba
-//mentario para que
+#import "FavoriteViewController.h"
+
 @interface HomeViewController (){
     
     UIButton* infoButton;
@@ -24,10 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.view.backgroundColor = [UIColor colorWithRed:0.75 green:0.92 blue:0.83 alpha:.5];
     draggableBackground = [[DraggableViewBackground alloc]initWithFrame:self.view.frame];
-
     draggableBackground.center = self.view.center;
     [self.view addSubview:draggableBackground];
     infoButton = [[UIButton alloc]initWithFrame:CGRectMake(125, 430, 75, 75)];
@@ -74,19 +71,16 @@
 
 -(void) showFavorites
 {
-    
+    FavoriteViewController * detailsViewController = [[FavoriteViewController alloc]init];
+    [self showViewController:detailsViewController sender:self];
 }
 
 -(void) showInfo
 {
     DetailsHouseViewController *detailsViewController = [[DetailsHouseViewController alloc]init];
     HousePhoto *photo = draggableBackground.houseCards[draggableBackground.houseIndex];
-
-    
-    
     detailsViewController.house = photo.house;
     [self showViewController:detailsViewController sender:self];
-
 }
 
 - (UILabel *)createHomeButtonView {

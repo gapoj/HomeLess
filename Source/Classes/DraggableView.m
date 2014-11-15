@@ -23,22 +23,18 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    self.backgroundColor = [UIColor colorWithRed:0.75 green:0.92 blue:0.83 alpha:.5];
     if (self) {
         [self setupView];
-        information = [[UILabel alloc]initWithFrame:CGRectMake(-50, 200, 280, 100)];
+        information = [[UILabel alloc]initWithFrame:CGRectMake(-50, 240, 280, 100)];
         information.text = @"Descripcion de la casa";
         [information setTextAlignment:NSTextAlignmentCenter];
         information.textColor = [UIColor blackColor];
         information.font = [UIFont systemFontOfSize:12];
-        
-        imageHouse = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 280, 260)];
-        self.backgroundColor = [UIColor whiteColor];
+        imageHouse = [[UIImageView alloc] initWithFrame:CGRectMake(5, -30, 250, 280)];
         panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(beingDragged:)];
-        
+        self.backgroundColor = [UIColor whiteColor];
         [self addGestureRecognizer:panGestureRecognizer];
         [self addSubview:imageHouse];
-        
         overlayView = [[OverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width/2-100, 0, 100, 100)];
         overlayView.alpha = 0;
         [self addSubview:overlayView];
