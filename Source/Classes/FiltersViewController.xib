@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FiltersViewController">
             <connections>
+                <outlet property="bathHigh" destination="m5X-Uh-GxK" id="hcJ-x6-x9I"/>
+                <outlet property="bathLow" destination="p64-q1-car" id="iH8-a3-3Yp"/>
+                <outlet property="garageSegmented" destination="dqx-fV-Kyz" id="hTh-sg-QrF"/>
                 <outlet property="petLabel" destination="Flq-pv-F9R" id="EnS-SN-6D7"/>
+                <outlet property="priceHigh" destination="ErE-yf-2ba" id="bN9-DW-FH9"/>
+                <outlet property="priceLow" destination="xOT-RV-6P6" id="TFg-Xu-XAI"/>
+                <outlet property="roomHigh" destination="wyd-8o-OiT" id="zpC-Pz-6Pj"/>
+                <outlet property="roomLow" destination="CUr-Iv-WOk" id="Wfq-1X-RHH"/>
                 <outlet property="scroller" destination="Qnf-P4-Ugb" id="G8m-wU-rDj"/>
+                <outlet property="sqrHigh" destination="Oid-Kz-teC" id="2cu-3d-VUc"/>
+                <outlet property="sqrLow" destination="jXZ-vq-d9W" id="dQN-MP-UwY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

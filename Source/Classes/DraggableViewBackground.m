@@ -4,6 +4,7 @@
 #import "House.h"
 #import "HousePhoto.h"
 #import "Favorite.h"
+#import "Filter.h"
 
 @implementation DraggableViewBackground{
     NSInteger cardsLoadedIndex;
@@ -21,6 +22,34 @@ static const float CARD_WIDTH = 260;
 - (void)loadData
 {
     [self.activityIndicator startAnimating];
+    
+    PFQuery *filters = [Filter query];
+    [filters whereKey:@"owner" equalTo:[PFUser currentUser]];
+    [filters findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            if (objects) {
+                [self loadHousesFromFilter: objects];
+            }else{
+                [self loadAllHouses];
+            }
+        }
+    }];
+    loadedCards = [[NSMutableArray alloc] init];
+    allCards = [[NSMutableArray alloc] init];
+    cardsLoadedIndex = 0;
+    self.houseIndex = 0;
+}
+
+//HACER ESTE!
+-(void) loadHousesFromFilter: (NSArray*) filters{
+    //quedarse con el ultimo filtro
+    //tener las casas que cumplan con ese filtro
+    //asignarlas a houseCards
+    //llamar a loadPhotos
+}
+
+- (void)loadAllHouses
+{
     PFQuery *housesQuery = [House query];
     [housesQuery whereKey:@"owner" notEqualTo:[PFUser currentUser]];
     [housesQuery includeKey:@"owner"];
@@ -30,14 +59,10 @@ static const float CARD_WIDTH = 260;
         }else{
             houseCards  = houses;
             [self loadPhotos];
-            
         }
     }];
-    loadedCards = [[NSMutableArray alloc] init];
-    allCards = [[NSMutableArray alloc] init];
-    cardsLoadedIndex = 0;
-    self.houseIndex = 0;
 }
+
 -(void)loadPhotos{
     PFQuery *photoQuery = [HousePhoto query];
     [photoQuery whereKey:@"house"containedIn: houseCards];

@@ -42,6 +42,7 @@
 		544C6AB81A0FA1360057C2E3 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AAE1A0FA1360057C2E3 /* Icon.png */; };
 		544C6AB91A0FA1360057C2E3 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AAF1A0FA1360057C2E3 /* Icon@2x.png */; };
 		544C6ABE1A0FA1360057C2E3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AB41A0FA1360057C2E3 /* LoginViewController.xib */; };
+		54687FD21A17F58600961973 /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54687FD11A17F58600961973 /* Filter.m */; };
 		6D10F48316DD68E000690A0F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D10F48216DD68E000690A0F /* CoreLocation.framework */; };
 		8103BCCD19AD1F8900BCF4C7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8103BCCB19AD1F8900BCF4C7 /* Bolts.framework */; };
 		8103BCCE19AD1F8900BCF4C7 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8103BCCC19AD1F8900BCF4C7 /* ParseFacebookUtils.framework */; };
@@ -127,6 +128,8 @@
 		544C6AAE1A0FA1360057C2E3 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Source/Resources/Icon.png; sourceTree = SOURCE_ROOT; };
 		544C6AAF1A0FA1360057C2E3 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Source/Resources/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		544C6AB41A0FA1360057C2E3 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Source/Resources/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
+		54687FD01A17F58600961973 /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Filter.h; path = Source/Classes/Filter.h; sourceTree = SOURCE_ROOT; };
+		54687FD11A17F58600961973 /* Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Filter.m; path = Source/Classes/Filter.m; sourceTree = SOURCE_ROOT; };
 		6D10F48216DD68E000690A0F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8103BCCB19AD1F8900BCF4C7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		8103BCCC19AD1F8900BCF4C7 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -415,6 +418,8 @@
 		E2EDA5581A0D2CC000848400 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				54687FD01A17F58600961973 /* Filter.h */,
+				54687FD11A17F58600961973 /* Filter.m */,
 				E24E23511A1673E80037088A /* Favorite.h */,
 				E24E23521A1673E80037088A /* Favorite.m */,
 				E2C2EF2A1A13CF0A0066A36D /* HousePhoto.h */,
@@ -526,6 +531,7 @@
 				544C6A9E1A0FA0490057C2E3 /* LoginViewController.m in Sources */,
 				E24998211A1135A100E9969D /* MessagesViewController.m in Sources */,
 				E24E234F1A1670260037088A /* FavoriteViewController.m in Sources */,
+				54687FD21A17F58600961973 /* Filter.m in Sources */,
 				180CBF101A12BEDC00AE563C /* SendMessageViewController.m in Sources */,
 				E293FBFE1A1103F7001F8910 /* DetailsHouseViewController.m in Sources */,
 				544C6AAA1A0FA1110057C2E3 /* main.m in Sources */,
