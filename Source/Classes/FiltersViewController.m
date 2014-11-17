@@ -38,24 +38,36 @@
     [scroller setContentSize:CGSizeMake(320, 1350)];
 }
 
-- (IBAction)onSaveButtonPressed:(id)sender {    
-    Filter *newFilter = [Filter object];
-    newFilter.owner = [PFUser currentUser];
-    newFilter.roomsLow = [self.roomLow.text integerValue];
-    newFilter.roomsHigh = [self.roomHigh.text integerValue];
-    newFilter.squareMetersLow = [self.sqrLow.text integerValue];
-    newFilter.squareMetersHigh = [self.sqrHigh.text integerValue];
-    newFilter.priceLow = [self.priceLow.text integerValue];
-    newFilter.priceHigh = [self.priceHigh.text integerValue];
-    newFilter.bathroomsLow = [self.bathLow.text integerValue];
-    newFilter.bathroomsHigh = [self.bathHigh.text integerValue];
-    newFilter.petAllowed = self.petLabel.text;
-    [newFilter saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(error){
+- (IBAction)onSaveButtonPressed:(id)sender {
+    PFQuery *filterQuery = [Filter query];
+    [filterQuery whereKey:@"owner" equalTo:[PFUser currentUser]];
+    [filterQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
             NSLog(@"%@",error);
+        }else
+        {
+            Filter *newFilter = [Filter object];
+            if (objects)
+            {
+                newFilter = objects.firstObject;
+            }
+            newFilter.owner = [PFUser currentUser];
+            newFilter.roomsLow = [self.roomLow.text integerValue];
+            newFilter.roomsHigh = [self.roomHigh.text integerValue];
+            newFilter.squareMetersLow = [self.sqrLow.text integerValue];
+            newFilter.squareMetersHigh = [self.sqrHigh.text integerValue];
+            newFilter.priceLow = [self.priceLow.text integerValue];
+            newFilter.priceHigh = [self.priceHigh.text integerValue];
+            newFilter.bathroomsLow = [self.bathLow.text integerValue];
+            newFilter.bathroomsHigh = [self.bathHigh.text integerValue];
+            newFilter.petAllowed = self.petLabel.text;
+            [newFilter saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if(error){
+                    NSLog(@"%@",error);
+                }
+            }];
         }
     }];
-    
 }
 
 - (IBAction)onCatPressed:(id)sender {
