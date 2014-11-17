@@ -34,7 +34,7 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="loginButtonTouchHandler:" destination="-1" eventType="touchUpInside" id="9"/>
+                        <action selector="loginButtonTouchHandler:" destination="-1" eventType="touchUpInside" id="XiD-mt-gKx"/>
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeImg" id="bO6-wo-Ntb">
