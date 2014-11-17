@@ -52,15 +52,56 @@
             {
                 newFilter = objects.firstObject;
             }
+            
             newFilter.owner = [PFUser currentUser];
-            newFilter.roomsLow = [self.roomLow.text integerValue];
-            newFilter.roomsHigh = [self.roomHigh.text integerValue];
-            newFilter.squareMetersLow = [self.sqrLow.text integerValue];
-            newFilter.squareMetersHigh = [self.sqrHigh.text integerValue];
-            newFilter.priceLow = [self.priceLow.text integerValue];
-            newFilter.priceHigh = [self.priceHigh.text integerValue];
-            newFilter.bathroomsLow = [self.bathLow.text integerValue];
-            newFilter.bathroomsHigh = [self.bathHigh.text integerValue];
+            
+            if (![self.roomLow.text isEqualToString:@""]) {
+                newFilter.roomsLow = [self.roomLow.text integerValue];
+            } else {
+                newFilter.roomsLow = NSIntegerMin;
+            }
+            if (![self.roomHigh.text isEqualToString:@""]) {
+                newFilter.roomsHigh = [self.roomHigh.text integerValue];
+            } else {
+                newFilter.roomsHigh = NSIntegerMax;
+            }
+           
+            if (![self.sqrLow.text isEqualToString:@""]) {
+                newFilter.squareMetersLow = [self.sqrLow.text integerValue];
+
+            } else {
+                newFilter.squareMetersLow = NSIntegerMin;
+            }
+            if (![self.sqrHigh.text isEqualToString:@""]) {
+                newFilter.squareMetersHigh = [self.sqrHigh.text integerValue];
+            } else {
+                newFilter.squareMetersHigh = NSIntegerMax;
+            }
+            
+            if (![self.priceLow.text isEqualToString:@""]) {
+                newFilter.priceLow = [self.priceLow.text integerValue];
+                
+            } else {
+                newFilter.priceLow = NSIntegerMin;
+            }
+            if (![self.priceHigh.text isEqualToString:@""]) {
+                newFilter.priceHigh = [self.priceHigh.text integerValue];
+            } else {
+                newFilter.priceHigh = NSIntegerMax;
+            }
+            if (![self.bathLow.text isEqualToString:@""]) {
+                newFilter.bathroomsLow = [self.bathLow.text integerValue];
+                
+            } else {
+                newFilter.bathroomsLow= NSIntegerMin;
+            }
+            if (![self.bathHigh.text isEqualToString:@""]) {
+                newFilter.bathroomsHigh = [self.bathHigh.text integerValue];
+
+            } else {
+                newFilter.bathroomsHigh = NSIntegerMax;
+            }
+           
             newFilter.catAllowed = self.isCatAllowed;
             newFilter.dogAllowed =self.isDogAllowed;
             newFilter.withGarage = self.garageSegmented.selectedSegmentIndex == 0;
