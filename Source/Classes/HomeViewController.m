@@ -45,7 +45,7 @@
 
 -(void) viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [draggableBackground loadData];
 }
 
 - (void)showUserDetails {

@@ -12,6 +12,7 @@
                 <outlet property="petLabel" destination="Flq-pv-F9R" id="EnS-SN-6D7"/>
                 <outlet property="priceHigh" destination="ErE-yf-2ba" id="bN9-DW-FH9"/>
                 <outlet property="priceLow" destination="xOT-RV-6P6" id="TFg-Xu-XAI"/>
+                <outlet property="rentOrSaleSegmented" destination="Nn4-xJ-ECU" id="nj1-S8-ohk"/>
                 <outlet property="roomHigh" destination="wyd-8o-OiT" id="zpC-Pz-6Pj"/>
                 <outlet property="roomLow" destination="CUr-Iv-WOk" id="Wfq-1X-RHH"/>
                 <outlet property="scroller" destination="Qnf-P4-Ugb" id="G8m-wU-rDj"/>

@@ -6,7 +6,7 @@
 
 -(void)cardSwipedLeft:(UIView *)card;
 -(void)cardSwipedRight:(UIView *)card;
-
+- (void)loadData;
 @property (retain,nonatomic)NSArray* houseCards;
 @property (retain,nonatomic)NSMutableArray* allCards; 
 

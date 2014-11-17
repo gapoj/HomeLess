@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *bathLow;
 @property (weak, nonatomic) IBOutlet UITextField *bathHigh;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *garageSegmented;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *rentOrSaleSegmented;
 @end
 
 @implementation FiltersViewController
@@ -47,7 +48,7 @@
         }else
         {
             Filter *newFilter = [Filter object];
-            if (objects)
+            if (objects.count>0)
             {
                 newFilter = objects.firstObject;
             }
@@ -63,9 +64,17 @@
             newFilter.catAllowed = self.isCatAllowed;
             newFilter.dogAllowed =self.isDogAllowed;
             newFilter.withGarage = self.garageSegmented.selectedSegmentIndex == 0;
+            if (self.rentOrSaleSegmented.selectedSegmentIndex==0) {
+                newFilter.rentOrSale = @"Rent";
+            } else {
+                 newFilter.rentOrSale = @"Sale";
+            }
             [newFilter saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if(error){
                     NSLog(@"%@",error);
+                }else{
+                
+                    [self dismissViewControllerAnimated:YES completion:nil];
                 }
             }];
         }

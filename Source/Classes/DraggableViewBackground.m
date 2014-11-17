@@ -51,13 +51,9 @@ static const float CARD_WIDTH = 260;
     [housesQuery whereKey:@"rooms" greaterThanOrEqualTo:[NSNumber numberWithLong:filter.roomsLow]];
     [housesQuery whereKey:@"squareMeters" greaterThanOrEqualTo:[NSNumber numberWithLong:filter.squareMetersLow]];
     [housesQuery whereKey:@"rentOrSale" equalTo:filter.rentOrSale];
-    NSNumber *garage;
-    if (filter.withGarage) {
-        garage = 0;
-    }else{
-        garage = [NSNumber numberWithInt:1];
-    }
-    [housesQuery whereKey:@"withGarage" equalTo:garage];
+   
+  
+    [housesQuery whereKey:@"withGarage" equalTo:[NSNumber numberWithBool:filter.withGarage]];
     [housesQuery findObjectsInBackgroundWithBlock:^(NSArray *houses, NSError *error) {
         if(error){
             NSLog(@"Error: %@",error);
@@ -105,11 +101,10 @@ static const float CARD_WIDTH = 260;
     if (self) {
         [super layoutSubviews];
         [self setupView];
-        [self loadData];
+        //[self loadData];
     }
     return self;
 }
-
 -(void)setupView
 {
     xButton = [[UIButton alloc]initWithFrame:CGRectMake(50, 415, 75, 75)];
