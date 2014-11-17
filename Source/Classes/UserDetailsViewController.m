@@ -3,6 +3,7 @@
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "House.h"
+#import "HousePhoto.h"
 #import "HouseTableViewCell.h"
 
 @interface UserDetailsViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -50,6 +51,33 @@
     return self.houses.count;
 }
 
+- (void)bringPhotoToCell:(House *)house cell:(HouseTableViewCell *)cell {
+    PFQuery *photoQuery = [HousePhoto query];
+    [photoQuery whereKey:@"house"equalTo:house];
+    [photoQuery whereKey:@"isMain" equalTo:[NSNumber numberWithBool:YES]];
+    
+    [photoQuery findObjectsInBackgroundWithBlock:^(NSArray *photos, NSError *error) {
+        if(error){
+            NSLog(@"Error: %@",error);
+        }else{
+            HousePhoto * photo = photos[0];
+            PFFile *file =  photo.parsePhoto;
+            if (file != nil) {
+                NSError *error;
+                NSData * data = [file getData: &error];
+                if (!error) {
+                    UIImage *image = [UIImage imageWithData:data];
+                    cell.image.image = image;
+                    cell.image.contentMode= UIViewContentModeScaleAspectFit;
+                }else{
+                    NSLog(@"%@",error);
+                }
+                
+            }
+        }
+    }];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HouseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HouseCell"];
     if (cell == nil) {
@@ -58,9 +86,11 @@
     }
     House * house = self.houses[indexPath.row];
     cell.label.text = house.title;
-    
+    [self bringPhotoToCell:house cell:cell];
+
     return cell;
 }
+
 - (void) refreshHouses
 {
     PFQuery *housesQuery = [House query];
