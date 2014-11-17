@@ -74,7 +74,8 @@
                     NSLog(@"%@",error);
                 }else{
                 
-                    [self dismissViewControllerAnimated:YES completion:nil];
+                    HomeViewController  * vc=   [[HomeViewController alloc] init];
+                   [self showViewController:vc sender:self];
                 }
             }];
         }
