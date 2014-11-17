@@ -169,7 +169,7 @@
                   symbolName = "__46-[AddHouseViewController addAdditionalPhotos:]_block_invoke_2"
                   moduleName = "HomeLess"
                   urlString = "file:///Users/guillermoapoj/Desktop/HomeLess/Source/Classes/AddHouseViewController.m"
-                  timestampString = "437947642.634174"
+                  timestampString = "437949819.370521"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "181"
@@ -183,7 +183,7 @@
                   symbolName = "__46-[AddHouseViewController addAdditionalPhotos:]_block_invoke_2"
                   moduleName = "HomeLess"
                   urlString = "file:///Users/guillermoapoj/Desktop/HomeLess/Source/Classes/AddHouseViewController.m"
-                  timestampString = "437947642.634435"
+                  timestampString = "437949819.370823"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "181"
@@ -255,6 +255,38 @@
             endingLineNumber = "77"
             landmarkName = "-onSaveButtonPressed:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/Classes/DetailsHouseViewController.m"
+            timestampString = "437949500.330856"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-onPageChanged:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/Classes/DetailsHouseViewController.m"
+            timestampString = "437952994.779267"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "@implementation DetailsHouseViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

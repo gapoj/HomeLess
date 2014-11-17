@@ -1,12 +1,7 @@
-#import <Parse/Parse.h>
-#import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "AddHouseViewController.h"
-#import "House.h"
-#import "HousePhoto.h"
-#import <MobileCoreServices/UTCoreTypes.h>
-#import "MyCell.h"
 
 @interface AddHouseViewController ()<UITextViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+@property (strong, nonatomic) IBOutlet UILabel *addOrEditLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *mainPhoto;
 @property (weak, nonatomic) IBOutlet UITextField *PriceTextField;
@@ -30,6 +25,20 @@
 @end
 @implementation AddHouseViewController
 
+- (void)viewWithHouse {
+    self.titleTextField.text= self.house.title;
+    self.addressTextField.text=self.house.address;
+    self.PriceTextField.text =[NSString stringWithFormat:@"%lu",  self.house.price];
+    self.desc.text = self.house.houseDescription;
+    self.bathroomsLabel.text =[NSString stringWithFormat:@"%lu",  self.house.bathrooms];
+    self.roomsLabel.text =[NSString stringWithFormat:@"%lu",  self.house.rooms];
+    self.squareMetersLabel.text =[NSString stringWithFormat:@"%lu",  self.house.squareMeters];
+    self.isCatAllowed=self.house.isCatAllowed;
+    self.isDogAllowed=  self.house.isDogAllowed ;
+    [self updatePetAllowedLabel];
+    self.addOrEditLabel.text = @"Edit House";
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.photos = [NSMutableArray array];
@@ -37,6 +46,10 @@
     [scroller setScrollEnabled:YES];
     [scroller setContentSize:CGSizeMake(320, 1350)];
     self.desc.delegate = self;
+    if (self.house) {
+      
+        [self viewWithHouse];
+    }
 }
 
 - (IBAction)onAddPhotos:(id)sender {
@@ -98,7 +111,13 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)onSave:(id)sender {
-    House *newHouse = [House object];
+    House *newHouse;
+    if (self.house) {
+        newHouse=self.house;
+    } else {
+        newHouse= [House object];
+
+    }
     newHouse.owner = [PFUser currentUser];
     newHouse.title = self.titleTextField.text;
     newHouse.address = self.addressTextField.text;

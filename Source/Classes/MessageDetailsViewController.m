@@ -5,7 +5,7 @@
 //  Created by Guillermo Apoj on 11/12/14.
 //
 //
-
+#import "DetailsHouseViewController.h"
 #import "HomeViewController.h"
 #import "MessageDetailsViewController.h"
 #import "SendMessageViewController.h"
@@ -22,6 +22,18 @@
 @end
 
 @implementation MessageDetailsViewController
+- (IBAction)onRelatedHouse:(id)sender {
+    DetailsHouseViewController *vc = [[DetailsHouseViewController alloc] init];
+    vc.house = self.message.houseRelated;
+    self.currentUserID =[PFUser currentUser].objectId;
+    if ([self.message.sender.objectId isEqualToString:self.currentUserID]) {
+        vc.canEdit = YES;
+    }else{
+    
+        vc.canEdit = NO;
+    }
+    [self showViewController:vc sender:self];
+}
 
 
 - (void)viewDidLoad {

@@ -23,6 +23,6 @@
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @property (strong, nonatomic) IBOutlet UIImageView *image;
-
-
+@property bool canEdit;
+@property (strong, nonatomic) IBOutlet UIButton *editButton;
 @end

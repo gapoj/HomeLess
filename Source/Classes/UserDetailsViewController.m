@@ -5,6 +5,7 @@
 #import "House.h"
 #import "HousePhoto.h"
 #import "HouseTableViewCell.h"
+#import "DetailsHouseViewController.h"
 
 @interface UserDetailsViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *userImage;
@@ -90,7 +91,14 @@
 
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DetailsHouseViewController *vc = [[DetailsHouseViewController alloc] init];
+    vc.canEdit = YES;
+    vc.house = self.houses[indexPath.row];
+    [self showViewController:vc sender:self];
+    
+}
 - (void) refreshHouses
 {
     PFQuery *housesQuery = [House query];
@@ -229,21 +237,9 @@
 
 - (IBAction)addHouse:(id)sender {
     AddHouseViewController *vc = [[AddHouseViewController alloc] init];
+    vc.house = nil;
     [self showViewController:vc sender:self];
 }
 
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//    NSString *sectionName;
-//    switch (section)
-//    {
-//        case 0:
-//            sectionName = @"My Houses";
-//            break;
-//        default:
-//            sectionName = @"";
-//            break;
-//    }
-//    return sectionName;
-//}
+
 @end

@@ -1,16 +1,22 @@
-
+#import "AddHouseViewController.h"
 #import "DetailsHouseViewController.h"
 #import "UserDetailsViewController.h"
 #import "FiltersViewController.h"
 #import "HomeViewController.h"
+#import "SendMessageViewController.h"
+
 @interface DetailsHouseViewController ()
 @property NSArray * photos;
+
 @end
 
 @implementation DetailsHouseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (!self.canEdit) {
+        self.editButton.hidden = YES;
+    }
     self.photos = [[NSArray alloc]init];
     [self loadPhotos];
     [scroller setScrollEnabled:YES];
@@ -47,6 +53,13 @@
         }
     }];
 }
+- (IBAction)onContact:(id)sender {
+    SendMessageViewController *vc = [[SendMessageViewController alloc] init];
+    vc.relatedHouse = self.house;
+    vc.previousMessage = nil;
+    [self showViewController:vc sender:self];
+
+}
 -(void)photosFromData:(NSArray * )array{
     NSMutableArray * loadPhotos =[[NSMutableArray alloc ]initWithCapacity:array.count];
     for (HousePhoto *photo in array) {
@@ -68,15 +81,21 @@
     self.image.image= loadPhotos[0];
     self.photos = loadPhotos;
 }
+- (IBAction)onEdit:(id)sender {
+    AddHouseViewController *vc = [[AddHouseViewController alloc] init];
+    vc.house =self.house;
+    [self showViewController:vc sender:self];
+}
 - (IBAction)onPageChanged:(UIPageControl *)sender {
     NSInteger a = sender.currentPage;
     self.image.image = self.photos[a];
 }
-- (IBAction)onHomeButtonPressed:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
   
     return NO;
+}
+- (IBAction)onBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

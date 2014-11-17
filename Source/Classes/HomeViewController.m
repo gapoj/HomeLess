@@ -80,6 +80,7 @@
     DetailsHouseViewController *detailsViewController = [[DetailsHouseViewController alloc]init];
     HousePhoto *photo = draggableBackground.houseCards[draggableBackground.houseIndex];
     detailsViewController.house = photo.house;
+    detailsViewController.canEdit = NO;
     [self showViewController:detailsViewController sender:self];
 }
 
