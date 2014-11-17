@@ -10,6 +10,8 @@
 @property NSInteger roomsHigh;
 @property NSInteger bathroomsHigh;
 @property NSInteger squareMetersHigh;
-@property NSString *petAllowed;
+@property BOOL dogAllowed;
+@property BOOL catAllowed;
+@property BOOL withGarage;
 @property PFUser* owner;
 @end

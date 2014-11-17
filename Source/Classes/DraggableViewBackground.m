@@ -28,7 +28,7 @@ static const float CARD_WIDTH = 260;
     [filters findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             if (objects) {
-                [self loadHousesFromFilter: objects];
+                [self loadHousesFromFilter: objects.firstObject];
             }else{
                 [self loadAllHouses];
             }
@@ -40,12 +40,32 @@ static const float CARD_WIDTH = 260;
     self.houseIndex = 0;
 }
 
-//HACER ESTE!
--(void) loadHousesFromFilter: (NSArray*) filters{
-    //quedarse con el ultimo filtro
-    //tener las casas que cumplan con ese filtro
-    //asignarlas a houseCards
-    //llamar a loadPhotos
+-(void) loadHousesFromFilter: (Filter*) filter{
+    PFQuery *housesQuery = [House query];
+    [housesQuery whereKey:@"owner" notEqualTo:[PFUser currentUser]];
+    [housesQuery includeKey:@"owner"];
+    [housesQuery whereKey:@"bathrooms" lessThanOrEqualTo:[NSNumber numberWithLong:filter.bathroomsHigh]];
+    [housesQuery whereKey:@"rooms" lessThanOrEqualTo:[NSNumber numberWithLong:filter.roomsHigh]];
+    [housesQuery whereKey:@"squareMeters" lessThanOrEqualTo:[NSNumber numberWithLong:filter.squareMetersHigh]];
+    [housesQuery whereKey:@"bathrooms" greaterThanOrEqualTo:[NSNumber numberWithLong:filter.bathroomsLow]];
+    [housesQuery whereKey:@"rooms" greaterThanOrEqualTo:[NSNumber numberWithLong:filter.roomsLow]];
+    [housesQuery whereKey:@"squareMeters" greaterThanOrEqualTo:[NSNumber numberWithLong:filter.squareMetersLow]];
+    [housesQuery whereKey:@"rentOrSale" equalTo:filter.rentOrSale];
+    NSNumber *garage;
+    if (filter.withGarage) {
+        garage = 0;
+    }else{
+        garage = [NSNumber numberWithInt:1];
+    }
+    [housesQuery whereKey:@"withGarage" equalTo:garage];
+    [housesQuery findObjectsInBackgroundWithBlock:^(NSArray *houses, NSError *error) {
+        if(error){
+            NSLog(@"Error: %@",error);
+        }else{
+            houseCards  = houses;
+            [self loadPhotos];
+        }
+    }];
 }
 
 - (void)loadAllHouses

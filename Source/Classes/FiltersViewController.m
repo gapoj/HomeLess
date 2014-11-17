@@ -60,7 +60,9 @@
             newFilter.priceHigh = [self.priceHigh.text integerValue];
             newFilter.bathroomsLow = [self.bathLow.text integerValue];
             newFilter.bathroomsHigh = [self.bathHigh.text integerValue];
-            newFilter.petAllowed = self.petLabel.text;
+            newFilter.catAllowed = self.isCatAllowed;
+            newFilter.dogAllowed =self.isDogAllowed;
+            newFilter.withGarage = self.garageSegmented.selectedSegmentIndex == 0;
             [newFilter saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if(error){
                     NSLog(@"%@",error);

@@ -20,7 +20,9 @@
 @dynamic roomsHigh;
 @dynamic bathroomsHigh;
 @dynamic squareMetersHigh;
-@dynamic petAllowed;
+@dynamic dogAllowed;
+@dynamic catAllowed;
+@dynamic withGarage;
 
 
 + (NSString*) parseClassName
