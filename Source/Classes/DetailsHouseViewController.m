@@ -12,7 +12,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [scroller setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320, 1850)];
+    [scroller setContentSize:CGSizeMake(320, 1900)];
     if(!self.house.isDogAllowed){
     self.dog.hidden=YES;
     }

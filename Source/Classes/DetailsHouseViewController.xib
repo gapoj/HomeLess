@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -45,7 +45,7 @@
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="1062" width="400" height="21"/>
+                                <rect key="frame" x="0.0" y="1051" width="400" height="21"/>
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Rooms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgd-L5-ufX">
@@ -174,19 +174,13 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garage-50" translatesAutoresizingMaskIntoConstraints="NO" id="ShD-Nr-7TC">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="60" y="988" width="53" height="48"/>
-                            </variation>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="erk-7A-wic">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="133" y="1111" width="53" height="48"/>
+                                <rect key="frame" x="30" y="993" width="53" height="48"/>
                             </variation>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="Qck-z5-wJM">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="30" y="1111" width="53" height="48"/>
+                                <rect key="frame" x="30" y="1087" width="53" height="48"/>
                             </variation>
                         </imageView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwo-BE-Bzy">
@@ -216,6 +210,12 @@
                                 <rect key="frame" x="-18" y="477" width="400" height="50"/>
                             </variation>
                         </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="erk-7A-wic">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="128" y="1087" width="53" height="48"/>
+                            </variation>
+                        </imageView>
                     </subviews>
                     <variation key="default">
                         <mask key="subviews">
@@ -234,11 +234,11 @@
                             <exclude reference="k0l-Ls-Qgh"/>
                             <exclude reference="hZ3-xQ-Ibx"/>
                             <exclude reference="ShD-Nr-7TC"/>
-                            <exclude reference="erk-7A-wic"/>
                             <exclude reference="Qck-z5-wJM"/>
                             <exclude reference="fwo-BE-Bzy"/>
                             <exclude reference="Xfc-Wb-KIk"/>
                             <exclude reference="GSD-Mx-ei5"/>
+                            <exclude reference="erk-7A-wic"/>
                         </mask>
                     </variation>
                     <variation key="widthClass=compact" fixedFrame="YES">
@@ -259,11 +259,11 @@
                             <include reference="k0l-Ls-Qgh"/>
                             <include reference="hZ3-xQ-Ibx"/>
                             <include reference="ShD-Nr-7TC"/>
-                            <include reference="erk-7A-wic"/>
                             <include reference="Qck-z5-wJM"/>
                             <include reference="fwo-BE-Bzy"/>
                             <include reference="Xfc-Wb-KIk"/>
                             <include reference="GSD-Mx-ei5"/>
+                            <include reference="erk-7A-wic"/>
                         </mask>
                     </variation>
                 </scrollView>
