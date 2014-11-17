@@ -27,7 +27,7 @@ static const float CARD_WIDTH = 260;
     [filters whereKey:@"owner" equalTo:[PFUser currentUser]];
     [filters findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            if (objects) {
+            if (objects.count > 0) {
                 [self loadHousesFromFilter: objects.firstObject];
             }else{
                 [self loadAllHouses];
