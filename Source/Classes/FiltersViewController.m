@@ -35,7 +35,7 @@
     self.isCatAllowed = false;
     self.isDogAllowed = false;
     [scroller setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320, 1350)];
+    [scroller setContentSize:CGSizeMake(320, 1150)];
 }
 
 - (IBAction)onSaveButtonPressed:(id)sender {
