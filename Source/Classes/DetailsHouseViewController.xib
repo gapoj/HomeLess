@@ -191,15 +191,6 @@
                                 <rect key="frame" x="128" y="1087" width="53" height="48"/>
                             </variation>
                         </imageView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="house description here" translatesAutoresizingMaskIntoConstraints="NO" id="uFy-8g-2AI">
-                            <rect key="frame" x="8" y="238" width="320" height="61"/>
-                            <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="-93" width="0.0" height="0.0"/>
-                            </variation>
-                        </textView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0M-wj-u9B">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <state key="normal" title="contact the owner">
@@ -212,13 +203,13 @@
                                 <action selector="onContact:" destination="-1" eventType="touchUpInside" id="MTN-Qm-gEu"/>
                             </connections>
                         </button>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="house description here" translatesAutoresizingMaskIntoConstraints="NO" id="Xfc-Wb-KIk">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="No description writed" translatesAutoresizingMaskIntoConstraints="NO" id="Xfc-Wb-KIk">
                             <rect key="frame" x="8" y="87" width="320" height="61"/>
                             <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="8" y="571" width="371" height="89"/>
+                                <rect key="frame" x="0.0" y="575" width="384" height="90"/>
                             </variation>
                         </textView>
                     </subviews>
@@ -241,7 +232,6 @@
                             <exclude reference="Qck-z5-wJM"/>
                             <exclude reference="GSD-Mx-ei5"/>
                             <exclude reference="erk-7A-wic"/>
-                            <exclude reference="uFy-8g-2AI"/>
                             <exclude reference="N0M-wj-u9B"/>
                             <exclude reference="Xfc-Wb-KIk"/>
                         </mask>
@@ -266,7 +256,6 @@
                             <include reference="Qck-z5-wJM"/>
                             <include reference="GSD-Mx-ei5"/>
                             <include reference="erk-7A-wic"/>
-                            <include reference="uFy-8g-2AI"/>
                             <include reference="N0M-wj-u9B"/>
                             <include reference="Xfc-Wb-KIk"/>
                         </mask>

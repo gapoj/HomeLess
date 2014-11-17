@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/Classes/AddHouseViewController.m"
-            timestampString = "437747049.498136"
+            timestampString = "437956332.894469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "-addAdditionalPhotos:"
             landmarkType = "5">
             <Locations>
@@ -169,11 +169,11 @@
                   symbolName = "__46-[AddHouseViewController addAdditionalPhotos:]_block_invoke_2"
                   moduleName = "HomeLess"
                   urlString = "file:///Users/guillermoapoj/Desktop/HomeLess/Source/Classes/AddHouseViewController.m"
-                  timestampString = "437949819.370521"
+                  timestampString = "437956491.433996"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "181"
-                  endingLineNumber = "181"
+                  startingLineNumber = "200"
+                  endingLineNumber = "200"
                   offsetFromSymbolStart = "157">
                </Location>
                <Location
@@ -183,11 +183,11 @@
                   symbolName = "__46-[AddHouseViewController addAdditionalPhotos:]_block_invoke_2"
                   moduleName = "HomeLess"
                   urlString = "file:///Users/guillermoapoj/Desktop/HomeLess/Source/Classes/AddHouseViewController.m"
-                  timestampString = "437949819.370823"
+                  timestampString = "437956491.434302"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "181"
-                  endingLineNumber = "181"
+                  startingLineNumber = "200"
+                  endingLineNumber = "200"
                   offsetFromSymbolStart = "173">
                </Location>
             </Locations>
@@ -200,11 +200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/Classes/AddHouseViewController.m"
-            timestampString = "437747049.498136"
+            timestampString = "437956332.894469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "-savePhotos:"
             landmarkType = "5">
          </BreakpointContent>
@@ -216,11 +216,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/Classes/AddHouseViewController.m"
-            timestampString = "437747049.498136"
+            timestampString = "437956332.894469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "-onSave:"
             landmarkType = "5">
          </BreakpointContent>
@@ -232,11 +232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/Classes/AddHouseViewController.m"
-            timestampString = "437747538.951914"
+            timestampString = "437956332.894469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "-onSave:"
             landmarkType = "5">
          </BreakpointContent>
@@ -248,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/Classes/FiltersViewController.m"
-            timestampString = "437941149.487397"
+            timestampString = "437956332.894469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "-onSaveButtonPressed:"
             landmarkType = "5">
          </BreakpointContent>
@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/Classes/DetailsHouseViewController.m"
-            timestampString = "437949500.330856"
+            timestampString = "437956332.894469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "-onPageChanged:"
             landmarkType = "5">
          </BreakpointContent>
