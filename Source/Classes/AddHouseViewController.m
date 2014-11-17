@@ -35,7 +35,7 @@
     self.photos = [NSMutableArray array];
     [self.myCollection registerNib:[UINib nibWithNibName:@"MyCell" bundle:nil] forCellWithReuseIdentifier:@"CELL"] ;
     [scroller setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320, 1500)];
+    [scroller setContentSize:CGSizeMake(320, 1350)];
     self.desc.delegate = self;
 }
 
