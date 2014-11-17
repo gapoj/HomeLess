@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "House.h"
+#import "HousePhoto.h"
 
 @interface DetailsHouseViewController : UIViewController
 {
@@ -19,7 +20,9 @@
 @property (strong, nonatomic) IBOutlet UIImageView *cat;
 
 @property (strong, nonatomic) IBOutlet UIImageView *dog;
+@property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 
+@property (strong, nonatomic) IBOutlet UIImageView *image;
 
 
 @end
