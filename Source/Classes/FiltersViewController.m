@@ -38,7 +38,7 @@
     [scroller setContentSize:CGSizeMake(320, 1350)];
 }
 
-- (IBAction)onSaveButtonPressed:(id)sender {
+- (IBAction)onSaveButtonPressed:(id)sender {    
     Filter *newFilter = [Filter object];
     newFilter.owner = [PFUser currentUser];
     newFilter.roomsLow = [self.roomLow.text integerValue];
