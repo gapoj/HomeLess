@@ -331,27 +331,17 @@
 		E24998231A1147E800E9969D /* Messages */ = {
 			isa = PBXGroup;
 			children = (
-				E24E233F1A1630FB0037088A /* HistoricalInboxTableViewCell.h */,
-				E24E23401A1630FB0037088A /* HistoricalInboxTableViewCell.m */,
-				E24E23411A1630FB0037088A /* HistoricalInboxTableViewCell.xib */,
-				E24E23431A1630FB0037088A /* OutBoxTableViewCell.h */,
-				E24E23441A1630FB0037088A /* OutBoxTableViewCell.m */,
-				E24E23451A1630FB0037088A /* OutBoxTableViewCell.xib */,
+				E28165201A1B732400D5DC32 /* Inbox */,
 				18C09E311A13ED7D00887EAA /* MessageDetailsViewController.h */,
 				18C09E321A13ED7D00887EAA /* MessageDetailsViewController.m */,
 				18C09E331A13ED7D00887EAA /* MessageDetailsViewController.xib */,
-				180CBF0C1A12BEDC00AE563C /* SendMessageViewController.h */,
-				18EC79611A138C00000BBD48 /* InboxMessageTableViewCell.h */,
-				18EC79621A138C00000BBD48 /* InboxMessageTableViewCell.m */,
-				18EC79631A138C00000BBD48 /* InboxMessageTableViewCell.xib */,
-				180CBF0D1A12BEDC00AE563C /* SendMessageViewController.m */,
-				180CBF0E1A12BEDC00AE563C /* SendMessageViewController.xib */,
 				E249981E1A1135A100E9969D /* MessagesViewController.h */,
 				E249981F1A1135A100E9969D /* MessagesViewController.m */,
 				E24998201A1135A100E9969D /* MessagesViewController.xib */,
-				18A335401A15179A0042E39C /* HistoricalOutBoxTableViewCell.h */,
-				18A335411A15179A0042E39C /* HistoricalOutBoxTableViewCell.m */,
-				18A335421A15179A0042E39C /* HistoricalOutBoxTableViewCell.xib */,
+				E28165211A1B732A00D5DC32 /* Outbox */,
+				180CBF0C1A12BEDC00AE563C /* SendMessageViewController.h */,
+				180CBF0D1A12BEDC00AE563C /* SendMessageViewController.m */,
+				180CBF0E1A12BEDC00AE563C /* SendMessageViewController.xib */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
@@ -364,6 +354,42 @@
 				E24E234E1A1670260037088A /* FavoriteViewController.xib */,
 			);
 			name = Favorite;
+			sourceTree = "<group>";
+		};
+		E28165201A1B732400D5DC32 /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				E24E233F1A1630FB0037088A /* HistoricalInboxTableViewCell.h */,
+				E24E23401A1630FB0037088A /* HistoricalInboxTableViewCell.m */,
+				E24E23411A1630FB0037088A /* HistoricalInboxTableViewCell.xib */,
+				18EC79611A138C00000BBD48 /* InboxMessageTableViewCell.h */,
+				18EC79621A138C00000BBD48 /* InboxMessageTableViewCell.m */,
+				18EC79631A138C00000BBD48 /* InboxMessageTableViewCell.xib */,
+			);
+			name = Inbox;
+			sourceTree = "<group>";
+		};
+		E28165211A1B732A00D5DC32 /* Outbox */ = {
+			isa = PBXGroup;
+			children = (
+				18A335401A15179A0042E39C /* HistoricalOutBoxTableViewCell.h */,
+				18A335411A15179A0042E39C /* HistoricalOutBoxTableViewCell.m */,
+				18A335421A15179A0042E39C /* HistoricalOutBoxTableViewCell.xib */,
+				E24E23431A1630FB0037088A /* OutBoxTableViewCell.h */,
+				E24E23441A1630FB0037088A /* OutBoxTableViewCell.m */,
+				E24E23451A1630FB0037088A /* OutBoxTableViewCell.xib */,
+			);
+			name = Outbox;
+			sourceTree = "<group>";
+		};
+		E28165221A1B736C00D5DC32 /* Add House */ = {
+			isa = PBXGroup;
+			children = (
+				18C09E301A13ED4900887EAA /* AddHouseViewController.h */,
+				544C6A701A0FA0490057C2E3 /* AddHouseViewController.m */,
+				544C6A711A0FA0490057C2E3 /* AddHouseViewController.xib */,
+			);
+			name = "Add House";
 			sourceTree = "<group>";
 		};
 		E2BD4CBC1A0BBA9F00EBEE02 /* Filters */ = {
@@ -389,15 +415,13 @@
 		E2EDA5561A0D2C6600848400 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				E24E23421A1630FB0037088A /* MyCell.xib */,
-				E26DB31F1A14E2E5009704C9 /* MyCell.h */,
-				E26DB3201A14E2E5009704C9 /* MyCell.m */,
-				18C09E301A13ED4900887EAA /* AddHouseViewController.h */,
-				544C6A701A0FA0490057C2E3 /* AddHouseViewController.m */,
-				544C6A711A0FA0490057C2E3 /* AddHouseViewController.xib */,
+				E28165221A1B736C00D5DC32 /* Add House */,
 				544C6A841A0FA0490057C2E3 /* HouseTableViewCell.h */,
 				544C6A851A0FA0490057C2E3 /* HouseTableViewCell.m */,
 				544C6A861A0FA0490057C2E3 /* HouseTableViewCell.xib */,
+				E26DB31F1A14E2E5009704C9 /* MyCell.h */,
+				E26DB3201A14E2E5009704C9 /* MyCell.m */,
+				E24E23421A1630FB0037088A /* MyCell.xib */,
 				544C6A8C1A0FA0490057C2E3 /* UserDetailsViewController.h */,
 				544C6A8D1A0FA0490057C2E3 /* UserDetailsViewController.m */,
 				544C6A8E1A0FA0490057C2E3 /* UserDetailsViewController.xib */,

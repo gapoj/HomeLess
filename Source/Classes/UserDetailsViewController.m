@@ -52,31 +52,33 @@
     return self.houses.count;
 }
 
-- (void)bringPhotoToCell:(House *)house cell:(HouseTableViewCell *)cell {
-    PFQuery *photoQuery = [HousePhoto query];
-    [photoQuery whereKey:@"house"equalTo:house];
-    [photoQuery whereKey:@"isMain" equalTo:[NSNumber numberWithBool:YES]];
-    
-    [photoQuery findObjectsInBackgroundWithBlock:^(NSArray *photos, NSError *error) {
-        if(error){
-            NSLog(@"Error: %@",error);
-        }else{
-            HousePhoto * photo = photos[0];
-            PFFile *file =  photo.parsePhoto;
-            if (file != nil) {
-                NSError *error;
-                NSData * data = [file getData: &error];
-                if (!error) {
-                    UIImage *image = [UIImage imageWithData:data];
-                    cell.image.image = image;
-                    cell.image.contentMode= UIViewContentModeScaleAspectFit;
-                }else{
-                    NSLog(@"%@",error);
+- (void)setPhotoToCell:(House *)house cell:(HouseTableViewCell *)cell {
+    if (house) {
+        PFQuery *photoQuery = [HousePhoto query];
+        [photoQuery whereKey:@"house"equalTo:house];
+        [photoQuery whereKey:@"isMain" equalTo:[NSNumber numberWithBool:YES]];
+        [photoQuery findObjectsInBackgroundWithBlock:^(NSArray *photos, NSError *error) {
+            if(error){
+                NSLog(@"Error: %@",error);
+            }else{
+                HousePhoto * photo = photos[0];
+                PFFile *file =  photo.parsePhoto;
+                if (file != nil) {
+                    NSError *error;
+                    NSData * data = [file getData: &error];
+                    if (!error) {
+                        UIImage *image = [UIImage imageWithData:data];
+                        cell.image.image = image;
+                        cell.image.contentMode= UIViewContentModeScaleAspectFit;
+                    }else{
+                        NSLog(@"%@",error);
+                    }
                 }
-                
             }
-        }
-    }];
+        }];
+    }else{
+        cell.image.image = [UIImage imageNamed:@"homeImg"];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -87,7 +89,7 @@
     }
     House * house = self.houses[indexPath.row];
     cell.label.text = house.title;
-    [self bringPhotoToCell:house cell:cell];
+    [self setPhotoToCell:house cell:cell];
 
     return cell;
 }
@@ -241,5 +243,21 @@
     [self showViewController:vc sender:self];
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    House *houseToDelete = [House object];
+    houseToDelete = [self.houses objectAtIndex:indexPath.row];
+    [houseToDelete deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        }
+    }];
+    NSMutableArray *aux = [NSMutableArray arrayWithArray:self.houses];
+    [aux removeObjectAtIndex:indexPath.row];
+    self.houses = [NSArray arrayWithArray:aux];
+    [self.tableView reloadData];
+}
 @end

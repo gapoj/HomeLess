@@ -245,9 +245,6 @@
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
        textView.backgroundColor = [UIColor colorWithRed:.93 green:.87 blue:.93 alpha:.5];
-    
-    
-    
 }
 - (BOOL)textViewShouldEndEditing:(UITextView *)textView{
   
@@ -259,6 +256,7 @@
     NSLog(@"textViewDidEndEditing:");
     [self.view endEditing:YES];
 }
+
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
     NSCharacterSet *doneButtonCharacterSet = [NSCharacterSet newlineCharacterSet];
     NSRange replacementTextRange = [text rangeOfCharacterFromSet:doneButtonCharacterSet];
