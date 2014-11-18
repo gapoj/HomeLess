@@ -203,15 +203,6 @@
                                 <action selector="onContact:" destination="-1" eventType="touchUpInside" id="MTN-Qm-gEu"/>
                             </connections>
                         </button>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="No description writed" translatesAutoresizingMaskIntoConstraints="NO" id="Xfc-Wb-KIk">
-                            <rect key="frame" x="8" y="87" width="320" height="61"/>
-                            <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="-93" width="0.0" height="0.0"/>
-                            </variation>
-                        </textView>
                         <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Tr-ps-pz2">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -240,6 +231,15 @@
                                 <action selector="onPreviousPressed:" destination="-1" eventType="touchUpInside" id="4We-DY-NCE"/>
                             </connections>
                         </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="No description writed" translatesAutoresizingMaskIntoConstraints="NO" id="Xfc-Wb-KIk">
+                            <rect key="frame" x="8" y="87" width="320" height="61"/>
+                            <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="8" y="571" width="322" height="99"/>
+                            </variation>
+                        </textView>
                     </subviews>
                     <variation key="default">
                         <mask key="subviews">
@@ -261,9 +261,9 @@
                             <exclude reference="GSD-Mx-ei5"/>
                             <exclude reference="erk-7A-wic"/>
                             <exclude reference="N0M-wj-u9B"/>
-                            <exclude reference="Xfc-Wb-KIk"/>
                             <exclude reference="6Tr-ps-pz2"/>
                             <exclude reference="EqF-f5-FlF"/>
+                            <exclude reference="Xfc-Wb-KIk"/>
                         </mask>
                     </variation>
                     <variation key="widthClass=compact" fixedFrame="YES">
@@ -287,9 +287,9 @@
                             <include reference="GSD-Mx-ei5"/>
                             <include reference="erk-7A-wic"/>
                             <include reference="N0M-wj-u9B"/>
-                            <include reference="Xfc-Wb-KIk"/>
                             <include reference="6Tr-ps-pz2"/>
                             <include reference="EqF-f5-FlF"/>
+                            <include reference="Xfc-Wb-KIk"/>
                         </mask>
                     </variation>
                 </scrollView>
@@ -299,16 +299,17 @@
                     <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="93" y="29" width="170" height="42"/>
+                        <rect key="frame" x="69" y="40" width="170" height="42"/>
                     </variation>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCO-ms-sR0">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="&lt;">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="24" y="35" width="46" height="30"/>
+                        <rect key="frame" x="8" y="35" width="46" height="30"/>
                     </variation>
                     <connections>
                         <action selector="onBack:" destination="-1" eventType="touchUpInside" id="SWK-ht-0nW"/>
@@ -320,7 +321,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="292" y="29" width="45" height="41"/>
+                        <rect key="frame" x="247" y="41" width="45" height="41"/>
                     </variation>
                     <connections>
                         <action selector="onEdit:" destination="-1" eventType="touchUpInside" id="HK4-4k-aqv"/>
@@ -345,7 +346,7 @@
                     <include reference="9qn-xc-33g"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="134" y="1752"/>
+            <point key="canvasLocation" x="134" y="1849.5"/>
         </view>
     </objects>
     <resources>

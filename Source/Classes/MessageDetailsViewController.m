@@ -22,6 +22,9 @@
 @end
 
 @implementation MessageDetailsViewController
+- (IBAction)onBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 - (IBAction)onRelatedHouse:(id)sender {
     DetailsHouseViewController *vc = [[DetailsHouseViewController alloc] init];
     vc.house = self.message.houseRelated;
@@ -68,7 +71,7 @@
     PFQuery *messagesQuery = [Message query];
     [messagesQuery whereKey:@"conversationID" equalTo:self.message.conversationID];
     
-    
+    [messagesQuery whereKey:@"objectId" notEqualTo: self.message.objectId];
     [messagesQuery includeKey:@"sender"];
     [messagesQuery includeKey:@"receiver"];
     [messagesQuery includeKey:@"houseRelated"];

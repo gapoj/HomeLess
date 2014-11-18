@@ -113,15 +113,17 @@
         newMessagge.date = [[NSDate alloc] init];
         [newMessagge setDateToGlobalTime];
         newMessagge.sender = [PFUser currentUser];
-        newMessagge.receiver= self.relatedHouse.owner;
+       
         newMessagge.houseRelated = self.relatedHouse;
         if (self.previousMessage) {
             newMessagge.conversationID = self.previousMessage.conversationID;
             newMessagge.numberInConversation = self.previousMessage.numberInConversation + 1;
+            newMessagge.receiver = self.previousMessage.sender;
 
         } else {
             newMessagge.conversationID =[NSString stringWithFormat:@"%@ %@" ,self.relatedHouse.objectId, newMessagge.date];
             newMessagge.numberInConversation = 1;
+             newMessagge.receiver= self.relatedHouse.owner;
         }
         
         [newMessagge saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

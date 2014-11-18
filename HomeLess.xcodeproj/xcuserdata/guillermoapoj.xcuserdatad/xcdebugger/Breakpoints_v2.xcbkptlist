@@ -169,7 +169,7 @@
                   symbolName = "__46-[AddHouseViewController addAdditionalPhotos:]_block_invoke_2"
                   moduleName = "HomeLess"
                   urlString = "file:///Users/guillermoapoj/Desktop/HomeLess/Source/Classes/AddHouseViewController.m"
-                  timestampString = "437956491.433996"
+                  timestampString = "438027635.55073"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "200"
@@ -183,7 +183,7 @@
                   symbolName = "__46-[AddHouseViewController addAdditionalPhotos:]_block_invoke_2"
                   moduleName = "HomeLess"
                   urlString = "file:///Users/guillermoapoj/Desktop/HomeLess/Source/Classes/AddHouseViewController.m"
-                  timestampString = "437956491.434302"
+                  timestampString = "438027635.550927"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "200"
@@ -269,7 +269,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
             endingLineNumber = "90"
-            landmarkName = "-onPageChanged:"
+            landmarkName = "-onEdit:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
