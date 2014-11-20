@@ -12,30 +12,45 @@
 #import "HousePhoto.h"
 #import "FavoriteViewController.h"
 
-@interface HomeViewController (){
+@interface HomeViewController () <DraggableViewBackgoundDelegate>{
     
     UIButton* infoButton;
     UILabel *name;
     DraggableViewBackground *draggableBackground;
+    UILabel *noHouses;
+
 }
 @end
 
 @implementation HomeViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    draggableBackground = [[DraggableViewBackground alloc]initWithFrame:self.view.frame];
-    draggableBackground.center = self.view.center;
-    [self.view addSubview:draggableBackground];
-    infoButton = [[UIButton alloc]initWithFrame:CGRectMake(125, 430, 75, 75)];
-    [infoButton setImage:[UIImage imageNamed:@"infoButton"] forState:UIControlStateNormal];
-    [infoButton addTarget:self action:@selector(showInfo) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:infoButton];
+- (void)createMenuButton {
     UILabel *homeLabel = [self createHomeButtonView];
     DWBubbleMenuButton *menuButton = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(15,25,50,50) expansionDirection:DirectionDown];
     menuButton.homeButtonView = homeLabel;
     [menuButton addButtons:[self createDemoButtonArray]];
     [self.view addSubview:menuButton];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    draggableBackground = [[DraggableViewBackground alloc]initWithFrame:self.view.frame];
+    draggableBackground.center = self.view.center;
+    draggableBackground.delegate = self;
+    
+    [self.view addSubview:draggableBackground];
+    noHouses = [[UILabel alloc]initWithFrame:CGRectMake(100, 33, 200, 100)];
+    noHouses.text = @"";
+    noHouses.center = self.view.center;
+    noHouses.textAlignment =NSTextAlignmentCenter;
+    noHouses.backgroundColor = [UIColor colorWithRed:0.75 green:0.92 blue:0.83 alpha:1];
+    [self.view addSubview:noHouses];
+    infoButton = [[UIButton alloc]initWithFrame:CGRectMake(125, 430, 75, 75)];
+    [infoButton setImage:[UIImage imageNamed:@"infoButton"] forState:UIControlStateNormal];
+    [infoButton addTarget:self action:@selector(showInfo) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:infoButton];
+    
+    [self createMenuButton];
     name = [[UILabel alloc]initWithFrame:CGRectMake(100, 33, 170, 42)];
     name.font = [UIFont systemFontOfSize:33];
     name.text = @"HomeLess";
@@ -133,4 +148,18 @@
 - (BOOL)prefersStatusBarHidden {
     return true;
 }
+- (void) housesCharged{
+    [self.view bringSubviewToFront:draggableBackground];
+    [self createMenuButton];
+    infoButton.enabled = YES;
+
+}
+-(void)housesFinished:(NSString*)string  {
+    noHouses.text = string;
+     [self.view bringSubviewToFront:noHouses];
+  
+    infoButton.enabled = NO;
+
+}
+
 @end

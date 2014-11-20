@@ -21,6 +21,7 @@ static const float CARD_WIDTH = 260;
 
 - (void)loadData
 {
+    [self.delegate housesFinished:@"Loading data"];
     [self.activityIndicator startAnimating];
     
     PFQuery *filters = [Filter query];
@@ -32,6 +33,8 @@ static const float CARD_WIDTH = 260;
             }else{
                 [self loadAllHouses];
             }
+        }else{
+             [self.delegate housesFinished:@"Connection error"];
         }
     }];
     loadedCards = [[NSMutableArray alloc] init];
@@ -56,6 +59,8 @@ static const float CARD_WIDTH = 260;
     [housesQuery whereKey:@"withGarage" equalTo:[NSNumber numberWithBool:filter.withGarage]];
     [housesQuery findObjectsInBackgroundWithBlock:^(NSArray *houses, NSError *error) {
         if(error){
+            [self.delegate housesFinished:@"Connection error"];
+
             NSLog(@"Error: %@",error);
         }else{
             houseCards  = houses;
@@ -71,6 +76,8 @@ static const float CARD_WIDTH = 260;
     [housesQuery includeKey:@"owner"];
     [housesQuery findObjectsInBackgroundWithBlock:^(NSArray *houses, NSError *error) {
         if(error){
+            [self.delegate housesFinished:@"Connection error"];
+
             NSLog(@"Error: %@",error);
         }else{
             houseCards  = houses;
@@ -86,7 +93,10 @@ static const float CARD_WIDTH = 260;
     [photoQuery includeKey:@"house"];
     [photoQuery findObjectsInBackgroundWithBlock:^(NSArray *photos, NSError *error) {
         if(error){
+            [self.delegate housesFinished:@"Connection error"];
+
             NSLog(@"Error: %@",error);
+            
         }else{
             houseCards  = photos;
             [self loadCards];
@@ -161,6 +171,10 @@ static const float CARD_WIDTH = 260;
             }
             cardsLoadedIndex++;
         }
+        [self.delegate housesCharged];
+    }else{
+         [self.activityIndicator stopAnimating];
+        [self.delegate housesFinished:@"there are no houses that pass the filter"];
     }
 }
 
@@ -173,7 +187,11 @@ static const float CARD_WIDTH = 260;
         cardsLoadedIndex++;
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
+    
     self.houseIndex++;
+    if (self.houseIndex == [self.houseCards count]) {
+        [self.delegate housesFinished:@"No more houses to show"];
+    }
 }
 
 -(void)cardSwipedRight:(UIView *)card
@@ -186,6 +204,9 @@ static const float CARD_WIDTH = 260;
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
     self.houseIndex++;
+    if (self.houseIndex == [self.houseCards count]) {
+        [self.delegate housesFinished:@"No more houses to show"];
+    }
 }
 -(void)addFavorite{
     Favorite *  favorite=[Favorite object];
@@ -207,6 +228,7 @@ static const float CARD_WIDTH = 260;
     }];
     [dragView rightClickAction];
     self.houseIndex++;
+  
 }
 
 -(void)swipeLeft
@@ -218,5 +240,6 @@ static const float CARD_WIDTH = 260;
     }];
     [dragView leftClickAction];
     self.houseIndex++;
+    
 }
 @end
