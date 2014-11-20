@@ -402,6 +402,10 @@
                             </connections>
                         </button>
                     </subviews>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="krM-4B-ZKo" appends="YES" id="GE1-qk-tqW"/>
+                    </connections>
                 </scrollView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add House" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dd6-BN-K0J">
                     <rect key="frame" x="61" y="24" width="170" height="42"/>
@@ -446,6 +450,12 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="304" y="169"/>
         </view>
+        <tapGestureRecognizer id="krM-4B-ZKo">
+            <connections>
+                <action selector="onTap:" destination="-1" id="adI-fg-8pe"/>
+                <outlet property="delegate" destination="-1" id="eaf-c7-iQO"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="addPhoto" width="128" height="128"/>

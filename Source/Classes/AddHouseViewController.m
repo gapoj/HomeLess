@@ -275,4 +275,7 @@
     return YES;
 }
 
+- (IBAction)onTap:(id)sender {
+    [self.view endEditing:YES];
+}
 @end
