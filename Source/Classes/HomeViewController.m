@@ -149,9 +149,8 @@
     return true;
 }
 - (void) housesCharged{
-    [self.view bringSubviewToFront:draggableBackground];
-    [self createMenuButton];
-    infoButton.enabled = YES;
+    [self.view sendSubviewToBack:noHouses];
+      infoButton.enabled = YES;
 
 }
 -(void)housesFinished:(NSString*)string  {
