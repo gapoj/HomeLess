@@ -2,14 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessagesViewController">
             <connections>
-                <outlet property="folderButton" destination="I1S-wH-Fgs" id="TxZ-9N-xLi"/>
-                <outlet property="folderLabel" destination="HB0-cL-1CL" id="jf9-tB-wJx"/>
+                <outlet property="messageButton" destination="BBo-0t-Ya1" id="HK8-TO-JBC"/>
+                <outlet property="navigationBar" destination="XaS-mC-8Ra" id="fqU-rj-0lU"/>
                 <outlet property="tableView" destination="Zpy-Sg-LSX" id="iw3-D0-bLA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,7 +21,9 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="382" id="1dP-Mi-kAl"/>
+                        <constraint firstAttribute="height" constant="382" id="1dP-Mi-kAl">
+                            <variation key="widthClass=compact" constant="534"/>
+                        </constraint>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
@@ -40,83 +40,44 @@
                         <outlet property="delegate" destination="-1" id="mN4-v1-fjX"/>
                     </connections>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="inbox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HB0-cL-1CL">
-                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1S-wH-Fgs">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <color key="backgroundColor" red="0.0" green="0.30818083010000002" blue="1" alpha="0.57999999999999996" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="121" id="iA3-OA-CBu"/>
-                    </constraints>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal">
-                        <color key="titleShadowColor" red="1" green="0.095412352610000001" blue="0.091958460160000005" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="iA3-OA-CBu"/>
-                        </mask>
-                    </variation>
-                    <variation key="widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="iA3-OA-CBu"/>
-                        </mask>
-                    </variation>
-                    <connections>
-                        <action selector="changeFolder:" destination="-1" eventType="touchUpInside" id="GiU-Gz-TZq"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSd-LX-rDX">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" image="menuHome">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="26" width="54" height="49"/>
-                    </variation>
-                    <connections>
-                        <action selector="onHomePressed:" destination="-1" eventType="touchUpInside" id="igb-O5-80G"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otz-FW-wEA">
-                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="98" y="33" width="170" height="42"/>
-                    </variation>
-                </label>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaS-mC-8Ra">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Messages" id="8uu-eT-vwn">
+                            <barButtonItem key="leftBarButtonItem" title="&lt;" id="8Hq-US-rQ9">
+                                <color key="tintColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onHomePressed:" destination="-1" id="pSc-dE-7ha"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Inbox" id="BBo-0t-Ya1">
+                                <color key="tintColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeFolder:" destination="-1" id="lrn-fF-RDU"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="0.016714702000000001" green="0.076191601989999996" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="Zpy-Sg-LSX" firstAttribute="top" secondItem="I1S-wH-Fgs" secondAttribute="bottom" constant="33" id="CfU-4a-AxB"/>
-                <constraint firstItem="I1S-wH-Fgs" firstAttribute="top" secondItem="HB0-cL-1CL" secondAttribute="bottom" constant="8" symbolic="YES" id="Fkb-ft-uh6"/>
-                <constraint firstItem="HB0-cL-1CL" firstAttribute="centerX" secondItem="Zpy-Sg-LSX" secondAttribute="centerX" id="WaS-DT-aeG"/>
-                <constraint firstItem="HB0-cL-1CL" firstAttribute="leading" secondItem="I1S-wH-Fgs" secondAttribute="leading" id="YTX-KK-tG0"/>
+                <constraint firstItem="XaS-mC-8Ra" firstAttribute="trailing" secondItem="Zpy-Sg-LSX" secondAttribute="trailing" id="D4d-JE-hmd"/>
                 <constraint firstAttribute="bottom" secondItem="Zpy-Sg-LSX" secondAttribute="bottom" id="cFH-Um-FFC"/>
-                <constraint firstItem="HB0-cL-1CL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="dQ3-fy-FRZ"/>
                 <constraint firstAttribute="trailing" secondItem="Zpy-Sg-LSX" secondAttribute="trailing" id="gGg-Rk-xRi"/>
                 <constraint firstItem="Zpy-Sg-LSX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lG9-EM-9d0"/>
+                <constraint firstItem="XaS-mC-8Ra" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="tdf-Xu-JuV"/>
+                <constraint firstItem="XaS-mC-8Ra" firstAttribute="leading" secondItem="Zpy-Sg-LSX" secondAttribute="leading" id="wS0-lY-IEp"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="Zpy-Sg-LSX"/>
-                    <exclude reference="HB0-cL-1CL"/>
-                    <exclude reference="I1S-wH-Fgs"/>
-                    <exclude reference="kSd-LX-rDX"/>
-                    <exclude reference="Otz-FW-wEA"/>
+                    <exclude reference="XaS-mC-8Ra"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="WaS-DT-aeG"/>
-                    <exclude reference="YTX-KK-tG0"/>
-                    <exclude reference="dQ3-fy-FRZ"/>
-                    <exclude reference="Fkb-ft-uh6"/>
-                    <exclude reference="CfU-4a-AxB"/>
+                    <exclude reference="D4d-JE-hmd"/>
+                    <exclude reference="tdf-Xu-JuV"/>
+                    <exclude reference="wS0-lY-IEp"/>
                     <exclude reference="cFH-Um-FFC"/>
                     <exclude reference="gGg-Rk-xRi"/>
                     <exclude reference="lG9-EM-9d0"/>
@@ -125,17 +86,12 @@
             <variation key="widthClass=compact">
                 <mask key="subviews">
                     <include reference="Zpy-Sg-LSX"/>
-                    <include reference="HB0-cL-1CL"/>
-                    <include reference="I1S-wH-Fgs"/>
-                    <include reference="kSd-LX-rDX"/>
-                    <include reference="Otz-FW-wEA"/>
+                    <include reference="XaS-mC-8Ra"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="WaS-DT-aeG"/>
-                    <include reference="YTX-KK-tG0"/>
-                    <include reference="dQ3-fy-FRZ"/>
-                    <include reference="Fkb-ft-uh6"/>
-                    <include reference="CfU-4a-AxB"/>
+                    <include reference="D4d-JE-hmd"/>
+                    <include reference="tdf-Xu-JuV"/>
+                    <include reference="wS0-lY-IEp"/>
                     <include reference="cFH-Um-FFC"/>
                     <include reference="gGg-Rk-xRi"/>
                     <include reference="lG9-EM-9d0"/>
@@ -144,7 +100,4 @@
             <point key="canvasLocation" x="137" y="104"/>
         </view>
     </objects>
-    <resources>
-        <image name="menuHome" width="256" height="256"/>
-    </resources>
 </document>

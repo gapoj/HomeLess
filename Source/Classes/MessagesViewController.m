@@ -10,15 +10,22 @@
 @interface MessagesViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property NSArray *messages;
-@property (strong, nonatomic) IBOutlet UIButton *folderButton;
-@property (strong, nonatomic) IBOutlet UILabel *folderLabel;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
+//@property (strong, nonatomic) IBOutlet UILabel *folderLabel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *messageButton;
 @end
 
 @implementation MessagesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (self.inbox) {
+        [self.messageButton setTitle:@"Go to sent"];
+    } else {
+        [self.messageButton setTitle:@"Go to inbox"];
+    }
 }
+
 - (IBAction)changeFolder:(id)sender {
     if (self.inbox) {
         MessagesViewController *vc = [[MessagesViewController alloc] init];
@@ -27,21 +34,16 @@
         
     } else {
         [self dismissViewControllerAnimated:YES completion:^{
-            
         }];
     }
-    
 }
 - (void)loadMessages {
     PFQuery *messagesQuery = [Message query];
     if (self.inbox) {
         [messagesQuery whereKey:@"receiver" equalTo:[PFUser currentUser]];
-        
     } else {
         [messagesQuery whereKey:@"sender" equalTo:[PFUser currentUser]];
     }
-    
-   
     [messagesQuery includeKey:@"sender"];
     [messagesQuery includeKey:@"receiver"];
     [messagesQuery includeKey:@"houseRelated"];
@@ -53,10 +55,9 @@
             [self.tableView reloadData];
         }
     }];
-    
 }
+
 - (IBAction)onHomePressed:(id)sender {
-    
     if (!self.inbox) {
         HomeViewController *detailsViewController = [[HomeViewController alloc]init];
         [self showViewController:detailsViewController sender:self];
@@ -70,15 +71,12 @@
     [super viewDidAppear:animated];
     [self loadMessages];
     if (self.inbox) {
-        [self.folderButton setTitle:@"Go to sent" forState:UIControlStateNormal];
-        self.folderLabel.text = @"Received messages";
-        
+        [self.messageButton setTitle:@"Go to sent"];
+//        self.navigationItem.title = @"Received messages";
     } else {
-        [self.folderButton setTitle:@"Go to inbox" forState:UIControlStateNormal];
-        self.folderLabel.text = @"Sent messages";
+        [self.messageButton setTitle:@"Go to inbox"];
+//        self.navigationItem.title = @"Sent messages";
     }
-    
-    
 }
 #pragma mark - Table view delegate
 
@@ -115,12 +113,10 @@
     if(!message.readed){
         cell.date.font = [UIFont boldSystemFontOfSize:10.0];
         cell.message.font = [UIFont boldSystemFontOfSize:13.0];
-    }
-    else
+    } else
     {
         cell.date.font = [UIFont systemFontOfSize:10.0];
         cell.message.font = [UIFont systemFontOfSize:13.0];
-        
     }
     return cell;
 }
@@ -133,16 +129,12 @@
     }
     
     cell.message.text =message.subject;
-    
     [cell.message sizeToFit];
-    
     NSDate *theDate =[message getLocalTimeDate];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    //[formatter setDateFormat:@"HH:mm a"];
     [formatter setDateFormat:@"yyyy-MM-dd"];
     NSString *timeString = [formatter stringFromDate:theDate];
     cell.date.text = timeString;
-    
     
     if(!message.readed){
         cell.date.font = [UIFont boldSystemFontOfSize:10.0];
@@ -152,23 +144,20 @@
     {
         cell.date.font = [UIFont systemFontOfSize:10.0];
         cell.message.font = [UIFont systemFontOfSize:13.0];
-        
     }
     return cell;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Message * message = self.messages[indexPath.row];//
-
     UITableViewCell *cell;
     if (self.inbox) {
         cell = [self createInboxCell:tableView message:message];
-
     } else {
         cell = [self createOutboxCell:tableView message:message];
-
     }
-        return cell;
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -176,6 +165,5 @@
     MessageDetailsViewController *vc = [[MessageDetailsViewController alloc] init];
     vc.message = self.messages[indexPath.row];
     [self showViewController:vc sender:self];
-    
 }
 @end
