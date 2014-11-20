@@ -10,7 +10,6 @@
                 <outlet property="cat" destination="Qck-z5-wJM" id="aCi-g1-YOJ"/>
                 <outlet property="desc" destination="Xfc-Wb-KIk" id="le7-dT-7jn"/>
                 <outlet property="dog" destination="erk-7A-wic" id="dRM-jE-4U6"/>
-                <outlet property="editButton" destination="9qn-xc-33g" id="Z8T-fi-rf4"/>
                 <outlet property="garage" destination="ShD-Nr-7TC" id="pQ2-2f-6qW"/>
                 <outlet property="housetitle" destination="GSD-Mx-ei5" id="e7I-RH-Rqh"/>
                 <outlet property="image" destination="EnA-KZ-oSc" id="Uua-uw-DIn"/>
@@ -37,7 +36,7 @@
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="811" width="400" height="21"/>
+                                <rect key="frame" x="0.0" y="839" width="400" height="21"/>
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Pet Policy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcf-vr-Drn">
@@ -47,7 +46,7 @@
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="1051" width="400" height="21"/>
+                                <rect key="frame" x="0.0" y="1079" width="400" height="21"/>
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Rooms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgd-L5-ufX">
@@ -57,7 +56,7 @@
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="673" width="400" height="21"/>
+                                <rect key="frame" x="0.0" y="701" width="400" height="21"/>
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Square footage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWi-mQ-1nF">
@@ -67,7 +66,7 @@
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="739" width="400" height="21"/>
+                                <rect key="frame" x="0.0" y="767" width="400" height="21"/>
                             </variation>
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ 500" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0KY-Ae-a1N">
@@ -76,7 +75,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="30" y="851" width="97" height="30"/>
+                                <rect key="frame" x="30" y="879" width="97" height="30"/>
                             </variation>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="kfo-cf-6Sc"/>
@@ -89,14 +88,14 @@
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="547" width="400" height="21"/>
+                                <rect key="frame" x="0.0" y="575" width="400" height="21"/>
                             </variation>
                         </label>
                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ev2-Pw-KDx">
                             <rect key="frame" x="-19" y="-18" width="39" height="37"/>
                             <color key="pageIndicatorTintColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="106" y="432" width="146" height="37"/>
+                                <rect key="frame" x="106" y="440" width="146" height="37"/>
                             </variation>
                             <connections>
                                 <action selector="onPageChanged:" destination="-1" eventType="valueChanged" id="vwC-rf-laf"/>
@@ -109,7 +108,7 @@
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="964" width="400" height="21"/>
+                                <rect key="frame" x="0.0" y="992" width="400" height="21"/>
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Bathrooms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sno-da-l5b">
@@ -119,7 +118,7 @@
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="894" width="400" height="21"/>
+                                <rect key="frame" x="0.0" y="922" width="400" height="21"/>
                             </variation>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="EnA-KZ-oSc">
@@ -134,7 +133,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="30" y="773" width="97" height="30"/>
+                                <rect key="frame" x="30" y="801" width="97" height="30"/>
                             </variation>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="mAk-bH-KwB"/>
@@ -146,7 +145,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="30" y="702" width="97" height="30"/>
+                                <rect key="frame" x="30" y="730" width="97" height="30"/>
                             </variation>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="x60-VU-cKi"/>
@@ -158,7 +157,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="30" y="923" width="97" height="30"/>
+                                <rect key="frame" x="30" y="951" width="97" height="30"/>
                             </variation>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="Btb-kz-lQR"/>
@@ -167,28 +166,19 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garage-50" translatesAutoresizingMaskIntoConstraints="NO" id="ShD-Nr-7TC">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="30" y="993" width="53" height="48"/>
+                                <rect key="frame" x="30" y="1021" width="53" height="48"/>
                             </variation>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="Qck-z5-wJM">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="30" y="1087" width="53" height="48"/>
+                                <rect key="frame" x="30" y="1115" width="53" height="48"/>
                             </variation>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titulo casa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSD-Mx-ei5">
-                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="-21" y="448" width="400" height="50"/>
-                            </variation>
-                        </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="erk-7A-wic">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="128" y="1087" width="53" height="48"/>
+                                <rect key="frame" x="128" y="1115" width="53" height="48"/>
                             </variation>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0M-wj-u9B">
@@ -197,7 +187,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="-6" y="516" width="146" height="30"/>
+                                <rect key="frame" x="-6" y="544" width="146" height="30"/>
                             </variation>
                             <connections>
                                 <action selector="onContact:" destination="-1" eventType="touchUpInside" id="MTN-Qm-gEu"/>
@@ -211,7 +201,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="354" y="0.0" width="46" height="424"/>
+                                <rect key="frame" x="354" y="28" width="46" height="424"/>
                             </variation>
                             <connections>
                                 <action selector="onNextPhotoPressed:" destination="-1" eventType="touchUpInside" id="nBo-Nb-Chk"/>
@@ -225,7 +215,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="0.0" width="46" height="424"/>
+                                <rect key="frame" x="0.0" y="28" width="46" height="424"/>
                             </variation>
                             <connections>
                                 <action selector="onPreviousPressed:" destination="-1" eventType="touchUpInside" id="4We-DY-NCE"/>
@@ -237,9 +227,18 @@
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="8" y="571" width="322" height="99"/>
+                                <rect key="frame" x="0.0" y="-93" width="0.0" height="0.0"/>
                             </variation>
                         </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titulo casa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSD-Mx-ei5">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="-21" y="471" width="400" height="50"/>
+                            </variation>
+                        </label>
                     </subviews>
                     <variation key="default">
                         <mask key="subviews">
@@ -258,16 +257,16 @@
                             <exclude reference="hZ3-xQ-Ibx"/>
                             <exclude reference="ShD-Nr-7TC"/>
                             <exclude reference="Qck-z5-wJM"/>
-                            <exclude reference="GSD-Mx-ei5"/>
                             <exclude reference="erk-7A-wic"/>
                             <exclude reference="N0M-wj-u9B"/>
                             <exclude reference="6Tr-ps-pz2"/>
                             <exclude reference="EqF-f5-FlF"/>
                             <exclude reference="Xfc-Wb-KIk"/>
+                            <exclude reference="GSD-Mx-ei5"/>
                         </mask>
                     </variation>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="93" width="400" height="1200"/>
+                        <rect key="frame" x="0.0" y="65" width="400" height="1228"/>
                         <mask key="subviews">
                             <include reference="8Ve-6E-uy0"/>
                             <include reference="tcf-vr-Drn"/>
@@ -284,75 +283,58 @@
                             <include reference="hZ3-xQ-Ibx"/>
                             <include reference="ShD-Nr-7TC"/>
                             <include reference="Qck-z5-wJM"/>
-                            <include reference="GSD-Mx-ei5"/>
                             <include reference="erk-7A-wic"/>
                             <include reference="N0M-wj-u9B"/>
                             <include reference="6Tr-ps-pz2"/>
                             <include reference="EqF-f5-FlF"/>
                             <include reference="Xfc-Wb-KIk"/>
+                            <include reference="GSD-Mx-ei5"/>
                         </mask>
                     </variation>
                 </scrollView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HomeLess" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wj-6Q-Dm4">
-                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yO-2y-fD5">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Details" id="172-6j-y6X">
+                            <barButtonItem key="leftBarButtonItem" title="&lt;" id="bD3-HL-88M">
+                                <color key="tintColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onBack:" destination="-1" id="9KO-ni-L5V"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" systemItem="compose" id="YmJ-5b-gJA">
+                                <color key="tintColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onEdit:" destination="-1" id="jOu-JL-zvs"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="69" y="40" width="170" height="42"/>
+                        <rect key="frame" x="0.0" y="21" width="400" height="44"/>
                     </variation>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCO-ms-sR0">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="&lt;">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="35" width="46" height="30"/>
-                    </variation>
-                    <connections>
-                        <action selector="onBack:" destination="-1" eventType="touchUpInside" id="SWK-ht-0nW"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qn-xc-33g">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" image="editHouse">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="247" y="41" width="45" height="41"/>
-                    </variation>
-                    <connections>
-                        <action selector="onEdit:" destination="-1" eventType="touchUpInside" id="HK4-4k-aqv"/>
-                    </connections>
-                </button>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.24169647312310572" blue="1" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="Qnf-P4-Ugb"/>
-                    <exclude reference="6Wj-6Q-Dm4"/>
-                    <exclude reference="cCO-ms-sR0"/>
-                    <exclude reference="9qn-xc-33g"/>
+                    <exclude reference="5yO-2y-fD5"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
                     <include reference="Qnf-P4-Ugb"/>
-                    <include reference="6Wj-6Q-Dm4"/>
-                    <include reference="cCO-ms-sR0"/>
-                    <include reference="9qn-xc-33g"/>
+                    <include reference="5yO-2y-fD5"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="134" y="1849.5"/>
+            <point key="canvasLocation" x="134" y="1849"/>
         </view>
     </objects>
     <resources>
         <image name="cat" width="256" height="256"/>
         <image name="dog" width="256" height="256"/>
-        <image name="editHouse" width="256" height="256"/>
         <image name="garage-50" width="50" height="50"/>
         <image name="home" width="4500" height="3000"/>
     </resources>

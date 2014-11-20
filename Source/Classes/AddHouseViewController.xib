@@ -7,7 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddHouseViewController">
             <connections>
                 <outlet property="PriceTextField" destination="onz-BK-G7U" id="cdw-OD-GrC"/>
-                <outlet property="addOrEditLabel" destination="Dd6-BN-K0J" id="6oe-lB-BXN"/>
                 <outlet property="addressTextField" destination="RPH-rH-zf6" id="b5n-Fo-eQf"/>
                 <outlet property="bathroomsLabel" destination="RiO-d2-iwe" id="kdH-YN-flu"/>
                 <outlet property="bathroomsSlider" destination="53m-AE-60c" id="RPI-Uu-elV"/>
@@ -407,44 +406,26 @@
                         <outletCollection property="gestureRecognizers" destination="krM-4B-ZKo" appends="YES" id="GE1-qk-tqW"/>
                     </connections>
                 </scrollView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add House" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dd6-BN-K0J">
-                    <rect key="frame" x="61" y="24" width="170" height="42"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <color key="textColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="23" y="36" width="170" height="42"/>
-                    </variation>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uEX-H6-Dni">
-                    <rect key="frame" x="282" y="30" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="save">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="14" y="18" width="35" height="33"/>
-                    </variation>
-                    <connections>
-                        <action selector="onSave:" destination="-1" eventType="touchUpInside" id="emc-bk-kbh"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HGA-uC-M3q">
-                    <rect key="frame" x="8" y="22" width="41" height="38"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <state key="normal" title="&lt;">
-                        <color key="titleColor" red="0.0" green="0.30818083010000002" blue="1" alpha="0.57999999999999996" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="325" y="57" width="54" height="49"/>
-                    </variation>
-                    <connections>
-                        <action selector="onHomeButtonPressed:" destination="-1" eventType="touchUpInside" id="JD8-RI-89u"/>
-                    </connections>
-                </button>
+                <navigationBar contentMode="scaleToFill" id="pac-Xn-xHA">
+                    <rect key="frame" x="0.0" y="27" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Add house" id="WB6-iY-Xla">
+                            <barButtonItem key="leftBarButtonItem" title="&lt;" id="aDt-Ii-Iqs">
+                                <color key="tintColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onHomeButtonPressed:" destination="-1" id="PtK-Vq-uRE"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" systemItem="save" id="pDu-ri-rSn">
+                                <color key="tintColor" red="0.56855156299999998" green="0.39935407899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onSave:" destination="-1" id="cjX-yl-shp"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.2416964731" blue="1" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -461,7 +442,6 @@
         <image name="addPhoto" width="128" height="128"/>
         <image name="cat" width="256" height="256"/>
         <image name="dog" width="256" height="256"/>
-        <image name="save" width="128" height="128"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

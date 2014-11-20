@@ -110,6 +110,7 @@
 - (IBAction)onHomeButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 - (IBAction)onSave:(id)sender {
     House *newHouse;
     if (self.house) {

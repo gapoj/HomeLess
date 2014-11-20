@@ -88,6 +88,7 @@
     vc.house =self.house;
     [self showViewController:vc sender:self];
 }
+
 - (IBAction)onNextPhotoPressed:(id)sender {
     NSInteger pageIndex = self.pageControl.currentPage;
     if (pageIndex < self.photos.count -1) {
