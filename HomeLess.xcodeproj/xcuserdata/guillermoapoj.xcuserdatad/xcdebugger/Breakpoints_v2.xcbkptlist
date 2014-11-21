@@ -250,12 +250,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/Classes/DraggableViewBackground.m"
-            timestampString = "438198706.542625"
+            timestampString = "438272991.58567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
-            landmarkName = "-swipeRight"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-loadAllHouses"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -266,12 +266,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/Classes/DraggableViewBackground.m"
-            timestampString = "438198706.542625"
+            timestampString = "438273000.673567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
-            landmarkName = "-swipeRight"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-loadHousesFromFilter:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -282,12 +282,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/Classes/DraggableViewBackground.m"
-            timestampString = "438198706.542625"
+            timestampString = "438273028.502028"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
-            landmarkName = "-swipeLeft"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-loadAllHouses"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

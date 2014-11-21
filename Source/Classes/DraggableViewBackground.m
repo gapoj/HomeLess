@@ -34,7 +34,8 @@ static const float CARD_WIDTH = 260;
                 [self loadAllHouses];
             }
         }else{
-             [self.delegate housesFinished:@"Connection error"];
+            [self.activityIndicator stopAnimating];
+            [self.delegate housesFinished:@"Connection error"];
         }
     }];
     loadedCards = [[NSMutableArray alloc] init];
@@ -54,13 +55,11 @@ static const float CARD_WIDTH = 260;
     [housesQuery whereKey:@"rooms" greaterThanOrEqualTo:[NSNumber numberWithLong:filter.roomsLow]];
     [housesQuery whereKey:@"squareMeters" greaterThanOrEqualTo:[NSNumber numberWithLong:filter.squareMetersLow]];
     [housesQuery whereKey:@"rentOrSale" equalTo:filter.rentOrSale];
-   
-  
     [housesQuery whereKey:@"withGarage" equalTo:[NSNumber numberWithBool:filter.withGarage]];
     [housesQuery findObjectsInBackgroundWithBlock:^(NSArray *houses, NSError *error) {
         if(error){
+            [self.activityIndicator stopAnimating];
             [self.delegate housesFinished:@"Connection error"];
-
             NSLog(@"Error: %@",error);
         }else{
             houseCards  = houses;
@@ -76,8 +75,8 @@ static const float CARD_WIDTH = 260;
     [housesQuery includeKey:@"owner"];
     [housesQuery findObjectsInBackgroundWithBlock:^(NSArray *houses, NSError *error) {
         if(error){
+            [self.activityIndicator stopAnimating];
             [self.delegate housesFinished:@"Connection error"];
-
             NSLog(@"Error: %@",error);
         }else{
             houseCards  = houses;
@@ -93,10 +92,9 @@ static const float CARD_WIDTH = 260;
     [photoQuery includeKey:@"house"];
     [photoQuery findObjectsInBackgroundWithBlock:^(NSArray *photos, NSError *error) {
         if(error){
+            [self.activityIndicator stopAnimating];
             [self.delegate housesFinished:@"Connection error"];
-
             NSLog(@"Error: %@",error);
-            
         }else{
             houseCards  = photos;
             [self loadCards];
@@ -111,7 +109,6 @@ static const float CARD_WIDTH = 260;
     if (self) {
         [super layoutSubviews];
         [self setupView];
-        //[self loadData];
     }
     return self;
 }
@@ -145,7 +142,6 @@ static const float CARD_WIDTH = 260;
             draggableView.imageHouse.contentMode = UIViewContentModeScaleAspectFit;
         }
     }
-    
     draggableView.delegate = self;
     draggableView.information.text =photo.house.title;
     return draggableView;
@@ -158,7 +154,6 @@ static const float CARD_WIDTH = 260;
         for (int i = 0; i<[houseCards count]; i++) {
             DraggableView* newCard = [self createDraggableViewWithDataAtIndex:i];
             [allCards addObject:newCard];
-            
             if (i<numLoadedCardsCap) {
                 [loadedCards addObject:newCard];
             }
@@ -173,7 +168,7 @@ static const float CARD_WIDTH = 260;
         }
         [self.delegate housesCharged];
     }else{
-         [self.activityIndicator stopAnimating];
+        [self.activityIndicator stopAnimating];
         [self.delegate housesFinished:@"there are no houses that pass the filter"];
     }
 }
@@ -181,13 +176,11 @@ static const float CARD_WIDTH = 260;
 -(void)cardSwipedLeft:(UIView *)card;
 {
     [loadedCards removeObjectAtIndex:0];
-    
     if (cardsLoadedIndex < [allCards count]) {
         [loadedCards addObject:[allCards objectAtIndex:cardsLoadedIndex]];
         cardsLoadedIndex++;
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
-    
     self.houseIndex++;
     if (self.houseIndex == [self.houseCards count]) {
         [self.delegate housesFinished:@"No more houses to show"];
@@ -227,8 +220,6 @@ static const float CARD_WIDTH = 260;
         dragView.overlayView.alpha = 1;
     }];
     [dragView rightClickAction];
-    self.houseIndex++;
-  
 }
 
 -(void)swipeLeft
@@ -239,7 +230,5 @@ static const float CARD_WIDTH = 260;
         dragView.overlayView.alpha = 1;
     }];
     [dragView leftClickAction];
-    self.houseIndex++;
-    
 }
 @end
