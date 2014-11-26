@@ -17,6 +17,9 @@
 		18D5A65C1A17BE6E00ECAB2D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5A65B1A17BE6E00ECAB2D /* HomeViewController.m */; };
 		18EC79641A138C00000BBD48 /* InboxMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EC79621A138C00000BBD48 /* InboxMessageTableViewCell.m */; };
 		18EC79651A138C00000BBD48 /* InboxMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EC79631A138C00000BBD48 /* InboxMessageTableViewCell.xib */; };
+		18FEF8D81A24BF1B00E253D0 /* ShowMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEF8D61A24BF1B00E253D0 /* ShowMapViewController.m */; };
+		18FEF8D91A24BF1B00E253D0 /* ShowMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FEF8D71A24BF1B00E253D0 /* ShowMapViewController.xib */; };
+		18FEF8DB1A24C32900E253D0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FEF8DA1A24C32900E253D0 /* MapKit.framework */; };
 		30C949AC1829561000B17666 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C949AB1829561000B17666 /* FacebookSDK.framework */; };
 		544C6A8F1A0FA0490057C2E3 /* AddHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A701A0FA0490057C2E3 /* AddHouseViewController.m */; };
 		544C6A901A0FA0490057C2E3 /* AddHouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544C6A711A0FA0490057C2E3 /* AddHouseViewController.xib */; };
@@ -34,7 +37,6 @@
 		544C6AA01A0FA0490057C2E3 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6A8D1A0FA0490057C2E3 /* UserDetailsViewController.m */; };
 		544C6AA11A0FA0490057C2E3 /* UserDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544C6A8E1A0FA0490057C2E3 /* UserDetailsViewController.xib */; };
 		544C6AA81A0FA1110057C2E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AA31A0FA1110057C2E3 /* InfoPlist.strings */; };
-		544C6AA91A0FA1110057C2E3 /* HomeLess-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AA51A0FA1110057C2E3 /* HomeLess-Info.plist */; };
 		544C6AAA1A0FA1110057C2E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C6AA71A0FA1110057C2E3 /* main.m */; };
 		544C6AB51A0FA1360057C2E3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AAB1A0FA1360057C2E3 /* Default-568h@2x.png */; };
 		544C6AB61A0FA1360057C2E3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 544C6AAC1A0FA1360057C2E3 /* Default.png */; };
@@ -93,6 +95,10 @@
 		18EC79611A138C00000BBD48 /* InboxMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InboxMessageTableViewCell.h; path = Source/Classes/InboxMessageTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		18EC79621A138C00000BBD48 /* InboxMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InboxMessageTableViewCell.m; path = Source/Classes/InboxMessageTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		18EC79631A138C00000BBD48 /* InboxMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InboxMessageTableViewCell.xib; path = Source/Classes/InboxMessageTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		18FEF8D51A24BF1B00E253D0 /* ShowMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowMapViewController.h; sourceTree = SOURCE_ROOT; };
+		18FEF8D61A24BF1B00E253D0 /* ShowMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowMapViewController.m; sourceTree = SOURCE_ROOT; };
+		18FEF8D71A24BF1B00E253D0 /* ShowMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowMapViewController.xib; sourceTree = SOURCE_ROOT; };
+		18FEF8DA1A24C32900E253D0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		30C949AB1829561000B17666 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		544C6A701A0FA0490057C2E3 /* AddHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddHouseViewController.m; path = Source/Classes/AddHouseViewController.m; sourceTree = SOURCE_ROOT; };
 		544C6A711A0FA0490057C2E3 /* AddHouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddHouseViewController.xib; path = Source/Classes/AddHouseViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -177,9 +183,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D10F48316DD68E000690A0F /* CoreLocation.framework in Frameworks */,
+				18FEF8DB1A24C32900E253D0 /* MapKit.framework in Frameworks */,
 				8103BCCD19AD1F8900BCF4C7 /* Bolts.framework in Frameworks */,
 				C425016D161BBAE400474BCD /* StoreKit.framework in Frameworks */,
-				6D10F48316DD68E000690A0F /* CoreLocation.framework in Frameworks */,
 				C4250170161BBAEE00474BCD /* libz.dylib in Frameworks */,
 				D4DA7A0E14D334F30055F672 /* AudioToolbox.framework in Frameworks */,
 				D4DA7A0F14D334F30055F672 /* CFNetwork.framework in Frameworks */,
@@ -221,6 +228,9 @@
 				E293FBFB1A1103F7001F8910 /* DetailsHouseViewController.h */,
 				E293FBFC1A1103F7001F8910 /* DetailsHouseViewController.m */,
 				E293FBFD1A1103F7001F8910 /* DetailsHouseViewController.xib */,
+				18FEF8D51A24BF1B00E253D0 /* ShowMapViewController.h */,
+				18FEF8D61A24BF1B00E253D0 /* ShowMapViewController.m */,
+				18FEF8D71A24BF1B00E253D0 /* ShowMapViewController.xib */,
 			);
 			name = Information;
 			sourceTree = "<group>";
@@ -322,6 +332,7 @@
 		D4DA79ED14D3345A0055F672 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18FEF8DA1A24C32900E253D0 /* MapKit.framework */,
 				8103BCD119AD1F9E00BCF4C7 /* User Frameworks */,
 				8103BCCA19AD1EF000BCF4C7 /* System Frameworks */,
 			);
@@ -482,7 +493,7 @@
 		D4DA79E114D3345A0055F672 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 			};
 			buildConfigurationList = D4DA79E414D3345A0055F672 /* Build configuration list for PBXProject "HomeLess" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -506,6 +517,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FEF8D91A24BF1B00E253D0 /* ShowMapViewController.xib in Resources */,
 				E24E23471A1630FB0037088A /* HistoricalInboxTableViewCell.xib in Resources */,
 				18A335441A15179A0042E39C /* HistoricalOutBoxTableViewCell.xib in Resources */,
 				544C6AB81A0FA1360057C2E3 /* Icon.png in Resources */,
@@ -526,7 +538,6 @@
 				E24E23501A1670260037088A /* FavoriteViewController.xib in Resources */,
 				544C6A9C1A0FA0490057C2E3 /* HouseTableViewCell.xib in Resources */,
 				18EC79651A138C00000BBD48 /* InboxMessageTableViewCell.xib in Resources */,
-				544C6AA91A0FA1110057C2E3 /* HomeLess-Info.plist in Resources */,
 				18C09E351A13ED7D00887EAA /* MessageDetailsViewController.xib in Resources */,
 				544C6AB61A0FA1360057C2E3 /* Default.png in Resources */,
 			);
@@ -547,6 +558,7 @@
 				544C6A9A1A0FA0490057C2E3 /* House.m in Sources */,
 				544C6A911A0FA0490057C2E3 /* AppDelegate.m in Sources */,
 				544C6A8F1A0FA0490057C2E3 /* AddHouseViewController.m in Sources */,
+				18FEF8D81A24BF1B00E253D0 /* ShowMapViewController.m in Sources */,
 				E2640A8E1A1278390070493F /* DWBubbleMenuButton.m in Sources */,
 				544C6A9B1A0FA0490057C2E3 /* HouseTableViewCell.m in Sources */,
 				180CBF0F1A12BEDC00AE563C /* Message.m in Sources */,
@@ -594,9 +606,11 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -629,9 +643,11 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

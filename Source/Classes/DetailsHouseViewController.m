@@ -15,7 +15,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     if (!self.canEdit) {
-        self.editButton.hidden = YES;
+        self.editButton.enabled= NO;
     }
     self.photos = [[NSArray alloc]init];
     [self loadPhotos];
@@ -36,6 +36,12 @@
     self.price.text=[NSString stringWithFormat:@"%lu", self.house.price];
     self.squareMeters.text=[NSString stringWithFormat:@"%lu", self.house.bathrooms];
     self.rooms.text=[NSString stringWithFormat:@"%lu", self.house.bathrooms];
+    self.address.text = self.house.address;
+}
+- (IBAction)onShowMap:(id)sender {
+    ShowMapViewController *vc = [[ShowMapViewController alloc]init];
+    vc.house = self.house;
+    [self showViewController:vc sender:self];
     
 }
 
