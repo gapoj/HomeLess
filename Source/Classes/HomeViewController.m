@@ -26,7 +26,7 @@
 
 - (void)createMenuButton {
     UILabel *homeLabel = [self createHomeButtonView];
-    DWBubbleMenuButton *menuButton = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(15,25,50,50) expansionDirection:DirectionDown];
+    DWBubbleMenuButton *menuButton = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(0,25,50,50) expansionDirection:DirectionDown];
     menuButton.homeButtonView = homeLabel;
     [menuButton addButtons:[self createDemoButtonArray]];
     [self.view addSubview:menuButton];
@@ -51,7 +51,7 @@
     [self.view addSubview:infoButton];
     
     [self createMenuButton];
-    name = [[UILabel alloc]initWithFrame:CGRectMake(100, 33, 170, 42)];
+    name = [[UILabel alloc]initWithFrame:CGRectMake(90, 33, 170, 42)];
     name.font = [UIFont systemFontOfSize:33];
     name.text = @"HomeLess";
     name.textColor = [UIColor colorWithRed:.64 green:.5 blue:1 alpha:1];

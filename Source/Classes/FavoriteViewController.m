@@ -3,6 +3,7 @@
 #import "House.h"
 #import "Favorite.h"
 #import "HousePhoto.h"
+#import "DetailsHouseViewController.h"
 
 @interface FavoriteViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -99,5 +100,14 @@
     [aux removeObjectAtIndex:indexPath.row];
     self.favorites = [NSArray arrayWithArray:aux];
     [self.tableView reloadData];
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DetailsHouseViewController *vc = [[DetailsHouseViewController alloc] init];
+    vc.canEdit = NO;
+    Favorite * fav =self.favorites[indexPath.row];
+    vc.house =fav.house;
+    [self showViewController:vc sender:self];
+    
 }
 @end

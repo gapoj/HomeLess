@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowMapViewController">
@@ -15,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wuy-F2-RET">
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wuy-F2-RET">
                     <rect key="frame" x="0.0" y="93" width="544" height="401"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="1tC-YR-WDm"/>
@@ -32,27 +33,30 @@
                             </barButtonItem>
                         </navigationItem>
                     </items>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="8" width="400" height="44"/>
-                    </variation>
                 </navigationBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="wuy-F2-RET" secondAttribute="bottom" constant="-6" id="Zcs-iP-pxU"/>
-                <constraint firstItem="wuy-F2-RET" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dBi-4W-OPy"/>
-                <constraint firstAttribute="trailing" secondItem="wuy-F2-RET" secondAttribute="trailing" id="g27-7L-go1"/>
-                <constraint firstItem="wuy-F2-RET" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="53" id="y7l-vh-mtc"/>
+                <constraint firstItem="wuy-F2-RET" firstAttribute="trailing" secondItem="csf-mP-0gQ" secondAttribute="trailing" id="1HV-l1-y08"/>
+                <constraint firstItem="wuy-F2-RET" firstAttribute="leading" secondItem="csf-mP-0gQ" secondAttribute="leading" id="U38-OW-HbI"/>
+                <constraint firstItem="wuy-F2-RET" firstAttribute="top" secondItem="csf-mP-0gQ" secondAttribute="bottom" constant="1" id="as0-Zz-MyQ"/>
+                <constraint firstItem="csf-mP-0gQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dgk-6c-XGf"/>
+                <constraint firstAttribute="bottom" secondItem="wuy-F2-RET" secondAttribute="bottom" constant="-6" id="mWL-0A-Xc6"/>
+                <constraint firstItem="csf-mP-0gQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="r79-9C-rd7"/>
+                <constraint firstAttribute="trailing" secondItem="csf-mP-0gQ" secondAttribute="trailing" id="wyA-rW-Pbv"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="csf-mP-0gQ"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="Zcs-iP-pxU"/>
-                    <exclude reference="dBi-4W-OPy"/>
-                    <exclude reference="g27-7L-go1"/>
-                    <exclude reference="y7l-vh-mtc"/>
+                    <exclude reference="dgk-6c-XGf"/>
+                    <exclude reference="r79-9C-rd7"/>
+                    <exclude reference="wyA-rW-Pbv"/>
+                    <exclude reference="1HV-l1-y08"/>
+                    <exclude reference="U38-OW-HbI"/>
+                    <exclude reference="as0-Zz-MyQ"/>
+                    <exclude reference="mWL-0A-Xc6"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -60,10 +64,13 @@
                     <include reference="csf-mP-0gQ"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="Zcs-iP-pxU"/>
-                    <include reference="dBi-4W-OPy"/>
-                    <include reference="g27-7L-go1"/>
-                    <include reference="y7l-vh-mtc"/>
+                    <include reference="dgk-6c-XGf"/>
+                    <include reference="r79-9C-rd7"/>
+                    <include reference="wyA-rW-Pbv"/>
+                    <include reference="1HV-l1-y08"/>
+                    <include reference="U38-OW-HbI"/>
+                    <include reference="as0-Zz-MyQ"/>
+                    <include reference="mWL-0A-Xc6"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="214" y="275"/>

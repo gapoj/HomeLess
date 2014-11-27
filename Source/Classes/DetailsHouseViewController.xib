@@ -266,13 +266,13 @@
                                 <action selector="onShowMap:" destination="-1" eventType="touchUpInside" id="D9v-Wt-Kyy"/>
                             </connections>
                         </button>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="No description writed" translatesAutoresizingMaskIntoConstraints="NO" id="Xfc-Wb-KIk">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="No description writed" translatesAutoresizingMaskIntoConstraints="NO" id="Xfc-Wb-KIk">
                             <rect key="frame" x="8" y="87" width="320" height="61"/>
                             <color key="backgroundColor" red="0.25371876710000002" green="1" blue="0.16639575030000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="10" y="604" width="304" height="95"/>
+                                <rect key="frame" x="0.0" y="604" width="379" height="87"/>
                             </variation>
                         </textView>
                     </subviews>
@@ -371,7 +371,7 @@
                     <include reference="5yO-2y-fD5"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="674" y="2540"/>
+            <point key="canvasLocation" x="674" y="2651.5"/>
         </view>
     </objects>
     <resources>
